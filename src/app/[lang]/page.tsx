@@ -1,13 +1,23 @@
-import { Content,RouterButton } from '@/components/client';
+function BannerSection(){
+  return (
+    <section id="banner" className="min-h-screen bg-slate-800">
+    </section>
+  );
+}
+
+function AboutSection(){
+  return (
+    <section id="about" className="min-h-screen bg-orange-100">
+    </section>
+  );
+}
+
 
 export default function MainPage(){
   return(
-    <div className="flex flex-col items-center justify-evenly grow">
-      <Content id="content" pageName="mainPage"/>
-      <RouterButton
-        route="subpage"
-        i18nMessage="mainPage.labels.goSubPage"
-      />
+    <div className="flex flex-col min-h-screen">
+      <BannerSection/>
+      <AboutSection/>
     </div>
   );
 }
