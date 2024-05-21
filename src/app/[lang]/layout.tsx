@@ -1,20 +1,20 @@
-import { archivo } from '@/utils/constants';
+import { NextIntlClientProvider } from 'next-intl';
+
+import { montserrat, timezone } from '@/utils/constants';
 import { getTranslationMessages } from '@/utils/functions';
 export { generateStaticParams, generateMetadata } from '@/utils/functions';
 
-import { timezone } from '@/utils/constants';
-import { NextIntlClientProvider } from 'next-intl';
-
 export default async function InternationalizedLayout({
-  children, params: {lang}
+  children,
+  params: { lang },
 }: {
-  children: React.ReactNode,
-  params : {lang: string},
+  children: React.ReactNode;
+  params: { lang: string };
 }) {
   const messages = await getTranslationMessages(lang);
   return (
     <html lang={lang}>
-      <body className={`${archivo.className}`}>
+      <body className={`${montserrat.className} box-border`}>
         <NextIntlClientProvider
           locale={lang}
           messages={messages}

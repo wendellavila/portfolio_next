@@ -15,11 +15,37 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {},
-  plugins: [],
+  variants: {
+    extend: {
+      display: ['group-hover'],
+    }
+  },
+  theme: {
+    extend: {
+      colors: {
+        blueprint: '#6D9DC5',
+        cream: '#FFDED5',
+        latte: '#9A7F78',
+        coffee: '#755d57',
+        silver: '#96AECD'
+      },
+    }
+  },
+  plugins: [
+    require('tailwindcss-animated')
+  ],
   corePlugins: {
     preflight: true,
   },
   mode: 'jit',
+  safelist: [
+    'text-coffee',
+    'text-slate-100',
+    'text-slate-500',
+    {
+      pattern: /(bg|border|text|decoration)-(latte|silver|sky-100|white)/,
+      variants: ['hover', 'group-hover'],
+    }
+  ]
 }
 export default config;

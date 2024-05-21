@@ -1,76 +1,60 @@
-
 'use client';
 import { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 
-interface LinkItem {
-  text: string;
-  ref: React.RefObject<HTMLElement>
-}
+import { NavigationItem } from '@/typing/types';
+import { BannerSection } from './(banner)/BannerSection';
+import { AboutSection } from './(about)/AboutSection';
+import { ExperienceSection } from './(experience)/ExperienceSection';
+import { SkillsSection } from './(skills)/SkillsSection';
+import { ProjectsSection } from './(projects)/ProjectsSection';
+import { Footer } from './(footer)/Footer';
 
-function NavLinks(props: {items: LinkItem[]}){
-  return (
-    <nav className="flex flex-col items-end">
-      { props.items.map(
-        item =>
-        <a key={item.text} className="underline hover:cursor-pointer"
-          onClick={() => {
-            if(item.ref.current) item.ref.current.scrollIntoView({behavior: 'smooth'});
-            console.log(item.ref.current);
-          }}
-        >
-          {item.text}
-        </a>
-      )}
-    </nav>
-  );
-}
-
-function BannerSection(props: {children?: React.ReactNode}){
-  return (
-    <section id="banner" className="min-h-screen bg-slate-800">
-      {props.children}
-    </section>
-  );
-}
-
-function AboutSection(props: {sectionRef: React.RefObject<HTMLElement>}){
-  return (
-    <section ref={props.sectionRef} id="about" className="min-h-screen bg-orange-100">
-    </section>
-  );
-}
-
-function ExperienceSection(props: {sectionRef: React.RefObject<HTMLElement>}){
-  return (
-    <section ref={props.sectionRef} id="experience" className="min-h-screen bg-white">
-    </section>
-  );
-}
-
-
-export default function MainPage(){
-
+export default function MainPage() {
+  const bannerRef = useRef<HTMLElement>(null);
   const aboutRef = useRef<HTMLElement>(null);
   const experienceRef = useRef<HTMLElement>(null);
+  const skillsRef = useRef<HTMLElement>(null);
+  const projectsRef = useRef<HTMLElement>(null);
 
-  const linkItems: LinkItem[] = [
+  const i18n = useTranslations('sections');
+
+  const linkItems: NavigationItem[] = [
     {
-      text: 'About Me',
-      ref: aboutRef
+      id: 'home',
+      text: i18n('banner.title'),
+      ref: bannerRef,
     },
     {
-      text: 'Experience',
-      ref: experienceRef
-    }
-  ]
+      id: 'about',
+      text: 'About Me',
+      ref: aboutRef,
+    },
+    {
+      id: 'education-experience',
+      text: i18n('educationExperience.title'),
+      ref: experienceRef,
+    },
+    {
+      id: 'skills',
+      text: i18n('skills.title'),
+      ref: skillsRef,
+    },
+    {
+      id: 'projects',
+      text: i18n('projects.title'),
+      ref: projectsRef,
+    },
+  ];
 
   return (
     <div className="flex flex-col min-h-screen">
-      <BannerSection>
-        <NavLinks items={linkItems}/>
-      </BannerSection>
-      <AboutSection sectionRef={aboutRef}/>
-      <ExperienceSection sectionRef={experienceRef}/>
+      <BannerSection componentRef={bannerRef} items={linkItems} />
+      <AboutSection componentRef={aboutRef} items={linkItems} />
+      <ExperienceSection componentRef={experienceRef} items={linkItems} />
+      <SkillsSection componentRef={skillsRef} items={linkItems} />
+      <ProjectsSection componentRef={projectsRef} items={linkItems} />
+      <Footer />
     </div>
   );
 }

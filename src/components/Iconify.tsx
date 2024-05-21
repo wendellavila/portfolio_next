@@ -6,8 +6,8 @@ import { Icon, IconProps } from '@iconify/react';
  * @param {IconProps} props 
  * @returns Iconify Icon Component
  */
-export default function Iconify(props: IconProps){
+export function Iconify(props: IconProps) {
   return (
-    <Icon {...props}/>
+    <Icon {...props} />
   );
 }

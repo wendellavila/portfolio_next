@@ -1,7 +1,11 @@
-import { Archivo } from 'next/font/google';
+import { Montserrat, Do_Hyeon } from 'next/font/google';
 
-export const archivo = Archivo({
-  subsets:['latin']
+export const montserrat = Montserrat({
+  subsets: ['latin']
+});
+export const doHyeon = Do_Hyeon({
+  subsets: ['latin'],
+  weight: ['400']
 });
 
 export const timezone = 'America/Sao_Paulo';
@@ -9,3 +13,10 @@ export const i18nConfig = {
   locales: ['en', 'pt'],
   defaultLocale: 'en'
 }
+
+export const projectTitle = 'Title';//'Wen\xADdell Jo\xADão Cas\xADtro de A\xADvi\xADla';
+export const deployUrl = 'https://wendellavila.github.io';
+export const githubUrl = 'https://github.com/wendellavila/';
+export const repoUrl = `${githubUrl}portfolio_next`;
+export const linkedinUrl = 'https://linkedin.com/in/wendellavila';
+export const email = 'wendelljcavila@gmail.com';
