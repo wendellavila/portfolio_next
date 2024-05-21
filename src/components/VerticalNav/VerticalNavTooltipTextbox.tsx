@@ -1,6 +1,8 @@
-import { TooltipProps } from '@/typing/props';
+import { ComponentProps, ColorProps } from '@/typing/props';
 
-export function TooltipTextbox(props: TooltipProps) {
+interface Props extends ComponentProps, ColorProps {}
+
+export function VerticalNavTooltipTextbox(props: Props) {
   const color = props.color;
   return (
     <span

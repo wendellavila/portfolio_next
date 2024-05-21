@@ -1,7 +1,12 @@
-import { VerticalNavItemProps } from '@/typing/props';
-import { Tooltip } from './Tooltip';
+import { ColorProps, NavigationProps, PositionProps } from '@/typing/props';
+import { VerticalNavTooltip } from './VerticalNavTooltip';
+import { NavigationItem } from '@/typing/types';
 
-export function Link(props: VerticalNavItemProps) {
+export interface Props extends ColorProps, NavigationProps, PositionProps {
+  item: NavigationItem;
+}
+
+export function VerticalNavLink(props: Props) {
   type NavLinkComponentType = 'tooltip' | 'dot';
   const orderedComponents: NavLinkComponentType[] =
     props.position === 'left' ? ['dot', 'tooltip'] : ['tooltip', 'dot'];
@@ -19,7 +24,7 @@ export function Link(props: VerticalNavItemProps) {
     >
       {orderedComponents.map((key, index) =>
         key === 'tooltip' ? (
-          <Tooltip
+          <VerticalNavTooltip
             key={`tooltip-${index}`}
             position={props.position}
             color={props.color}
@@ -27,7 +32,7 @@ export function Link(props: VerticalNavItemProps) {
             className={props.expandAll ? 'flex' : 'hidden group-hover:flex'}
           >
             {props.item.text}
-          </Tooltip>
+          </VerticalNavTooltip>
         ) : (
           <div
             key={`dot-${index}`}

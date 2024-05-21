@@ -1,8 +1,10 @@
-import { TooltipProps } from '@/typing/props';
-import { TooltipLine } from './TooltipLine';
-import { TooltipTextbox } from './TooltipTextbox';
+import { ComponentProps, PositionProps, ColorProps } from '@/typing/props';
+import { VerticalNavTooltipLine } from './VerticalNavTooltipLine';
+import { VerticalNavTooltipTextbox } from './VerticalNavTooltipTextbox';
 
-export function Tooltip(props: TooltipProps) {
+interface Props extends ComponentProps, PositionProps, ColorProps {}
+
+export function VerticalNavTooltip(props: Props) {
   const color = props.color;
   const textColor = props.textColor;
   const tooltipPosition = props.position === 'left' ? 'left-2' : 'right-2';
@@ -19,9 +21,12 @@ export function Tooltip(props: TooltipProps) {
     >
       {orderedComponents.map((key, index) =>
         key === 'textbox' ? (
-          <TooltipTextbox key={`tooltip-textbox-${index}`} {...props} />
+          <VerticalNavTooltipTextbox
+            key={`tooltip-textbox-${index}`}
+            {...props}
+          />
         ) : (
-          <TooltipLine key={`tooltip-line-${index}`} {...props} />
+          <VerticalNavTooltipLine key={`tooltip-line-${index}`} {...props} />
         )
       )}
     </div>

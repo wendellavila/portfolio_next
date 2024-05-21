@@ -5,9 +5,11 @@ import { Iconify } from '@/components/Iconify';
 import { i18nConfig } from '@/utils/constants';
 import { Map } from '@/typing/types';
 
-import { LanguageSelectorTooltipProps } from '@/typing/props';
+export interface Props {
+  isOpen: boolean;
+}
 
-export function LanguageSelector(props: LanguageSelectorTooltipProps) {
+export function VerticalNavLanguage(props: Props) {
   const router = useRouter();
   const locale = useLocale();
   let pathname = usePathname();

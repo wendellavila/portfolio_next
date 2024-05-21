@@ -1,8 +1,10 @@
-import { VerticalNavLanguageSelectorProps } from '@/typing/props';
-import { LanguageSelectorTooltip } from './LanguageSelectorTooltip';
+import { ColorProps, NavigationProps, PositionProps } from '@/typing/props';
+import { VerticalNavLanguageTooltip } from './VerticalNavLanguageTooltip';
 import { useState } from 'react';
 
-export function NavLinkLanguage(props: VerticalNavLanguageSelectorProps) {
+interface Props extends ColorProps, NavigationProps, PositionProps {}
+
+export function VerticalNavLanguageLink(props: Props) {
   type NavLinkComponentType = 'languageSelector' | 'dot';
   const orderedComponents: NavLinkComponentType[] =
     props.position === 'left'
@@ -19,7 +21,7 @@ export function NavLinkLanguage(props: VerticalNavLanguageSelectorProps) {
     >
       {orderedComponents.map((key, index) =>
         key === 'languageSelector' ? (
-          <LanguageSelectorTooltip
+          <VerticalNavLanguageTooltip
             key={`tooltip-${index}`}
             position={props.position}
             color={props.color}

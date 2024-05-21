@@ -1,10 +1,17 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { TypingTextProps } from '@/typing/props';
+import { ComponentProps } from '@/typing/props';
+
+interface TypingTextProps extends ComponentProps {
+  component?: TextComponent;
+  ariaLabel?: string;
+  children: string;
+}
+type TextComponent = 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 /**
  * A text component with typing animation.
- * @param {object} props 
+ * @param {object} props
  * @param {string} props.component The html tag used for the component.
  * @param {string} props.ariaLabel Text used for screen readers.
  */
@@ -23,13 +30,20 @@ export function TypingText(props: TypingTextProps) {
     for (let i = 0; i < props.children.length; i++) {
       timeoutIds.push(
         setTimeout(() => {
-          setDisplayText(previousText => `${previousText.slice(0, previousText.length - 1)}${props.children[i]}|`);
+          setDisplayText(
+            previousText =>
+              `${previousText.slice(0, previousText.length - 1)}${
+                props.children[i]
+              }|`
+          );
         }, 100 * (i + 1))
       );
     }
     timeoutIds.push(
       setTimeout(() => {
-        setDisplayText(previousText => previousText.slice(0, previousText.length - 1));
+        setDisplayText(previousText =>
+          previousText.slice(0, previousText.length - 1)
+        );
       }, 100 * (props.children.length + 2))
     );
     return () => {

@@ -1,8 +1,12 @@
-import { LanguageSelectorTooltipProps } from '@/typing/props';
-import { TooltipLine } from './TooltipLine';
-import { LanguageSelector } from './LanguageSelector';
+import { ColorProps, ComponentProps, PositionProps } from '@/typing/props';
+import { VerticalNavTooltipLine } from './VerticalNavTooltipLine';
+import { VerticalNavLanguage } from './VerticalNavLanguage';
 
-export function LanguageSelectorTooltip(props: LanguageSelectorTooltipProps) {
+interface Props extends ColorProps, ComponentProps, PositionProps {
+  isOpen: boolean;
+}
+
+export function VerticalNavLanguageTooltip(props: Props) {
   const color = props.color;
   const textColor = props.textColor;
   const tooltipPosition = props.position === 'left' ? 'left-2' : 'right-2';
@@ -19,14 +23,12 @@ export function LanguageSelectorTooltip(props: LanguageSelectorTooltipProps) {
     >
       {orderedComponents.map((key, index) =>
         key === 'textbox' ? (
-          <LanguageSelector
+          <VerticalNavLanguage
             key={`tooltip-textbox-${index}`}
-            position={props.position}
-            color={props.color}
             isOpen={props.isOpen}
           />
         ) : (
-          <TooltipLine key={`tooltip-line-${index}`} {...props} />
+          <VerticalNavTooltipLine key={`tooltip-line-${index}`} {...props} />
         )
       )}
     </div>

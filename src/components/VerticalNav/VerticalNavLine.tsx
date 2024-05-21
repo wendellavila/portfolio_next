@@ -1,6 +1,10 @@
-import { VerticalLineProps } from '@/typing/props';
+import { PositionProps, ColorProps } from '@/typing/props';
 
-export function VerticalLines(props: VerticalLineProps) {
+interface Props extends PositionProps, ColorProps {
+  gap?: boolean;
+}
+
+export function VerticalNavLine(props: Props) {
   const color = props.color;
   return (
     <div

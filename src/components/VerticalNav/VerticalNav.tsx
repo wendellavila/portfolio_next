@@ -1,11 +1,27 @@
-import { VerticalNavProps } from '@/typing/props';
+import {
+  ComponentProps,
+  ColorProps,
+  NavigationProps,
+  PositionProps,
+} from '@/typing/props';
 import { useScreenDimensions } from '@/utils/hooks';
 import { Fragment } from 'react';
 
-import { Link } from './Link';
-import { VerticalLines } from './VerticalLines';
+import { VerticalNavLink } from './VerticalNavLink';
+import { VerticalNavLine } from './VerticalNavLine';
 
-import { NavLinkLanguage } from './LanguageLink';
+import { VerticalNavLanguageLink } from './VerticalNavLanguageLink';
+
+interface VerticalNavProps
+  extends ComponentProps,
+    ColorProps,
+    NavigationProps,
+    PositionProps {
+  expandAll?: boolean;
+  gap?: boolean;
+  showOnSmall?: boolean;
+  languageSelector?: boolean;
+}
 
 export function VerticalNav(props: VerticalNavProps) {
   const [width] = useScreenDimensions(5);
@@ -17,21 +33,21 @@ export function VerticalNav(props: VerticalNavProps) {
         className={`flex flex-col justify-around items-center z-10
       ${props.className ?? ''}`}
       >
-        <VerticalLines
+        <VerticalNavLine
           color={props.color}
           position={props.position}
           gap={props.gap}
         />
         {props.items.map((item, _) => (
           <Fragment key={`vertical-nav-item-${item.id}`}>
-            <Link item={item} {...props} />
-            <VerticalLines color={props.color} position={props.position} />
+            <VerticalNavLink item={item} {...props} />
+            <VerticalNavLine color={props.color} position={props.position} />
           </Fragment>
         ))}
         {props.languageSelector && (
           <>
-            <NavLinkLanguage {...props} />
-            <VerticalLines color={props.color} position={props.position} />
+            <VerticalNavLanguageLink {...props} />
+            <VerticalNavLine color={props.color} position={props.position} />
           </>
         )}
       </nav>
