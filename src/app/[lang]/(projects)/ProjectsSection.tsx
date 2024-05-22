@@ -16,6 +16,7 @@ export function ProjectsSection(props: SectionProps) {
         position="right"
         color="silver"
         textColor="slate-500"
+        backgroundColor="white"
       />
     </section>
   );

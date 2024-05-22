@@ -14,6 +14,7 @@ export function AboutSection(props: SectionProps) {
         position="left"
         color="latte"
         textColor="coffee"
+        backgroundColor="cream"
       />
       <div className="grow pt-2 pb-6 pr-4"></div>
     </section>

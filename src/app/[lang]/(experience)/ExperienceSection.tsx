@@ -15,6 +15,7 @@ export function ExperienceSection(props: SectionProps) {
         position="right"
         color="silver"
         textColor="slate-500"
+        backgroundColor="white"
       />
     </section>
   );

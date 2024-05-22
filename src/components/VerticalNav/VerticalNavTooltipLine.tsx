@@ -3,8 +3,9 @@ import { PositionProps, ColorProps } from '@/typing/props';
 interface Props extends PositionProps, ColorProps {}
 
 export function VerticalNavTooltipLine(props: Props) {
-  const color = props.color;
-  const lineMargin = props.position === 'left' ? 'ml-2' : 'mr-2';
+  const { color, position } = props;
+
+  const lineMargin = position === 'left' ? 'ml-2' : 'mr-2';
 
   return (
     <div

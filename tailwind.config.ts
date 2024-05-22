@@ -1,7 +1,7 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 // Adding default tailwind colors
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 // Removing deprecated color names
 delete colors['lightBlue'];
 delete colors['warmGray'];
@@ -18,7 +18,7 @@ const config: Config = {
   variants: {
     extend: {
       display: ['group-hover'],
-    }
+    },
   },
   theme: {
     extend: {
@@ -27,25 +27,25 @@ const config: Config = {
         cream: '#FFDED5',
         latte: '#9A7F78',
         coffee: '#755d57',
-        silver: '#96AECD'
+        silver: '#96AECD',
       },
-    }
+    },
   },
-  plugins: [
-    require('tailwindcss-animated')
-  ],
+  plugins: [require('tailwindcss-animated')],
   corePlugins: {
     preflight: true,
   },
   mode: 'jit',
   safelist: [
+    'bg-cream',
+    'bg-blueprint',
     'text-coffee',
     'text-slate-100',
     'text-slate-500',
     {
       pattern: /(bg|border|text|decoration)-(latte|silver|sky-100|white)/,
       variants: ['hover', 'group-hover'],
-    }
-  ]
-}
+    },
+  ],
+};
 export default config;

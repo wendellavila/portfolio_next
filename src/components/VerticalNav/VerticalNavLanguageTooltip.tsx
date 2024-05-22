@@ -7,9 +7,9 @@ interface Props extends ColorProps, ComponentProps, PositionProps {
 }
 
 export function VerticalNavLanguageTooltip(props: Props) {
-  const color = props.color;
-  const textColor = props.textColor;
-  const tooltipPosition = props.position === 'left' ? 'left-2' : 'right-2';
+  const { color, className, isOpen, position, textColor } = props;
+
+  const tooltipPosition = position === 'left' ? 'left-2' : 'right-2';
   type TooltipComponentType = 'textbox' | 'line';
 
   const orderedComponents: TooltipComponentType[] =
@@ -17,15 +17,15 @@ export function VerticalNavLanguageTooltip(props: Props) {
 
   return (
     <div
-      className={`${props.className ?? ''}
+      className={`${className ?? ''}
       absolute flex-row items-center ${tooltipPosition}
       text-${textColor ?? color}`}
     >
-      {orderedComponents.map((key, index) =>
-        key === 'textbox' ? (
+      {orderedComponents.map((type, index) =>
+        type === 'textbox' ? (
           <VerticalNavLanguage
             key={`tooltip-textbox-${index}`}
-            isOpen={props.isOpen}
+            isOpen={isOpen}
           />
         ) : (
           <VerticalNavTooltipLine key={`tooltip-line-${index}`} {...props} />

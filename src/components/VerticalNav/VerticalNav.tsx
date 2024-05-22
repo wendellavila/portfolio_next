@@ -24,30 +24,36 @@ interface VerticalNavProps
 }
 
 export function VerticalNav(props: VerticalNavProps) {
+  const {
+    className,
+    color,
+    gap,
+    items,
+    languageSelector,
+    position,
+    showOnSmall,
+  } = props;
+
   const [width] = useScreenDimensions(5);
   const isSmall = width < 768;
 
   return (
-    (props.showOnSmall ?? !isSmall) && (
+    (showOnSmall ?? !isSmall) && (
       <nav
         className={`flex flex-col justify-around items-center z-10
-      ${props.className ?? ''}`}
+      ${className ?? ''}`}
       >
-        <VerticalNavLine
-          color={props.color}
-          position={props.position}
-          gap={props.gap}
-        />
-        {props.items.map((item, _) => (
+        <VerticalNavLine color={color} position={position} gap={gap} />
+        {items.map((item, _) => (
           <Fragment key={`vertical-nav-item-${item.id}`}>
             <VerticalNavLink item={item} {...props} />
-            <VerticalNavLine color={props.color} position={props.position} />
+            <VerticalNavLine color={color} position={position} />
           </Fragment>
         ))}
-        {props.languageSelector && (
+        {languageSelector && (
           <>
             <VerticalNavLanguageLink {...props} />
-            <VerticalNavLine color={props.color} position={props.position} />
+            <VerticalNavLine color={color} position={position} />
           </>
         )}
       </nav>

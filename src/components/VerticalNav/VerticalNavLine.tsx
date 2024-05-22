@@ -5,13 +5,12 @@ interface Props extends PositionProps, ColorProps {
 }
 
 export function VerticalNavLine(props: Props) {
-  const color = props.color;
+  const { color, gap, position } = props;
+
   return (
     <div
-      className={`w-[6px] border-x border-solid ${
-        props.gap ? 'grow-[6]' : 'grow'
-      }
-      ${props.position === 'left' ? 'mr-12 ml-2' : 'mr-2 ml-12'}
+      className={`w-[6px] border-x border-solid ${gap ? 'grow-[6]' : 'grow'}
+      ${position === 'left' ? 'mr-12 ml-2' : 'mr-2 ml-12'}
       border-${color}/35`}
     ></div>
   );

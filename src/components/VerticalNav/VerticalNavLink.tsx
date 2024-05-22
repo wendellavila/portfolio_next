@@ -7,14 +7,17 @@ export interface Props extends ColorProps, NavigationProps, PositionProps {
 }
 
 export function VerticalNavLink(props: Props) {
+  const { backgroundColor, color, expandAll, item, position, textColor } =
+    props;
+
   type NavLinkComponentType = 'tooltip' | 'dot';
   const orderedComponents: NavLinkComponentType[] =
     props.position === 'left' ? ['dot', 'tooltip'] : ['tooltip', 'dot'];
 
   return (
     <a
-      href={props.item.id}
-      aria-label={props.item.text}
+      href={item.id}
+      aria-label={item.text}
       className={`group relative flex flex-row items-center hover:cursor-pointer
           ${props.position === 'left' ? 'justify-start' : 'justify-end'}`}
       onClick={event => {
@@ -22,25 +25,26 @@ export function VerticalNavLink(props: Props) {
         props.item.ref.current?.scrollIntoView({ behavior: 'smooth' });
       }}
     >
-      {orderedComponents.map((key, index) =>
-        key === 'tooltip' ? (
+      {orderedComponents.map((type, index) =>
+        type === 'tooltip' ? (
           <VerticalNavTooltip
             key={`tooltip-${index}`}
-            position={props.position}
-            color={props.color}
-            textColor={props.textColor}
-            className={props.expandAll ? 'flex' : 'hidden group-hover:flex'}
+            position={position}
+            color={color}
+            textColor={textColor}
+            backgroundColor={backgroundColor}
+            className={expandAll ? 'flex' : 'hidden group-hover:flex'}
           >
-            {props.item.text}
+            {item.text}
           </VerticalNavTooltip>
         ) : (
           <div
             key={`dot-${index}`}
             className={`h-2 w-2 border border-solid hover:cursor-pointer 
-          ${props.position === 'left' ? 'mr-12 ml-2' : 'mr-2 ml-12'} border-${
-              props.color
-            }/60
-          bg-transparent group-hover:bg-${props.color}`}
+          ${
+            position === 'left' ? 'mr-12 ml-2' : 'mr-2 ml-12'
+          } border-${color}/60
+          bg-transparent group-hover:bg-${color}`}
           ></div>
         )
       )}

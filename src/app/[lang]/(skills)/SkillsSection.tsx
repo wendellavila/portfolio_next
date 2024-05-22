@@ -15,6 +15,7 @@ export function SkillsSection(props: SectionProps) {
         position="left"
         color="sky-100"
         textColor="slate-100"
+        backgroundColor="blueprint"
       />
       <div className="grow pt-2 pb-6 pr-4"></div>
     </section>
