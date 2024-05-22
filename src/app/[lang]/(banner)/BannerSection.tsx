@@ -16,6 +16,7 @@ import {
 import { SectionProps } from '@/typing/props';
 
 export function BannerSection(props: SectionProps) {
+  const { componentRef, items } = props;
   const i18n = useTranslations('sections.banner');
   const subtitle = i18n('subtitle');
   const stylizedSubtitle = `__${subtitle.replaceAll(' ', '_')}__`;
@@ -23,7 +24,7 @@ export function BannerSection(props: SectionProps) {
   return (
     <section
       id="banner"
-      ref={props.componentRef}
+      ref={componentRef}
       className="min-h-screen flex relative text-white/95 pt-8 pb-4 lg:pt-12 px-8 lg:px-16"
     >
       <StarrySky />
@@ -80,7 +81,7 @@ export function BannerSection(props: SectionProps) {
         expandAll={true}
         showOnSmall={true}
         languageSelector={true}
-        items={props.items}
+        items={items}
         position="right"
         color="white"
         textColor="white"

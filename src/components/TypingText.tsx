@@ -16,8 +16,9 @@ type TextComponent = 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
  * @param {string} props.ariaLabel Text used for screen readers.
  */
 export function TypingText(props: TypingTextProps) {
+  const { ariaLabel, children, className, component } = props;
   const caret = 'ꕯ';
-  const ComponentWrapper = props.component ?? 'span';
+  const ComponentWrapper = component ?? 'span';
   const [displayText, setDisplayText] = useState<string>(caret);
   let timeoutIds: ReturnType<typeof setTimeout>[] = [];
 
@@ -27,14 +28,12 @@ export function TypingText(props: TypingTextProps) {
         setDisplayText('|');
       }, 0)
     );
-    for (let i = 0; i < props.children.length; i++) {
+    for (let i = 0; i < children.length; i++) {
       timeoutIds.push(
         setTimeout(() => {
           setDisplayText(
             previousText =>
-              `${previousText.slice(0, previousText.length - 1)}${
-                props.children[i]
-              }|`
+              `${previousText.slice(0, previousText.length - 1)}${children[i]}|`
           );
         }, 100 * (i + 1))
       );
@@ -44,15 +43,15 @@ export function TypingText(props: TypingTextProps) {
         setDisplayText(previousText =>
           previousText.slice(0, previousText.length - 1)
         );
-      }, 100 * (props.children.length + 2))
+      }, 100 * (children.length + 2))
     );
     return () => {
       timeoutIds.forEach(timeoutId => clearTimeout(timeoutId));
     };
-  }, [props.children, setDisplayText]);
+  }, [children, setDisplayText]);
 
   return (
-    <ComponentWrapper className={props.className} aria-label={props.ariaLabel}>
+    <ComponentWrapper className={className} aria-label={ariaLabel}>
       {displayText}
     </ComponentWrapper>
   );

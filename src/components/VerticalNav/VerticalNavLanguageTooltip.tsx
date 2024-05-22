@@ -13,7 +13,7 @@ export function VerticalNavLanguageTooltip(props: Props) {
   type TooltipComponentType = 'textbox' | 'line';
 
   const orderedComponents: TooltipComponentType[] =
-    props.position === 'left' ? ['line', 'textbox'] : ['textbox', 'line'];
+    position === 'left' ? ['line', 'textbox'] : ['textbox', 'line'];
 
   return (
     <div

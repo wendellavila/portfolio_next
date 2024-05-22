@@ -10,6 +10,7 @@ interface StarProps extends ComponentProps {
 }
 
 export function Star(props: StarProps) {
+  const { size, top, left } = props;
   const random = Math.random();
   let animationClassName = '';
   if (props.animate === 'random' || props.animate === undefined) {
@@ -45,10 +46,10 @@ export function Star(props: StarProps) {
   return (
     <div
       style={{
-        height: props.size ?? 1,
-        width: props.size ?? 1,
-        top: props.top ?? 0,
-        left: props.left ?? 0,
+        height: size ?? 1,
+        width: size ?? 1,
+        top: top ?? 0,
+        left: left ?? 0,
       }}
       className={`absolute ${colorClassName} rounded-full ${animationClassName}`}
     ></div>

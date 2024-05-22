@@ -3,14 +3,16 @@ import { SectionProps } from '@/typing/props';
 import { VerticalNav } from '@/components/VerticalNav';
 
 export function AboutSection(props: SectionProps) {
+  const { componentRef, items } = props;
+
   return (
     <section
-      ref={props.componentRef}
+      ref={componentRef}
       id="about"
       className="min-h-screen flex flex-row bg-cream"
     >
       <VerticalNav
-        items={props.items}
+        items={items}
         position="left"
         color="latte"
         textColor="coffee"

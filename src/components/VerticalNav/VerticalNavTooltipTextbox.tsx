@@ -3,7 +3,7 @@ import { ComponentProps, ColorProps } from '@/typing/props';
 interface Props extends ComponentProps, ColorProps {}
 
 export function VerticalNavTooltipTextbox(props: Props) {
-  const { backgroundColor, color } = props;
+  const { backgroundColor, children, color } = props;
 
   return (
     <span
@@ -12,7 +12,7 @@ export function VerticalNavTooltipTextbox(props: Props) {
         backgroundColor ? 'bg-' + backgroundColor : 'backdrop-blur-sm'
       }`}
     >
-      {props.children}
+      {children}
     </span>
   );
 }

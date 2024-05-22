@@ -6,12 +6,13 @@ interface LoadingScreenProps extends ComponentProps {
 }
 
 export function LoadingScreen(props: LoadingScreenProps) {
+  const { className, id } = props;
   return (
     <section
-      id={props.id}
+      id={id}
       className={`
 			min-h-screen flex flex-col items-center justify-center
-			bg-blueprint text-white ${props.className ?? ''}
+			bg-blueprint text-white ${className ?? ''}
 			`}
     >
       <div className="grow-[2]"></div>
