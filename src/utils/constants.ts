@@ -1,11 +1,7 @@
-import { Montserrat, Do_Hyeon } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 
 export const montserrat = Montserrat({
   subsets: ['latin'],
-});
-export const doHyeon = Do_Hyeon({
-  subsets: ['latin'],
-  weight: ['400'],
 });
 
 export const timezone = 'America/Sao_Paulo';
