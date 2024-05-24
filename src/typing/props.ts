@@ -5,7 +5,7 @@ export interface PositionProps {
   position: 'left' | 'right';
 }
 export interface ColorProps {
-  color: 'latte' | 'silver' | 'sky-100' | 'white';
+  color?: 'latte' | 'silver' | 'sky-100' | 'white';
   textColor?: 'coffee' | 'slate-100' | 'slate-500' | 'white';
   backgroundColor?: 'cream' | 'white' | 'blueprint';
 }

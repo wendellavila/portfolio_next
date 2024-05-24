@@ -43,7 +43,7 @@ const config: Config = {
     'text-slate-100',
     'text-slate-500',
     {
-      pattern: /(bg|border|text|decoration)-(latte|silver|sky-100|white)/,
+      pattern: /(bg|border|text|decoration)-(latte|silver|sky-100|white|black)/,
       variants: ['hover', 'group-hover'],
     },
   ],
