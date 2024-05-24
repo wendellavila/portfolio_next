@@ -23,7 +23,7 @@ export function Footer() {
         </a>
         . {i18n('sourceCodeAvailableOn')}{' '}
         <a href={repoUrl} className="underline">
-          Github
+          GitHub
         </a>
         .
       </span>
