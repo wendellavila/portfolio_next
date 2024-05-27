@@ -40,7 +40,7 @@ export function AboutSection(props: SectionProps) {
             <LinkList />
           </div>
           <div className="flex flex-col items-center justify-center">
-            <div className="md:px-12 px-6 max-w-[1200px]">
+            <article className="md:px-12 px-6 max-w-[1200px]">
               {i18n('content')
                 .split('\n')
                 .map((line, index) => (
@@ -51,7 +51,7 @@ export function AboutSection(props: SectionProps) {
                     {line}
                   </p>
                 ))}
-            </div>
+            </article>
           </div>
         </div>
       </div>

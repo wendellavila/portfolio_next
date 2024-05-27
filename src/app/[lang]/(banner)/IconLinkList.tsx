@@ -14,7 +14,7 @@ export function IconLinkList() {
   ];
 
   return (
-    <div className="flex flex-row gap-3 mt-4">
+    <nav className="flex flex-row gap-3 mt-4">
       {linkData.map(item => (
         <a
           key={item.url}
@@ -32,6 +32,6 @@ export function IconLinkList() {
           />
         </a>
       ))}
-    </div>
+    </nav>
   );
 }

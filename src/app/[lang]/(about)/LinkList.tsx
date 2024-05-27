@@ -9,7 +9,7 @@ export function LinkList() {
   ];
 
   return (
-    <div className="py-4 text-coffee">
+    <nav className="py-4 text-coffee">
       {linkData.map(item => (
         <a
           key={item.url}
@@ -21,6 +21,6 @@ export function LinkList() {
           {item.text ?? item.url}
         </a>
       ))}
-    </div>
+    </nav>
   );
 }
