@@ -14,7 +14,7 @@ export function ProjectItem(props: ProjectItemProps) {
   return (
     <article
       className="relative flex flex-col items-center
-       text-center"
+       text-center mb-2"
     >
       <a
         className="z-10 hover:cursor-pointer hover:underline
@@ -36,12 +36,12 @@ export function ProjectItem(props: ProjectItemProps) {
           />
         </div>
         <div>
-          <span className="bg-cream mb-1 px-2 text-md leading-relaxed">
+          <span className="bg-cream mb-1 px-2 text-lg leading-relaxed">
             {title}
           </span>
         </div>
       </a>
-      {description && <p className="text-sm mt-1">{description}</p>}
+      {description && <p className="text-md mt-1">{description}</p>}
     </article>
   );
 }

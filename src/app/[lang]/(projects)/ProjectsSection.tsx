@@ -18,7 +18,7 @@ export function ProjectsSection(props: SectionProps) {
       id="projects"
       className="min-h-screen flex flex-row bg-white"
     >
-      <div className="grow pt-2 pb-6 pl-4">
+      <div className="grow pt-2 pb-6 px-6 md:pl-12">
         <SectionHeader decorationClassName="bg-silver">
           {i18n('title').toLocaleUpperCase()}
         </SectionHeader>

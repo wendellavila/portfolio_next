@@ -13,11 +13,17 @@ export function ExperienceSection(props: SectionProps) {
       id="education-experience"
       className="min-h-screen flex flex-row bg-white"
     >
-      <div className={`grow pt-2 pb-6 pl-6 md:pl-12 pr-6 md:pr-0`}>
-        <CvSection i18nNamespace="education" />
-        <CvSection i18nNamespace="experience" />
-        <CvSection i18nNamespace="courses" />
-        <CvSection i18nNamespace="publications" />
+      <div
+        className="grow pt-2 pb-6 px-6 md:pl-12 md:pr-0
+        inline-grid gap-x-24 lg:grid-cols-2"
+      >
+        <CvSection i18nNamespace="education" className="order-1" />
+        <CvSection i18nNamespace="experience" className="order-2 lg:order-3" />
+        <CvSection
+          i18nNamespace="publications"
+          className="order-3 lg:order-2"
+        />
+        <CvSection i18nNamespace="courses" className="order-4 lg:order-4" />
       </div>
       <VerticalNav
         items={items}
