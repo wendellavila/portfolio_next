@@ -37,10 +37,10 @@ export function VerticalNavLanguage(props: Props) {
   };
 
   return (
-    <div className="flex flex-col backdrop-blur-sm">
+    <div className={`flex flex-col ${isOpen ? 'backdrop-blur-sm' : ''}`}>
       <button
         className={`h-8 flex flex-row items-center hover:cursor-pointer border
-      border-white/50 ${isOpen ? 'bg-white/10' : 'group-hover:bg-white/10'}`}
+      border-white/50`}
         aria-label={i18n('showLanguageOptions')}
       >
         <div aria-hidden className="px-1.5 py-0.5">

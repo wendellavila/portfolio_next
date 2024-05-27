@@ -8,9 +8,7 @@ export function VerticalNavTooltipTextbox(props: Props) {
   return (
     <span
       className={`border px-2 py-1 whitespace-nowrap pointer-events-none
-      border-${color}/50 ${
-        backgroundColor ? 'bg-' + backgroundColor : 'backdrop-blur-sm'
-      }`}
+      border-${color}/50 ${backgroundColor ? 'bg-' + backgroundColor : ''}`}
     >
       {children}
     </span>
