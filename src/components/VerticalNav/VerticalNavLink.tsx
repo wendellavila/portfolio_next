@@ -16,7 +16,7 @@ export function VerticalNavLink(props: Props) {
 
   return (
     <a
-      href={item.id}
+      href={`#${item.id}`}
       aria-label={item.text}
       className={`group relative flex flex-row items-center hover:cursor-pointer
           ${props.position === 'left' ? 'justify-start' : 'justify-end'}`}
