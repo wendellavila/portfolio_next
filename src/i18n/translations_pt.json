@@ -16,20 +16,92 @@
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci turpis, posuere a metus at, consectetur rutrum lacus. Praesent feugiat egestas lectus, eu feugiat leo facilisis vitae. Vestibulum feugiat neque a diam tincidunt pretium. Donec condimentum ornare posuere. Integer tempus orci id efficitur imperdiet. Vivamus aliquet tristique nisl, sed viverra augue pulvinar vel. Aenean ornare blandit nisi imperdiet fermentum. Duis gravida erat porttitor justo tempus tristique. In lectus ipsum, fermentum a porttitor.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci turpis, posuere a metus at, consectetur rutrum lacus. Praesent feugiat egestas lectus, eu feugiat leo facilisis vitae. Vestibulum feugiat neque a diam tincidunt pretium. Donec condimentum ornare posuere. Integer tempus orci id efficitur imperdiet.\nVivamus aliquet tristique nisl, sed viverra augue pulvinar vel. Aenean ornare blandit nisi imperdiet fermentum. Duis gravida erat porttitor justo tempus tristique. In lectus ipsum, fermentum a porttitor vitae, consectetur vel nibh."
         },
         "educationExperience": {
-            "title": "Educação e Experiência",
+            "title": "Title",
             "items": {
-                "education": [],
-                "experience": [],
-                "courses": []
+                "education": {
+                    "count": "1",
+                    "0": {
+                        "name": "Name",
+                        "institution": "Institution",
+                        "url": "https://wendellavila.github.io",
+                        "years": "2024",
+                        "description": "Description"
+                    }
+                },
+                "experience": {
+                    "count": "3",
+                    "0": {
+                        "name": "Name",
+                        "institution": "Institution",
+                        "url": "https://wendellavila.github.io",
+                        "years": "2024",
+                        "description": "Description"
+                    },
+                    "1": {
+                        "name": "Name",
+                        "institution": "Institution",
+                        "url": "https://wendellavila.github.io",
+                        "years": "2024",
+                        "description": "Description"
+                    },
+                    "2": {
+                        "name": "Name",
+                        "institution": "Institution",
+                        "url": "https://wendellavila.github.io",
+                        "years": "2024",
+                        "description": "Description"
+                    }
+                },
+                "courses": {
+                    "count": "4",
+                    "0": {
+                        "name": "Name",
+                        "institution": "Institution",
+                        "url": "https://wendellavila.github.io",
+                        "years": "2024",
+                        "description": "Description"
+                    },
+                    "1": {
+                        "name": "Name",
+                        "institution": "Institution",
+                        "url": "https://wendellavila.github.io",
+                        "years": "2024",
+                        "description": "Description"
+                    },
+                    "2": {
+                        "name": "Name",
+                        "institution": "Institution",
+                        "url": "https://wendellavila.github.io",
+                        "years": "2024",
+                        "description": "Description"
+                    },
+                    "3": {
+                        "name": "Name",
+                        "institution": "Institution",
+                        "url": "https://wendellavila.github.io",
+                        "years": "2024",
+                        "description": "Description"
+                    }
+                },
+                "publications": {
+                    "count": "1",
+                    "0": {
+                        "name": "Name",
+                        "institution": "Institution",
+                        "url": "https://wendellavila.github.io",
+                        "years": "2024",
+                        "description": "Description"
+                    }
+                }
             }
         },
         "skills": {
             "title": "Habilidades",
-            "items": []
+            "items": {}
         },
         "projects": {
             "title": "Projetos",
-            "items": []
+            "items": {}
         },
         "footer": {
             "madeWith": "Feito com",
