@@ -1,4 +1,4 @@
-interface CvItemProps {
+interface Props {
   title: string;
   institution: string;
   titleUrl?: string;
@@ -8,7 +8,7 @@ interface CvItemProps {
   urlTarget?: 'name' | 'institution';
 }
 
-export function CvItem(props: CvItemProps) {
+export function CvItem(props: Props) {
   const { title, institution, description, titleUrl, institutionUrl, years } =
     props;
   const descriptionLines = (description ?? '').split('\n');

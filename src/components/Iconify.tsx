@@ -1,13 +1,11 @@
 'use client';
-import { Icon, IconProps } from '@iconify/react';
+import { Icon, IconProps as Props } from '@iconify/react';
 
 /**
  * Client wrapper for using Iconify icons inside server components.
- * @param {IconProps} props 
+ * @param {Props} props
  * @returns Iconify Icon Component
  */
-export function Iconify(props: IconProps) {
-  return (
-    <Icon {...props} />
-  );
+export function Iconify(props: Props) {
+  return <Icon {...props} />;
 }

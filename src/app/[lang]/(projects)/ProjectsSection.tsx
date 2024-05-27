@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 
 import { VerticalNav } from '@/components/VerticalNav';
 import { SectionProps } from '@/typing/props';
-import { SectionTitle } from '@/components/SectionTitle';
+import { SectionHeader } from '@/components/SectionHeader';
 import { ProjectItem } from './ProjectItem';
 
 export function ProjectsSection(props: SectionProps) {
@@ -19,9 +19,9 @@ export function ProjectsSection(props: SectionProps) {
       className="min-h-screen flex flex-row bg-white"
     >
       <div className="grow pt-2 pb-6 pl-4">
-        <SectionTitle decorationClassName="bg-silver">
+        <SectionHeader decorationClassName="bg-silver">
           {i18n('title').toLocaleUpperCase()}
-        </SectionTitle>
+        </SectionHeader>
         <div className="flex flex-row flex-wrap gap-8 justify-center px-8">
           {[...Array(count)].map((_, index) => (
             <ProjectItem

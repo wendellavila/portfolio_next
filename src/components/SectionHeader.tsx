@@ -5,7 +5,7 @@ interface Props {
   decorationClassName?: string;
 }
 
-export function SectionTitle(props: Props) {
+export function SectionHeader(props: Props) {
   const { children, className, component, decorationClassName } = props;
 
   const TextComponent = component ?? 'h2';

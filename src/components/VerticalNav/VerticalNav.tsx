@@ -12,7 +12,7 @@ import { VerticalNavLine } from './VerticalNavLine';
 
 import { VerticalNavLanguageLink } from './VerticalNavLanguageLink';
 
-interface VerticalNavProps
+interface Props
   extends ComponentProps,
     ColorProps,
     NavigationProps,
@@ -23,7 +23,7 @@ interface VerticalNavProps
   languageSelector?: boolean;
 }
 
-export function VerticalNav(props: VerticalNavProps) {
+export function VerticalNav(props: Props) {
   const {
     className,
     color,

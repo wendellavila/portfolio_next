@@ -3,7 +3,7 @@ import { SectionProps } from '@/typing/props';
 import { VerticalNav } from '@/components/VerticalNav';
 import { Avatar } from './Avatar';
 import { useTranslations } from 'next-intl';
-import { SectionTitle } from '@/components/SectionTitle';
+import { SectionHeader } from '@/components/SectionHeader';
 import { LinkList } from './LinkList';
 
 export function AboutSection(props: SectionProps) {
@@ -24,12 +24,12 @@ export function AboutSection(props: SectionProps) {
         backgroundColor="cream"
       />
       <div className="grow flex flex-col pt-2 pb-6">
-        <SectionTitle
+        <SectionHeader
           decorationClassName="bg-blueprint"
           className="ml-6 md:ml-0"
         >
           {i18n('title')}
-        </SectionTitle>
+        </SectionHeader>
         <div
           className={`flex items-center gap-8 grow 
           md:flex-row md:justify-evenly

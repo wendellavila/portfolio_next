@@ -1,11 +1,11 @@
 import { Iconify } from '@/components/Iconify';
 import { ComponentProps } from '@/typing/props';
 
-interface LoadingScreenProps extends ComponentProps {
+interface Props extends ComponentProps {
   imageSrc?: string;
 }
 
-export function LoadingScreen(props: LoadingScreenProps) {
+export function LoadingScreen(props: Props) {
   const { className, id } = props;
   return (
     <section

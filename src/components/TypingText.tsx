@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { ComponentProps } from '@/typing/props';
 
-interface TypingTextProps extends ComponentProps {
+interface Props extends ComponentProps {
   component?: TextComponent;
   ariaLabel?: string;
   children: string;
@@ -15,7 +15,7 @@ type TextComponent = 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
  * @param {string} props.component The html tag used for the component.
  * @param {string} props.ariaLabel Text used for screen readers.
  */
-export function TypingText(props: TypingTextProps) {
+export function TypingText(props: Props) {
   const { ariaLabel, children, className, component } = props;
   const caret = 'ꕯ';
   const ComponentWrapper = component ?? 'span';

@@ -1,7 +1,7 @@
 import { getRandomInt } from '@/utils/functions';
 import { ComponentProps } from '@/typing/props';
 
-interface StarProps extends ComponentProps {
+interface Props extends ComponentProps {
   size?: number;
   top?: number;
   left?: number;
@@ -9,7 +9,7 @@ interface StarProps extends ComponentProps {
   animationDuration?: 'slow' | 'medium' | 'fast' | 'random';
 }
 
-export function Star(props: StarProps) {
+export function Star(props: Props) {
   const { size, top, left } = props;
   const random = Math.random();
   let animationClassName = '';
