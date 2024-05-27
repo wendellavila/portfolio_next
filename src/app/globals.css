@@ -6,6 +6,10 @@ body {
   @apply text-black bg-white m-0 box-border;
 }
 
+::selection {
+  @apply bg-silver/25;
+}
+
 /* Prettier browser scrollbars */
 ::-webkit-scrollbar-track {
   background-color: transparent;
