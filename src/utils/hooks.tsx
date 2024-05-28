@@ -1,14 +1,42 @@
-import { MutableRefObject, useEffect, useState } from 'react';
+import { RefObject, useEffect, useRef, useState } from 'react';
+
+/**
+ * A hook that detects if the provided DOM node is currently in view.
+ * @param {RefObject<HTMLElement | null>} ref - A reference to a DOM node.
+ * @returns {boolean} The visibility status of the provided ref.
+ */
+export function useInView(ref: RefObject<HTMLElement | null>) {
+  const [inView, setVisibility] = useState(false);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(([entry]) =>
+      setVisibility(entry.isIntersecting)
+    );
+  }, []);
+
+  useEffect(() => {
+    if (observerRef && observerRef.current && ref.current)
+      observerRef.current.observe(ref.current);
+    return () => {
+      if (observerRef && observerRef.current) observerRef.current.disconnect();
+    };
+  }, [ref]);
+  return inView;
+}
 
 /**
  * A hook that returns the current width and height of a DOM node.
- * @param {MutableRefObject<HTMLElement | null>} ref - A reference to a DOM node.
+ * @param {RefObject<HTMLElement | null>} ref - A reference to a DOM node.
  * @param {number} threshold - The minimum difference in height or width (in pixels) to trigger an update.
  * This is used to avoid multiple rerenders while the window is still being resized. Defaults to 0px.
  * @returns {[number, number]} An array containing the current width in the first position and the current
  * height in the second position.
  */
-export function useRefDimensions(ref: MutableRefObject<HTMLElement | null>, threshold = 0) {
+export function useRefDimensions(
+  ref: RefObject<HTMLElement | null>,
+  threshold = 0
+) {
   const [refDimensions, setRefDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
@@ -20,8 +48,10 @@ export function useRefDimensions(ref: MutableRefObject<HTMLElement | null>, thre
         height: ref.current ? ref.current.offsetHeight : refDimensions.height,
       };
 
-      const widthChanged = Math.abs(refDimensions.width - newDimensions.width) > threshold;
-      const heightChanged = Math.abs(refDimensions.height - newDimensions.height) > threshold;
+      const widthChanged =
+        Math.abs(refDimensions.width - newDimensions.width) > threshold;
+      const heightChanged =
+        Math.abs(refDimensions.height - newDimensions.height) > threshold;
       if (widthChanged || heightChanged) {
         setRefDimensions(newDimensions);
       }
@@ -41,8 +71,10 @@ export function useRefDimensions(ref: MutableRefObject<HTMLElement | null>, thre
  * height in the second position.
  */
 export function useScreenDimensions(threshold = 0) {
-  const [screenDimensions, setScreenDimensions] = useState({ width: 0, height: 0 });
-
+  const [screenDimensions, setScreenDimensions] = useState({
+    width: 0,
+    height: 0,
+  });
 
   function getDimensions() {
     const hasWindow = typeof window !== 'undefined';
@@ -54,8 +86,10 @@ export function useScreenDimensions(threshold = 0) {
 
   function updateDimensions() {
     const newDimensions = getDimensions();
-    const widthChanged = Math.abs(screenDimensions.width - newDimensions.width) > threshold;
-    const heightChanged = Math.abs(screenDimensions.height - newDimensions.height) > threshold;
+    const widthChanged =
+      Math.abs(screenDimensions.width - newDimensions.width) > threshold;
+    const heightChanged =
+      Math.abs(screenDimensions.height - newDimensions.height) > threshold;
     if (widthChanged || heightChanged) {
       setScreenDimensions(newDimensions);
     }
