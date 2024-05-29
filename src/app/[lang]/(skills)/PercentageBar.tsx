@@ -22,7 +22,7 @@ export function PercentageBar(props: Props) {
 
   // Using square root function to reduce acceleration
   // when percentage gets closer to 100%
-  const animationTimeFunction = (x: number) => 1.2 * Math.sqrt(x);
+  const animationTimeFunction = (x: number) => 0.7 * Math.sqrt(x);
 
   useEffect(() => {
     if (animate) {
@@ -36,9 +36,7 @@ export function PercentageBar(props: Props) {
 
   return (
     <div className="flex flex-row gap-4 items-center flex-nowrap">
-      <div className="whitespace-nowrap w-1/3" aria-label={`${children}:`}>
-        {children}
-      </div>
+      <div className="w-1/3 flex flex-row items-center gap-2">{children}</div>
       <div
         aria-label={`${maxPercentage}%`}
         className="bg-slate-50/20 h-3 w-full"

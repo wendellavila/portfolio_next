@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { NavigationItem } from '@/typing/types';
 import { BannerSection } from './(banner)/BannerSection';
 import { AboutSection } from './(about)/AboutSection';
-import { ExperienceSection } from './(experience)/ExperienceSection';
+import { CvSection } from './(cv)/CvSection';
 import { SkillsSection } from './(skills)/SkillsSection';
 import { ProjectsSection } from './(projects)/ProjectsSection';
 import { Footer } from './(footer)/Footer';
@@ -31,8 +31,8 @@ export default function MainPage() {
       ref: aboutRef,
     },
     {
-      id: 'education-experience',
-      text: i18n('educationExperience.title'),
+      id: 'cv',
+      text: i18n('cv.title'),
       ref: experienceRef,
     },
     {
@@ -51,7 +51,7 @@ export default function MainPage() {
     <div className="flex flex-col min-h-screen">
       <BannerSection componentRef={bannerRef} items={linkItems} />
       <AboutSection componentRef={aboutRef} items={linkItems} />
-      <ExperienceSection componentRef={experienceRef} items={linkItems} />
+      <CvSection componentRef={experienceRef} items={linkItems} />
       <SkillsSection componentRef={skillsRef} items={linkItems} />
       <ProjectsSection componentRef={projectsRef} items={linkItems} />
       <Footer />

@@ -2,11 +2,13 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
+import { skillsData } from '@/utils/constants';
 import { SectionHeader } from '@/components/SectionHeader';
 import { VerticalNav } from '@/components/VerticalNav';
 import { SectionProps } from '@/typing/props';
 import { PercentageBar } from './PercentageBar';
 import { useInView } from '@/utils/hooks';
+import { Iconify } from '@/components/Iconify';
 
 export function SkillsSection(props: SectionProps) {
   const { componentRef, items } = props;
@@ -39,52 +41,25 @@ export function SkillsSection(props: SectionProps) {
           className="grow flex flex-col
            items-center justify-center"
         >
-          <div className="w-full max-w-[800px] mb-12">
-            <h3 className="font-semibold mb-2">Subtitle</h3>
-            <PercentageBar percentage={80} animate={animate}>
-              Test 1
-            </PercentageBar>
-            <PercentageBar percentage={70} animate={animate}>
-              Test test test
-            </PercentageBar>
-            <PercentageBar percentage={50} animate={animate}>
-              Test
-            </PercentageBar>
-            <PercentageBar percentage={20} animate={animate}>
-              Test
-            </PercentageBar>
-          </div>
-          <div className="w-full max-w-[800px] mb-12">
-            <h3 className="font-semibold mb-2">Subtitle</h3>
+          {skillsData.map(category => (
+            <div
+              key={`skills-${category.id}`}
+              className="w-full max-w-[800px] mb-12"
+            >
+              <h3 className="font-semibold mb-2">{i18n(category.id)}</h3>
 
-            <PercentageBar percentage={90} animate={animate}>
-              Test 1
-            </PercentageBar>
-            <PercentageBar percentage={80} animate={animate}>
-              Test test test
-            </PercentageBar>
-            <PercentageBar percentage={65} animate={animate}>
-              Test
-            </PercentageBar>
-            <PercentageBar percentage={30} animate={animate}>
-              Test
-            </PercentageBar>
-          </div>
-          <div className="w-full max-w-[800px] mb-12">
-            <h3 className="font-semibold mb-2">Subtitle</h3>
-            <PercentageBar percentage={80} animate={animate}>
-              Test 1
-            </PercentageBar>
-            <PercentageBar percentage={70} animate={animate}>
-              Test test test
-            </PercentageBar>
-            <PercentageBar percentage={50} animate={animate}>
-              Test
-            </PercentageBar>
-            <PercentageBar percentage={20} animate={animate}>
-              Test
-            </PercentageBar>
-          </div>
+              {category.data.map(skillItem => (
+                <PercentageBar
+                  key={`skills-${category.id}-${skillItem.title}`}
+                  percentage={skillItem.percentage}
+                  animate={animate}
+                >
+                  <Iconify icon={skillItem.icon} aria-hidden />
+                  {skillItem.title}
+                </PercentageBar>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </section>

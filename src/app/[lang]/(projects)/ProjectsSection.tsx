@@ -1,6 +1,7 @@
 'use client';
 import { useTranslations } from 'next-intl';
 
+import { projectData } from '@/utils/constants';
 import { VerticalNav } from '@/components/VerticalNav';
 import { SectionProps } from '@/typing/props';
 import { SectionHeader } from '@/components/SectionHeader';
@@ -8,9 +9,7 @@ import { ProjectItem } from './ProjectItem';
 
 export function ProjectsSection(props: SectionProps) {
   const { componentRef, items } = props;
-
   const i18n = useTranslations('sections.projects');
-  const count = parseInt(i18n('count')) || 0;
 
   return (
     <section
@@ -23,13 +22,13 @@ export function ProjectsSection(props: SectionProps) {
           {i18n('title').toLocaleUpperCase()}
         </SectionHeader>
         <div className="flex flex-row flex-wrap gap-8 justify-center px-8">
-          {[...Array(count)].map((_, index) => (
+          {projectData.map(project => (
             <ProjectItem
-              key={`project-item-${index}`}
-              title={i18n(`${index}.title`)}
-              image={i18n(`${index}.image`)}
-              url={i18n(`${index}.url`)}
-              description={i18n(`${index}.description`) ?? undefined}
+              key={`project-item-${project.id}`}
+              title={project.title}
+              image={project.image}
+              url={project.url}
+              description={i18n(`${project.id}.description`) ?? undefined}
             />
           ))}
         </div>

@@ -15,140 +15,78 @@
             "title": "Title",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci turpis, posuere a metus at, consectetur rutrum lacus. Praesent feugiat egestas lectus, eu feugiat leo facilisis vitae. Vestibulum feugiat neque a diam tincidunt pretium. Donec condimentum ornare posuere. Integer tempus orci id efficitur imperdiet. Vivamus aliquet tristique nisl, sed viverra augue pulvinar vel. Aenean ornare blandit nisi imperdiet fermentum. Duis gravida erat porttitor justo tempus tristique. In lectus ipsum, fermentum a porttitor.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci turpis, posuere a metus at, consectetur rutrum lacus. Praesent feugiat egestas lectus, eu feugiat leo facilisis vitae. Vestibulum feugiat neque a diam tincidunt pretium. Donec condimentum ornare posuere. Integer tempus orci id efficitur imperdiet.\nVivamus aliquet tristique nisl, sed viverra augue pulvinar vel. Aenean ornare blandit nisi imperdiet fermentum. Duis gravida erat porttitor justo tempus tristique. In lectus ipsum, fermentum a porttitor vitae, consectetur vel nibh."
         },
-        "educationExperience": {
+        "cv": {
+            "title": "CV"
+        },
+        "education": {
             "title": "Title",
-            "education": {
+            "unifal": {
                 "title": "Title",
-                "count": "1",
-                "0": {
-                    "title": "Title",
-                    "institution": "Institution",
-                    "titleUrl": "",
-                    "institutionUrl": "https://wendellavila.github.io",
-                    "years": "2024",
-                    "description": "Description\nDescription"
-                }
+                "institution": "Institution",
+                "years": "2024",
+                "description": "Description\nDescription"
+            }
+        },
+        "experience": {
+            "title": "Title",
+            "exportadora": {
+                "title": "Title",
+                "years": "2024",
+                "description": "Description"
             },
-            "experience": {
+            "progepe": {
                 "title": "Title",
-                "count": "3",
-                "0": {
-                    "title": "Title",
-                    "institution": "Institution",
-                    "titleUrl": "",
-                    "institutionUrl": "https://wendellavila.github.io",
-                    "years": "2024",
-                    "description": "Description"
-                },
-                "1": {
-                    "title": "Title",
-                    "institution": "Institution",
-                    "titleUrl": "",
-                    "institutionUrl": "https://wendellavila.github.io",
-                    "years": "2024",
-                    "description": "Description"
-                },
-                "2": {
-                    "title": "Title",
-                    "institution": "Institution",
-                    "titleUrl": "",
-                    "institutionUrl": "https://wendellavila.github.io",
-                    "years": "2024",
-                    "description": "Description"
-                }
+                "years": "2024",
+                "description": "Description"
             },
-            "courses": {
+            "tribit": {
                 "title": "Title",
-                "count": "4",
-                "0": {
-                    "title": "Title",
-                    "institution": "Institution",
-                    "titleUrl": "https://wendellavila.github.io",
-                    "institutionUrl": "",
-                    "years": "2024",
-                    "description": "Description"
-                },
-                "1": {
-                    "title": "Title",
-                    "institution": "Institution",
-                    "titleUrl": "https://wendellavila.github.io",
-                    "institutionUrl": "",
-                    "years": "2024",
-                    "description": "Description"
-                },
-                "2": {
-                    "title": "Title",
-                    "institution": "Institution",
-                    "titleUrl": "https://wendellavila.github.io",
-                    "institutionUrl": "",
-                    "years": "2024",
-                    "description": "Description"
-                },
-                "3": {
-                    "title": "Title",
-                    "institution": "Institution",
-                    "titleUrl": "https://wendellavila.github.io",
-                    "institutionUrl": "",
-                    "years": "2024",
-                    "description": "Description"
-                }
+                "years": "2024",
+                "description": "Description"
+            }
+        },
+        "courses": {
+            "title": "Title",
+            "python": {
+                "title": "Title",
+                "description": "Description"
             },
-            "publications": {
+            "r": {
                 "title": "Title",
-                "count": "1",
-                "0": {
-                    "title": "Title",
-                    "institution": "Institution",
-                    "titleUrl": "https://wendellavila.github.io",
-                    "institutionUrl": "https://wendellavila.github.io",
-                    "years": "2024",
-                    "description": "Description"
-                }
+                "description": "Description"
+            },
+            "java": {
+                "title": "Title",
+                "description": "Description"
+            },
+            "machineLearning": {
+                "title": "Title",
+                "description": "Description"
+            }
+        },
+        "publications": {
+            "title": "Title",
+            "l&nlm": {
+                "title": "Title",
+                "institution": "Institution",
+                "titleUrl": "https://wendellavila.github.io",
+                "institutionUrl": "https://wendellavila.github.io",
+                "years": "2024"
             }
         },
         "skills": {
             "title": "Title",
-            "items": {}
+            "programmingLanguages": "Programming Languages",
+            "frameworks": "Frameworks, Technologies, etc.",
+            "machineLearning": "Machine Learning",
+            "other": "Other"
         },
         "projects": {
             "title": "Title",
             "screenshot": "Screenshot",
-            "count": "6",
-            "0": {
+            "testProject": {
                 "title": "Title",
-                "image": "profile.png",
-                "url": "https://wendellavila.github.io",
                 "description": "Description"
-            },
-            "1": {
-                "title": "Title",
-                "image": "profile.png",
-                "url": "https://wendellavila.github.io",
-                "description": ""
-            },
-            "2": {
-                "title": "Title",
-                "image": "profile.png",
-                "url": "https://wendellavila.github.io",
-                "description": ""
-            },
-            "3": {
-                "title": "Title",
-                "image": "profile.png",
-                "url": "https://wendellavila.github.io",
-                "description": ""
-            },
-            "4": {
-                "title": "Title",
-                "image": "profile.png",
-                "url": "https://wendellavila.github.io",
-                "description": ""
-            },
-            "5": {
-                "title": "Title",
-                "image": "profile.png",
-                "url": "https://wendellavila.github.io",
-                "description": ""
             }
         },
         "footer": {
