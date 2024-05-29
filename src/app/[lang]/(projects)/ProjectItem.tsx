@@ -22,17 +22,17 @@ export function ProjectItem(props: Props) {
         group flex flex-col items-center gap-4"
         href={url}
       >
-        <div className="bg-cream z-10 flex justify-center rotate-3 group-hover:scale-[1.02]">
+        <div className="bg-cream flex justify-center rotate-3 transition duration-200 group-hover:scale-[1.02]">
           <div
             aria-hidden
-            className="absolute z-0 bg-blueprint w-full h-full -rotate-3"
+            className="absolute bg-blueprint w-full h-full -rotate-3"
           ></div>
           <Image
             src={`/${image}`}
             width={200}
             height={200}
             alt={`${title} - ${i18n('screenshot')}`}
-            className="w-[300px] h-[200px] m-4 bg-white shadow-md border-8 z-10
+            className="w-[300px] h-[200px] m-4 bg-white shadow-md border-8
             border-white -rotate-3"
           />
         </div>
