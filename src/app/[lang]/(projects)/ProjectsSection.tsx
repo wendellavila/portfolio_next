@@ -1,4 +1,5 @@
 'use client';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { projectData } from '@/utils/constants';
@@ -7,9 +8,19 @@ import { SectionProps } from '@/typing/props';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ProjectItem } from './ProjectItem';
 
+import { useInView } from '@/utils/hooks';
+
 export function ProjectsSection(props: SectionProps) {
   const { componentRef, items } = props;
+
   const i18n = useTranslations('sections.projects');
+  const inView = useInView(componentRef);
+  const [animate, setAnimate] = useState(false);
+
+  // Animate on first view
+  useEffect(() => {
+    if (inView && !animate) setAnimate(true);
+  }, [inView]);
 
   return (
     <section
@@ -29,6 +40,7 @@ export function ProjectsSection(props: SectionProps) {
               image={project.image}
               url={project.url}
               description={i18n(`${project.id}.description`) ?? undefined}
+              className={animate ? 'visible' : 'hidden'}
             />
           ))}
         </div>

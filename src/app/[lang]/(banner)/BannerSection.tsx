@@ -1,25 +1,30 @@
 'use client';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-import { Iconify } from '@/components/Iconify';
 import { TypingText } from '@/components/TypingText';
 import { VerticalNav } from '@/components/VerticalNav';
 import { StarrySky } from './StarrySky';
 
-import {
-  email,
-  githubUrl,
-  linkedinUrl,
-  montserrat,
-  projectTitle,
-} from '@/utils/constants';
+import { montserrat, projectTitle } from '@/utils/constants';
 import { SectionProps } from '@/typing/props';
+import { IconLinkList } from './IconLinkList';
+
+import { useInView } from '@/utils/hooks';
 
 export function BannerSection(props: SectionProps) {
   const { componentRef, items } = props;
   const i18n = useTranslations('sections.banner');
   const subtitle = i18n('subtitle');
   const stylizedSubtitle = `__${subtitle.replaceAll(' ', '_')}__`;
+
+  const inView = useInView(componentRef);
+  const [animate, setAnimate] = useState(false);
+
+  // Animate on first view
+  useEffect(() => {
+    if (inView && !animate) setAnimate(true);
+  }, [inView]);
 
   return (
     <section
@@ -41,40 +46,11 @@ export function BannerSection(props: SectionProps) {
         <TypingText
           ariaLabel={subtitle}
           className={`text-3xl mb-4 ${montserrat.className} break-all`}
+          animate={animate}
         >
           {stylizedSubtitle}
         </TypingText>
-        <div className="flex flex-row gap-3 mt-4">
-          <a href={linkedinUrl} target="_blank" aria-label="LinkedIn">
-            <Iconify
-              aria-label="LinkedIn Logo"
-              icon="mdi:linkedin"
-              width={45}
-              className={`text-white opacity-80
-              hover:cursor-pointer hover:opacity-100 hover:scale-105`}
-            />
-          </a>
-          <a href={githubUrl} target="_blank" aria-label="GitHub">
-            <Iconify
-              icon="mdi:github"
-              width={45}
-              className={`text-white opacity-80
-              hover:cursor-pointer hover:opacity-100 hover:scale-105`}
-            />
-          </a>
-          <a
-            href={`mailto:${email}`}
-            target="_blank"
-            aria-label={i18n('email')}
-          >
-            <Iconify
-              icon="basil:gmail-solid"
-              width={45}
-              className={`text-white opacity-80
-              hover:cursor-pointer hover:opacity-100 hover:scale-105`}
-            />
-          </a>
-        </div>
+        <IconLinkList className={animate ? 'visible' : 'hidden'} />
       </div>
       <VerticalNav
         gap={true}

@@ -2,12 +2,12 @@ import { ComponentProps } from '@/typing/props';
 import { useEffect, useState } from 'react';
 
 interface Props extends ComponentProps {
+  animate: boolean;
   percentage: number;
-  animate?: boolean;
 }
 
 export function PercentageBar(props: Props) {
-  const { animate, children } = props;
+  const { animate, className, children } = props;
 
   let maxPercentage = Math.round(props.percentage);
   if (maxPercentage < 0) maxPercentage = 0;
@@ -22,7 +22,7 @@ export function PercentageBar(props: Props) {
 
   // Using square root function to reduce acceleration
   // when percentage gets closer to 100%
-  const animationTimeFunction = (x: number) => 0.7 * Math.sqrt(x);
+  const animationTimeFunction = (x: number) => Math.sqrt(x);
 
   useEffect(() => {
     if (animate) {
@@ -32,10 +32,14 @@ export function PercentageBar(props: Props) {
       );
       return () => clearTimeout(timeoutId);
     }
-  }, [percentage, animate]);
+  }, [animate, percentage]);
 
   return (
-    <div className="flex flex-row gap-4 items-center flex-nowrap">
+    <div
+      className={`flex flex-row gap-4 items-center flex-nowrap ${
+        className ?? ''
+      }`}
+    >
       <div className="w-1/3 flex flex-row items-center gap-2">{children}</div>
       <div
         aria-label={`${maxPercentage}%`}

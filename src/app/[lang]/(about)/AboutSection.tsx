@@ -5,10 +5,20 @@ import { Avatar } from './Avatar';
 import { useTranslations } from 'next-intl';
 import { SectionHeader } from '@/components/SectionHeader';
 import { LinkList } from './LinkList';
+import { useEffect, useState } from 'react';
+import { useInView } from '@/utils/hooks';
 
 export function AboutSection(props: SectionProps) {
   const { componentRef, items } = props;
   const i18n = useTranslations('sections.about');
+
+  const [animate, setAnimate] = useState(false);
+  const inView = useInView(componentRef);
+
+  // Animate on first view
+  useEffect(() => {
+    if (inView && !animate) setAnimate(true);
+  }, [inView]);
 
   return (
     <section
@@ -35,12 +45,16 @@ export function AboutSection(props: SectionProps) {
           md:flex-row md:justify-evenly
           flex-col`}
         >
-          <div className="flex flex-col items-center px-4">
+          <div
+            className={`flex flex-col items-center px-4 animate-fade-right ${
+              animate ? 'visible' : 'hidden'
+            }`}
+          >
             <Avatar className="mb-4" src="/profile.png" size={200} alt="WA" />
             <LinkList />
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <article className="md:px-12 px-6 max-w-[1200px]">
+          <div className={` ${animate ? 'visible' : 'hidden'}`}>
+            <article className="md:px-12 px-6 max-w-[1200px] animate-fade-left">
               {i18n('content')
                 .split('\n')
                 .map((line, index) => (

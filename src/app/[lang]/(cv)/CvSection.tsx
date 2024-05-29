@@ -1,11 +1,21 @@
 'use client';
+import { useEffect, useState } from 'react';
 
 import { SectionProps } from '@/typing/props';
 import { VerticalNav } from '@/components/VerticalNav';
 import { CvSubSection } from './CvSubSection';
+import { useInView } from '@/utils/hooks';
 
 export function CvSection(props: SectionProps) {
   const { componentRef, items } = props;
+
+  const inView = useInView(componentRef);
+  const [animate, setAnimate] = useState(false);
+
+  // Animate on first view
+  useEffect(() => {
+    if (inView && !animate) setAnimate(true);
+  }, [inView]);
 
   return (
     <section
@@ -14,16 +24,25 @@ export function CvSection(props: SectionProps) {
       className="min-h-screen flex flex-row bg-white"
     >
       <div
-        className="grow pt-2 pb-6 px-6 md:pl-12 md:pr-0
-        inline-grid gap-x-24 lg:grid-cols-2"
+        className={`grow pt-2 pb-6 px-6 md:pl-12 md:pr-0
+        inline-grid gap-x-24 lg:grid-cols-2 ${animate ? 'visible' : 'hidden'}`}
       >
-        <CvSubSection subsection="education" className="order-1" />
-        <CvSubSection subsection="experience" className="order-2 lg:order-3" />
+        <CvSubSection
+          subsection="education"
+          className="order-1 animate-fade-right"
+        />
+        <CvSubSection
+          subsection="experience"
+          className="order-2 lg:order-3 animate-fade-left"
+        />
         <CvSubSection
           subsection="publications"
-          className="order-3 lg:order-2"
+          className="order-3 lg:order-2 animate-fade-right"
         />
-        <CvSubSection subsection="courses" className="order-4 lg:order-4" />
+        <CvSubSection
+          subsection="courses"
+          className="order-4 lg:order-4 animate-fade-left"
+        />
       </div>
       <VerticalNav
         items={items}

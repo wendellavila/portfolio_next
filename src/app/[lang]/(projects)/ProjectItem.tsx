@@ -1,27 +1,28 @@
+import { ComponentProps } from '@/typing/props';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-interface ProjectItemProps {
+interface Props extends ComponentProps {
   title: string;
   image: string;
   url: string;
   description?: string;
 }
 
-export function ProjectItem(props: ProjectItemProps) {
-  const { title, image, url, description } = props;
+export function ProjectItem(props: Props) {
+  const { className, title, image, url, description } = props;
   const i18n = useTranslations('sections.projects');
   return (
     <article
-      className="relative flex flex-col items-center
-       text-center mb-2"
+      className={`relative flex flex-col items-center
+      text-center mb-2 animate-fade-down ${className ?? ''}`}
     >
       <a
         className="z-10 hover:cursor-pointer hover:underline
-        flex flex-col items-center gap-4"
+        group flex flex-col items-center gap-4"
         href={url}
       >
-        <div className="bg-cream z-10 flex justify-center rotate-3">
+        <div className="bg-cream z-10 flex justify-center rotate-3 group-hover:scale-[1.02]">
           <div
             aria-hidden
             className="absolute z-0 bg-blueprint w-full h-full -rotate-3"

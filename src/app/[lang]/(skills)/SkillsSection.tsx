@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { skillsData } from '@/utils/constants';
@@ -14,11 +14,13 @@ export function SkillsSection(props: SectionProps) {
   const { componentRef, items } = props;
 
   const i18n = useTranslations('sections.skills');
-  const isInView = useInView(componentRef);
+  const inView = useInView(componentRef);
   const [animate, setAnimate] = useState(false);
 
-  // Animate progress bars on first view
-  if (isInView && !animate) setAnimate(true);
+  // Animate on first view
+  useEffect(() => {
+    if (inView && !animate) setAnimate(true);
+  }, [inView]);
 
   return (
     <section
