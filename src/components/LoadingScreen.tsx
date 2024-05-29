@@ -15,14 +15,12 @@ export function LoadingScreen(props: Props) {
 			bg-blueprint text-white ${className ?? ''}
 			`}
     >
-      <div className="grow-[2]"></div>
       <span className="text-xl hyphens-manual">Loading</span>
       <Iconify
         icon="svg-spinners:3-dots-fade"
         width={40}
         className="text-white"
       />
-      <div className="grow-[3]"></div>
     </section>
   );
 }
