@@ -28,11 +28,11 @@ export function ProjectsSection(props: SectionProps) {
       id="projects"
       className="min-h-screen flex flex-row bg-white"
     >
-      <div className="grow pt-2 pb-6 px-6 md:pl-12">
+      <div className="grow pt-2 pb-16 px-6 md:pl-12 flex flex-col">
         <SectionHeader decorationClassName="bg-silver">
           {i18n('title').toLocaleUpperCase()}
         </SectionHeader>
-        <div className="flex flex-row flex-wrap gap-8 justify-center px-8">
+        <div className="grow flex flex-row flex-wrap gap-8 justify-center items-center px-8">
           {projectData.map(project => (
             <ProjectItem
               key={`project-item-${project.id}`}

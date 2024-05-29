@@ -33,7 +33,7 @@ export function AboutSection(props: SectionProps) {
         textColor="coffee"
         backgroundColor="cream"
       />
-      <div className="grow flex flex-col pt-2 pb-6">
+      <div className="grow flex flex-col pt-2 pb-10">
         <SectionHeader
           decorationClassName="bg-blueprint"
           className="ml-6 md:ml-0"
@@ -59,7 +59,7 @@ export function AboutSection(props: SectionProps) {
                 .split('\n')
                 .map((line, index) => (
                   <p
-                    className="text-md mb-4 text-justify"
+                    className="text-md pb-4 text-justify"
                     key={`about-paragraph-${index + 1}`}
                   >
                     {line}

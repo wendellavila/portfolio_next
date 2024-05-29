@@ -21,11 +21,13 @@ export function CvSection(props: SectionProps) {
     <section
       ref={componentRef}
       id="education-experience"
-      className="min-h-screen flex flex-row bg-white"
+      className="min-h-screen flex flex-row bg-white items-center"
     >
       <div
-        className={`grow pt-2 pb-6 px-6 md:pl-12 md:pr-0
-        inline-grid gap-x-24 lg:grid-cols-2 ${animate ? 'visible' : 'hidden'}`}
+        className={`grow pt-2 pb-10 px-6 md:pl-12 md:pr-0 ${
+          animate ? 'visible' : 'hidden'
+        }
+        inline-grid gap-24 lg:grid-cols-2`}
       >
         <CvSubSection
           subsection="education"
