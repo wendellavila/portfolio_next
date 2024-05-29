@@ -15,8 +15,8 @@ export function CvSubSection(props: Props) {
   const subsectionData = subsectionInfo.data;
 
   return (
-    <section className="flex flex-col items-center">
-      <div className={`max-w-[800px] w-full ${className ?? ''}`}>
+    <section className={`flex flex-col items-center ${className ?? ''}`}>
+      <div className={`max-w-[800px] w-full`}>
         <SectionHeader decorationClassName="bg-silver">
           {i18n('title').toLocaleUpperCase()}
         </SectionHeader>

@@ -27,7 +27,7 @@ export function CvSection(props: SectionProps) {
         className={`grow pt-2 pb-10 px-6 md:pl-12 md:pr-0 ${
           animate ? 'visible' : 'hidden'
         }
-        inline-grid gap-24 lg:grid-cols-2 items-center`}
+        inline-grid gap-24 lg:grid-cols-2`}
       >
         <CvSubSection
           subsection="education"
@@ -43,7 +43,7 @@ export function CvSection(props: SectionProps) {
         />
         <CvSubSection
           subsection="courses"
-          className="order-4 lg:order-4 animate-fade-left"
+          className="order-4 animate-fade-left"
         />
       </div>
       <VerticalNav
