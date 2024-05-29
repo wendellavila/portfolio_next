@@ -27,11 +27,11 @@ export function LinkList() {
           key={item.url}
           href={item.url}
           target="_blank"
-          className={`flex items-center justify-center gap-1 text-sm hover:underline py-0.5 ${
+          className={`flex items-center justify-center gap-1 text-sm hover:underline py-0.5 animate-fade ${
             index % 2 == 0 ? 'animate-fade-right' : 'animate-fade-left'
           }`}
         >
-          <Iconify icon={item.icon} width={18} className="" />
+          <Iconify icon={item.icon} width={18} />
           {item.text ?? item.url}
         </a>
       ))}

@@ -44,9 +44,9 @@ export function IconLinkList(props: ComponentProps) {
             aria-label="LinkedIn Logo"
             icon={item.icon}
             width={45}
-            className={`text-white opacity-80 animate-fade ${item.animationDuration}
-            hover:cursor-pointer hover:opacity-100
-            hover:scale-105`}
+            className={`text-white/85 transition duration-75
+            hover:cursor-pointer hover:text-white hover:scale-105
+            animate-fade ${item.animationDuration}`}
           />
         </a>
       ))}
