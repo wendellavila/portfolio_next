@@ -1,5 +1,6 @@
 import { ComponentProps } from '@/typing/props';
 import { useEffect, useState } from 'react';
+import { setInterval } from 'timers/promises';
 
 interface Props extends ComponentProps {
   animate: boolean;
@@ -18,18 +19,18 @@ export function PercentageBar(props: Props) {
   useEffect(() => {
     const handleIncrease = () => {
       if (percentage < maxPercentage)
-        setPercentage(percentage => percentage + 0.5);
+        setPercentage((percentage) => percentage + 0.5);
     };
 
-    // Using square root function to reduce acceleration
-    // when percentage gets closer to 100%
-    const animationTimeFunction = (x: number) => Math.sqrt(x);
+    // This makes lower maxPercentages fill up a bit slower than high ones
+    const animationTimeFunction = (x: number) => 0.1 * (65 - maxPercentage);
 
     if (animate) {
       const timeoutId = setTimeout(
         handleIncrease,
         animationTimeFunction(percentage)
       );
+      console.log(animationTimeFunction(percentage));
       return () => clearTimeout(timeoutId);
     }
   }, [animate, maxPercentage, percentage]);
