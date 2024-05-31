@@ -8,100 +8,110 @@
             "subtitle": "Desenvolvedor Web",
             "email": "E-mail",
             "showLanguageOptions": "Exibir opções de idioma",
-            "currentLanguage": "Current Language",
-            "switchTo": "Mudar para"
+            "currentLanguage": "Idioma atual",
+            "switchTo": "Alternar para"
         },
         "about": {
-            "title": "Title",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci turpis, posuere a metus at, consectetur rutrum lacus. Praesent feugiat egestas lectus, eu feugiat leo facilisis vitae. Vestibulum feugiat neque a diam tincidunt pretium. Donec condimentum ornare posuere. Integer tempus orci id efficitur imperdiet. Vivamus aliquet tristique nisl, sed viverra augue pulvinar vel. Aenean ornare blandit nisi imperdiet fermentum. Duis gravida erat porttitor justo tempus tristique. In lectus ipsum, fermentum a porttitor.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci turpis, posuere a metus at, consectetur rutrum lacus. Praesent feugiat egestas lectus, eu feugiat leo facilisis vitae. Vestibulum feugiat neque a diam tincidunt pretium. Donec condimentum ornare posuere. Integer tempus orci id efficitur imperdiet.\nVivamus aliquet tristique nisl, sed viverra augue pulvinar vel. Aenean ornare blandit nisi imperdiet fermentum. Duis gravida erat porttitor justo tempus tristique. In lectus ipsum, fermentum a porttitor vitae, consectetur vel nibh."
+            "title": "Sobre Mim",
+            "content": "I'm a computer scientist who graduated from the Federal University of Alfenas (Unifal-MG) in 2022.\nI currently work as a junior fullstack developer, where I've been developing my skills on the front-end using React/Next.js and Flutter, and on the back-end with PHP and SQL Server.\nI'm also familiar with data science and machine learning.\nIn December 2023, I had the opportunity of publishing my article entitled \"Study and Analysis of Deep Learning Techniques for Solving Financial Problems\" in the journal 'Learning and Nonlinear Models'.\nIn addition to development, I am also passionate about the GNU/Linux ecosystem, which I use daily as my primary system for both development and leisure."
         },
-        "educationExperience": {
-            "title": "Title",
-            "items": {
-                "education": {
-                    "count": "1",
-                    "0": {
-                        "name": "Name",
-                        "institution": "Institution",
-                        "url": "https://wendellavila.github.io",
-                        "years": "2024",
-                        "description": "Description"
-                    }
-                },
-                "experience": {
-                    "count": "3",
-                    "0": {
-                        "name": "Name",
-                        "institution": "Institution",
-                        "url": "https://wendellavila.github.io",
-                        "years": "2024",
-                        "description": "Description"
-                    },
-                    "1": {
-                        "name": "Name",
-                        "institution": "Institution",
-                        "url": "https://wendellavila.github.io",
-                        "years": "2024",
-                        "description": "Description"
-                    },
-                    "2": {
-                        "name": "Name",
-                        "institution": "Institution",
-                        "url": "https://wendellavila.github.io",
-                        "years": "2024",
-                        "description": "Description"
-                    }
-                },
-                "courses": {
-                    "count": "4",
-                    "0": {
-                        "name": "Name",
-                        "institution": "Institution",
-                        "url": "https://wendellavila.github.io",
-                        "years": "2024",
-                        "description": "Description"
-                    },
-                    "1": {
-                        "name": "Name",
-                        "institution": "Institution",
-                        "url": "https://wendellavila.github.io",
-                        "years": "2024",
-                        "description": "Description"
-                    },
-                    "2": {
-                        "name": "Name",
-                        "institution": "Institution",
-                        "url": "https://wendellavila.github.io",
-                        "years": "2024",
-                        "description": "Description"
-                    },
-                    "3": {
-                        "name": "Name",
-                        "institution": "Institution",
-                        "url": "https://wendellavila.github.io",
-                        "years": "2024",
-                        "description": "Description"
-                    }
-                },
-                "publications": {
-                    "count": "1",
-                    "0": {
-                        "name": "Name",
-                        "institution": "Institution",
-                        "url": "https://wendellavila.github.io",
-                        "years": "2024",
-                        "description": "Description"
-                    }
-                }
+        "cv": {
+            "title": "CV",
+            "download": "Baixar",
+            "downloadPDF": "Baixar PDF"
+        },
+        "education": {
+            "title": "Educação",
+            "unifal": {
+                "title": "Bacharelado em Ciência da Computação",
+                "institution": "Universidade Federal de Alfenas",
+                "years": "2017-2022",
+                "description": ""
+            }
+        },
+        "experience": {
+            "title": "Experiência Profissional",
+            "exportadora": {
+                "title": "Desenvolvedor Fullstack Júnior",
+                "years": "Jul 2023-Presente",
+                "description": "Desenvolvimento mobile/web front-end utilizando React, Next.js e Flutter.\nDesenvolvimento back-end utilizando PHP e SQL Server.\nDesenvolvimento de customizações para o sistema ERP TOTVS Protheus utilizando AdvPl e SQL Server."
+            },
+            "progepe": {
+                "title": "Estagiário de Web Design/Design Gráfico",
+                "years": "Jun 2021-Dez 2021",
+                "description": "Design de páginas web utilizando Wordpress.\nEdição e criação de imagens utilizando Photoshop e desenho vetorial."
+            },
+            "tribit": {
+                "title": "Desenvolvedor Front-end",
+                "years": "Mai 2017-Abr 2019",
+                "description": "\nDesenvolvimento front-end utilizando HTML, CSS, Bootstrap, Ionic e Firebase."
+            }
+        },
+        "courses": {
+            "title": "Cursos e Certificações",
+            "python": {
+                "title": "Python A-Z™: Python For Data Science",
+                "description": "Python para análise de dados e ciência de dados."
+            },
+            "r": {
+                "title": "R Programming A-Z™: Python For Data Science",
+                "description": "R para análise de dados e ciência de dados."
+            },
+            "java": {
+                "title": "Java Completo 2023",
+                "description": "Java 17, JDBC, JPA, Hibernate, MySQL."
+            },
+            "machineLearning": {
+                "title": "Machine Learning A-Z™",
+                "description": "Curso completo de Machine learning utilizando Python e R."
+            }
+        },
+        "publications": {
+            "title": "Publicações",
+            "l&nlm": {
+                "years": "Dez 2023"
             }
         },
         "skills": {
             "title": "Habilidades",
-            "items": {}
+            "programmingLanguages": "Linguagens de Programação",
+            "frameworks": "Frameworks, Tecnologias, etc.",
+            "machineLearning": "Aprendizado de Máquina",
+            "other": "Outros"
         },
         "projects": {
             "title": "Projetos",
-            "items": {}
+            "screenshot": "Captura de tela",
+            "eudr_next": {
+                "description": "Front-end de uma plataforma de verificação de conformidade com protocolos ambientais, feito com Next.js 14, MUI e Tailwind CSS. Internacionalização feito com next-intl."
+            },
+            "mediawiki_pybot": {
+                "description": "Ferramenta de linha de comando para realizar edições em massa em wikis utilizando a API do MediaWiki. Feito com Python, inspirado pelo AutoWikiBrowser."
+            },
+            "block_game_next": {
+                "description": "Clone do Tetris feito com React/Next.js e Tailwind CSS."
+            },
+            "JSMP-Notebooks": {
+                "description": "Código utilizado para exploração de técnicas de aprendizado de máquina e deep learning utilizando dados da competição \"Jane Street Market Prediction\"."
+            },
+            "leetcode": {
+                "description": "Minhas soluções para problemas do LeetCode."
+            },
+            "chess_java": {
+                "description": "Jogo de xadrez via linha de comando feito com Java."
+            },
+            "ssg_i18n_next": {
+                "description": "Projeto SSG do Next.js 14 com detecção de idioma no navegador e internacionalização com next-intl."
+            },
+            "dashboard_flutter": {
+                "description": "Um dashboard responsivo com menu lateral e roteamento, feito com Flutter Web."
+            },
+            "routesapp_flutter": {
+                "description": "Visualização de rotas com Google Maps e lista de coordenadas pré-existentes. Feito com Flutter."
+            },
+            "starcount_mpi_c": {
+                "description": "Programa em C para contar estrelas em imagens astronômicas utilizando paralelismo com MPI."
+            }
         },
         "footer": {
             "madeWith": "Feito com",

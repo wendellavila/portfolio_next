@@ -38,12 +38,12 @@ export function ProjectsSection(props: SectionProps) {
         <div className="grow flex flex-row flex-wrap gap-8 justify-center items-center px-8">
           {projectData.map(project => (
             <ProjectItem
-              id={`projects-item-${project.id}`}
-              key={`projects-item-${project.id}`}
+              id={`projects-item-${project.title}`}
+              key={`projects-item-${project.title}`}
               title={project.title}
               image={project.image}
               url={project.url}
-              description={i18n(`${project.id}.description`) ?? undefined}
+              description={i18n(`${project.title}.description`) ?? undefined}
               className={animate ? 'visible' : 'hidden'}
             />
           ))}

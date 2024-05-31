@@ -17,7 +17,7 @@ export function CvItem(props: Props) {
 
   return (
     <article className="pb-6">
-      <div className="flex flex-row items-center justify-between mb-2">
+      <div className="flex flex-row items-center justify-between mb-2 gap-3">
         <div>
           <h4 className="text-md font-semibold">
             {titleUrl ? (
@@ -48,11 +48,14 @@ export function CvItem(props: Props) {
         <p className="ml-5">{descriptionLines[0]}</p>
       ) : (
         <ul className="list-[square] ml-5 marker:text-blueprint">
-          {descriptionLines.map((line, lineIndex) => (
-            <li className="list-inside" key={`${line}-${lineIndex}`}>
-              {line}
-            </li>
-          ))}
+          {descriptionLines.map(
+            (line, lineIndex) =>
+              line != '' && (
+                <li className="list-inside" key={`${line}-${lineIndex}`}>
+                  {line}
+                </li>
+              )
+          )}
         </ul>
       )}
     </article>

@@ -51,7 +51,7 @@ export function AboutSection(props: SectionProps) {
             className={`flex flex-col items-center px-4 animate-fade-right
             ${animate ? 'visible' : 'hidden'}`}
           >
-            <Avatar className="mb-4" src="/profile.png" size={200} alt="WA" />
+            <Avatar className="mb-4" src="/profile.jpg" size={200} alt="WA" />
             <LinkList />
           </div>
           <div id="about-content" className={animate ? 'visible' : 'hidden'}>

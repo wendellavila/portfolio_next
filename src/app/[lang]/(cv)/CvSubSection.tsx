@@ -27,7 +27,7 @@ export function CvSubSection(props: Props) {
           <CvItem
             id={`cv-${subsection}-item-${item.id}`}
             key={`cv-${subsection}-item-${item.id}`}
-            title={i18n(`${item.id}.title`)}
+            title={item.title ?? i18n(`${item.id}.title`)}
             institution={item.institution ?? i18n(`${item.id}.institution`)}
             titleUrl={item.titleUrl}
             institutionUrl={item.institutionUrl}

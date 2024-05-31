@@ -19,15 +19,15 @@ export default function MainPage() {
 
   const i18n = useTranslations('sections');
 
-  const linkItems: NavigationItem[] = [
+  const navItems: NavigationItem[] = [
     {
-      id: 'home',
+      id: 'banner',
       text: i18n('banner.title'),
       ref: bannerRef,
     },
     {
       id: 'about',
-      text: 'About Me',
+      text: i18n('about.title'),
       ref: aboutRef,
     },
     {
@@ -49,11 +49,11 @@ export default function MainPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <BannerSection componentRef={bannerRef} items={linkItems} />
-      <AboutSection componentRef={aboutRef} items={linkItems} />
-      <CvSection componentRef={experienceRef} items={linkItems} />
-      <SkillsSection componentRef={skillsRef} items={linkItems} />
-      <ProjectsSection componentRef={projectsRef} items={linkItems} />
+      <BannerSection componentRef={bannerRef} items={navItems} />
+      <AboutSection componentRef={aboutRef} items={navItems} />
+      <CvSection componentRef={experienceRef} items={navItems} />
+      <SkillsSection componentRef={skillsRef} items={navItems} />
+      <ProjectsSection componentRef={projectsRef} items={navItems} />
       <Footer />
     </div>
   );

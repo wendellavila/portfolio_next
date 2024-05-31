@@ -10,7 +10,7 @@ export const i18nConfig = {
   defaultLocale: 'en',
 };
 
-export const projectTitle = 'Title'; //'Wen\xADdell Jo\xADão Cas\xADtro de A\xADvi\xADla';
+export const projectTitle = 'Wen\xADdell Jo\xADão Cas\xADtro de A\xADvi\xADla';
 export const deployUrl = 'https://wendellavila.github.io';
 export const githubUrl = 'https://github.com/wendellavila';
 export const repoUrl = `${githubUrl}/portfolio_next`;
@@ -19,6 +19,7 @@ export const email = 'wendelljcavila@gmail.com';
 
 interface CvDataItem {
   id: string;
+  title?: string;
   institution?: string;
   titleUrl?: string;
   institutionUrl?: string;
@@ -28,7 +29,7 @@ interface CvDataItem {
 const educationData: CvDataItem[] = [
   {
     id: 'unifal',
-    institutionUrl: 'https://wendellavila.github.io',
+    institutionUrl: 'https://bcc.unifal-mg.edu.br',
   },
 ];
 
@@ -45,7 +46,7 @@ const experienceData: CvDataItem[] = [
   },
   {
     id: 'tribit',
-    institution: 'TriBit Jr.',
+    institution: 'TriBit Jr. - Unifal-MG',
   },
 ];
 
@@ -53,36 +54,37 @@ const coursesData: CvDataItem[] = [
   {
     id: 'machineLearning',
     institution: 'Udemy',
-    titleUrl: 'https://udemy.com',
-    years: '2024',
+    titleUrl: 'https://www.udemy.com/course/python-coding/',
+    years: '2020-2021',
   },
   {
     id: 'python',
     institution: 'Udemy',
-    titleUrl: 'https://udemy.com',
-    years: '2024',
+    titleUrl: 'https://www.udemy.com/course/python-coding/',
+    years: '2019-2020',
   },
   {
     id: 'java',
     institution: 'Udemy',
-    titleUrl: 'https://udemy.com',
-    years: '2024',
+    titleUrl: 'https://www.udemy.com/course/java-curso-completo/',
+    years: '2023',
   },
   {
     id: 'r',
     institution: 'Udemy',
-    titleUrl: 'https://udemy.com',
-    years: '2024',
+    titleUrl: 'https://www.udemy.com/course/r-programming/',
+    years: '2019-2020',
   },
 ];
 
 const publicationsData: CvDataItem[] = [
   {
     id: 'l&nlm',
+    title:
+      'Study and Analysis of Deep Learning Techniques for Solving Financial Problems',
     institution: 'Learning & Nonlinear Models',
-    titleUrl: 'https://wendellavila.github.io',
-    institutionUrl: 'https://wendellavila.github.io',
-    years: '2024',
+    titleUrl: 'https://sbic.org.br/lnlm/publicacoes/vol21-no2/vol21-no2-art4/',
+    institutionUrl: 'https://sbic.org.br/lnlm/',
   },
 ];
 
@@ -226,7 +228,6 @@ export const skillsData = [
 ];
 
 interface ProjectItem {
-  id: string;
   title: string;
   image: string;
   url: string;
@@ -234,9 +235,53 @@ interface ProjectItem {
 
 export const projectData: ProjectItem[] = [
   {
-    id: 'testProject',
-    title: 'Test Project',
-    image: 'profile.png',
-    url: 'https://wendellavila.github.io',
+    title: 'eudr_next',
+    image: 'project.png',
+    url: 'https://github.com/wendellavila/eudr_next',
+  },
+  {
+    title: 'mediawiki_pybot',
+    image: 'project.png',
+    url: 'https://github.com/wendellavila/mediawiki_pybot',
+  },
+  {
+    title: 'block_game_next',
+    image: 'project.png',
+    url: 'https://github.com/wendellavila/block_game_next',
+  },
+  {
+    title: 'JSMP-Notebooks',
+    image: 'project.png',
+    url: 'https://github.com/wendellavila/block_game_next',
+  },
+  {
+    title: 'leetcode',
+    image: 'project.png',
+    url: 'https://github.com/wendellavila/leetcode',
+  },
+  {
+    title: 'chess_java',
+    image: 'project.png',
+    url: 'https://github.com/wendellavila/chess_java',
+  },
+  {
+    title: 'ssg_i18n_next',
+    image: 'project.png',
+    url: 'https://github.com/wendellavila/ssg_i18n_next',
+  },
+  {
+    title: 'dashboard_flutter',
+    image: 'project.png',
+    url: 'https://github.com/wendellavila/dashboard_flutter',
+  },
+  {
+    title: 'routesapp_flutter',
+    image: 'project.png',
+    url: 'https://github.com/wendellavila/routesapp_flutter',
+  },
+  {
+    title: 'starcount_mpi_c',
+    image: 'project.png',
+    url: 'https://github.com/wendellavila/starcount_mpi_c',
   },
 ];
