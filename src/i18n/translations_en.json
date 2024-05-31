@@ -1,121 +1,121 @@
 {
-    "metadata": {
-        "description": "Web Developer"
+  "metadata": {
+    "description": "Web Developer"
+  },
+  "sections": {
+    "banner": {
+      "title": "Home",
+      "subtitle": "Web Developer",
+      "email": "Email",
+      "showLanguageOptions": "Show language options",
+      "currentLanguage": "Current language",
+      "switchTo": "Switch to"
     },
-    "sections": {
-        "banner": {
-            "title": "Home",
-            "subtitle": "Web Developer",
-            "email": "Email",
-            "showLanguageOptions": "Show language options",
-            "currentLanguage": "Current language",
-            "switchTo": "Switch to"
-        },
-        "about": {
-            "title": "About Me",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci turpis, posuere a metus at, consectetur rutrum lacus. Praesent feugiat egestas lectus, eu feugiat leo facilisis vitae. Vestibulum feugiat neque a diam tincidunt pretium. Donec condimentum ornare posuere. Integer tempus orci id efficitur imperdiet. Vivamus aliquet tristique nisl, sed viverra augue pulvinar vel. Aenean ornare blandit nisi imperdiet fermentum. Duis gravida erat porttitor justo tempus tristique. In lectus ipsum, fermentum a porttitor.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci turpis, posuere a metus at, consectetur rutrum lacus. Praesent feugiat egestas lectus, eu feugiat leo facilisis vitae. Vestibulum feugiat neque a diam tincidunt pretium. Donec condimentum ornare posuere. Integer tempus orci id efficitur imperdiet.\nVivamus aliquet tristique nisl, sed viverra augue pulvinar vel. Aenean ornare blandit nisi imperdiet fermentum. Duis gravida erat porttitor justo tempus tristique. In lectus ipsum, fermentum a porttitor vitae, consectetur vel nibh."
-        },
-        "cv": {
-            "title": "CV",
-            "download": "Download",
-            "downloadPDF": "Download PDF"
-        },
-        "education": {
-            "title": "Education",
-            "unifal": {
-                "title": "Bachelor of Science in Computer Science",
-                "institution": "Universidade Federal de Alfenas, Alfenas, Brazil.",
-                "years": "2017-2022",
-                "description": ""
-            }
-        },
-        "experience": {
-            "title": "Professional Experience",
-            "exportadora": {
-                "title": "Junior Fullstack Developer",
-                "years": "Jul 2023-Present",
-                "description": "Mobile/web front-end development using React, Next.js, and Flutter.\nBack-end development using PHP and SQL Server.\nDevelopment of customizations for the TOTVS Protheus ERP system using AdvPl and SQL Server."
-            },
-            "progepe": {
-                "title": "Web Design/Graphic Design Intern",
-                "years": "Jun 2021-Dec 2021",
-                "description": "Design of web pages using Wordpress.\nImage editing and creation using Photoshop and vectorial drawing software."
-            },
-            "tribit": {
-                "title": "Front-end Developer",
-                "years": "May 2017-Apr 2019",
-                "description": "Front-end development using HTML, CSS, Bootstrap, Ionic and Firebase."
-            }
-        },
-        "courses": {
-            "title": "Courses and Certifications",
-            "python": {
-                "title": "Python A-Z™: Python For Data Science",
-                "description": "Python for data analysis and data science."
-            },
-            "r": {
-                "title": "R Programming A-Z™: Python For Data Science",
-                "description": "R for data analysis and data science."
-            },
-            "java": {
-                "title": "Java Complete Course 2023",
-                "description": "Java 17, JDBC, JPA, Hibernate, MySQL."
-            },
-            "machineLearning": {
-                "title": "Machine Learning A-Z™",
-                "description": "Machine learning full course with Python and R."
-            }
-        },
-        "publications": {
-            "title": "Publications",
-            "l&nlm": {
-                "years": "Dec 2023"
-            }
-        },
-        "skills": {
-            "title": "Skills",
-            "programmingLanguages": "Programming Languages",
-            "frameworks": "Frameworks, Technologies, etc.",
-            "machineLearning": "Machine Learning",
-            "other": "Other"
-        },
-        "projects": {
-            "title": "Projects",
-            "screenshot": "Screenshot",
-            "eudr_next": {
-                "description": "Environmental Compliance Platform Frontend, made with Next.js 14, MUI, and Tailwind CSS. Internationalization made with next-intl."
-            },
-            "mediawiki_pybot": {
-                "description": "Command-line utility for performing mass edits on wikis using the MediaWiki API. Made with Python, inspired by AutoWikiBrowser."
-            },
-            "block_game_next": {
-                "description": "Tetris clone made with React/Next.js and Tailwind CSS."
-            },
-            "JSMP-Notebooks": {
-                "description": "Code used for exploring machine learning and deep learning techniques using data from the machine learning competition \"Jane Street Market Prediction\"."
-            },
-            "leetcode": {
-                "description": "My solutions for LeetCode problems."
-            },
-            "chess_java": {
-                "description": "Terminal-based chess game made with Java."
-            },
-            "ssg_i18n_next": {
-                "description": "Next.js 14 Starter SSG project with client-side locale detection and internationalization with next-intl."
-            },
-            "dashboard_flutter": {
-                "description": "A responsive web dashboard with sidemenu and routing, made with Flutter Web."
-            },
-            "routesapp_flutter": {
-                "description": "Routes visualization with Google Maps and existing coordinates."
-            },
-            "starcount_mpi_c": {
-                "description": "Program written in C that counts stars in astronomical images using parallelism with MPI."
-            }
-        },
-        "footer": {
-            "madeWith": "Made with",
-            "sourceCodeAvailableOn": "Source code is available on"
-        }
+    "about": {
+      "title": "About Me",
+      "content": "I'm a computer scientist who graduated from the Federal University of Alfenas (Unifal-MG) in 2022.\nI currently work as a junior fullstack developer, where I've been developing my skills on the front-end using React/Next.js and Flutter, and on the back-end with PHP and SQL Server.\nI'm also familiar with data science and machine learning.\nIn December 2023, I had the opportunity of publishing my article entitled \"Study and Analysis of Deep Learning Techniques for Solving Financial Problems\" in the journal 'Learning and Nonlinear Models'.\nIn addition to development, I am also passionate about the GNU/Linux ecosystem, which I use daily as my primary system for both development and leisure."
+    },
+    "cv": {
+      "title": "CV",
+      "download": "Download",
+      "downloadPDF": "Download PDF"
+    },
+    "education": {
+      "title": "Education",
+      "unifal": {
+        "title": "Bachelor of Science in Computer Science",
+        "institution": "Universidade Federal de Alfenas, Alfenas, Brazil.",
+        "years": "2017-2022",
+        "description": ""
+      }
+    },
+    "experience": {
+      "title": "Professional Experience",
+      "exportadora": {
+        "title": "Junior Fullstack Developer",
+        "years": "Jul 2023-Present",
+        "description": "Mobile/web front-end development using React, Next.js, and Flutter.\nBack-end development using PHP and SQL Server.\nDevelopment of customizations for the TOTVS Protheus ERP system using AdvPl and SQL Server."
+      },
+      "progepe": {
+        "title": "Web Design/Graphic Design Intern",
+        "years": "Jun 2021-Dec 2021",
+        "description": "Design of web pages using Wordpress.\nImage editing and creation using Photoshop and vectorial drawing software."
+      },
+      "tribit": {
+        "title": "Front-end Developer",
+        "years": "May 2017-Apr 2019",
+        "description": "Front-end development using HTML, CSS, Bootstrap, Ionic and Firebase."
+      }
+    },
+    "courses": {
+      "title": "Courses and Certifications",
+      "python": {
+        "title": "Python A-Z™: Python For Data Science",
+        "description": "Python for data analysis and data science."
+      },
+      "r": {
+        "title": "R Programming A-Z™: Python For Data Science",
+        "description": "R for data analysis and data science."
+      },
+      "java": {
+        "title": "Java Complete Course 2023",
+        "description": "Java 17, JDBC, JPA, Hibernate, MySQL."
+      },
+      "machineLearning": {
+        "title": "Machine Learning A-Z™",
+        "description": "Machine learning full course with Python and R."
+      }
+    },
+    "publications": {
+      "title": "Publications",
+      "l&nlm": {
+        "years": "Dec 2023"
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "programmingLanguages": "Programming Languages",
+      "frameworks": "Frameworks, Technologies, etc.",
+      "machineLearning": "Machine Learning",
+      "other": "Other"
+    },
+    "projects": {
+      "title": "Projects",
+      "screenshot": "Screenshot",
+      "eudr_next": {
+        "description": "Environmental Compliance Platform Frontend, made with Next.js 14, MUI, and Tailwind CSS. Internationalization made with next-intl."
+      },
+      "mediawiki_pybot": {
+        "description": "Command-line utility for performing mass edits on wikis using the MediaWiki API. Made with Python, inspired by AutoWikiBrowser."
+      },
+      "block_game_next": {
+        "description": "Tetris clone made with React/Next.js and Tailwind CSS."
+      },
+      "JSMP-Notebooks": {
+        "description": "Code used for exploring machine learning and deep learning techniques using data from the machine learning competition \"Jane Street Market Prediction\"."
+      },
+      "leetcode": {
+        "description": "My solutions for LeetCode problems."
+      },
+      "chess_java": {
+        "description": "Terminal-based chess game made with Java."
+      },
+      "ssg_i18n_next": {
+        "description": "Next.js 14 Starter SSG project with client-side locale detection and internationalization with next-intl."
+      },
+      "dashboard_flutter": {
+        "description": "A responsive web dashboard with sidemenu and routing, made with Flutter Web."
+      },
+      "routesapp_flutter": {
+        "description": "Routes visualization with Google Maps and existing coordinates."
+      },
+      "starcount_mpi_c": {
+        "description": "Program written in C that counts stars in astronomical images using parallelism with MPI."
+      }
+    },
+    "footer": {
+      "madeWith": "Made with",
+      "sourceCodeAvailableOn": "Source code is available on"
     }
+  }
 }
