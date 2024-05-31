@@ -23,7 +23,7 @@ export function IconLinkList(props: ComponentProps) {
       animationDuration: 'animate-duration-[1500ms]',
     },
     {
-      url: email,
+      url: `mailto:${email}`,
       icon: 'basil:gmail-solid',
       title: i18n('email'),
       animationDuration: 'animate-duration-[2000ms]',
@@ -32,7 +32,7 @@ export function IconLinkList(props: ComponentProps) {
 
   return (
     <nav className={`flex flex-row gap-3 mt-4 ${className}`}>
-      {linkData.map(item => (
+      {linkData.map((item) => (
         <a
           key={item.url}
           href={item.url}
@@ -44,7 +44,7 @@ export function IconLinkList(props: ComponentProps) {
             aria-label="LinkedIn Logo"
             icon={item.icon}
             width={45}
-            className={`text-white/85 transition duration-75
+            className={`text-white/85 
             hover:cursor-pointer hover:text-white hover:scale-105
             animate-fade ${item.animationDuration}`}
           />
