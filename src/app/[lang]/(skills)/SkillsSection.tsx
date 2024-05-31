@@ -34,7 +34,7 @@ export function SkillsSection(props: SectionProps) {
         backgroundColor="blueprint"
       />
       <div className="grow pt-2 pb-16 px-6 md:pr-12 md:pl-0 flex flex-col">
-        <SectionHeader className="" decorationClassName="bg-cream">
+        <SectionHeader decorationClassName="bg-cream">
           {i18n('title')}
         </SectionHeader>
         <div
