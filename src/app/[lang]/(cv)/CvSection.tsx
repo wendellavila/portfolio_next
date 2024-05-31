@@ -26,7 +26,7 @@ export function CvSection(props: SectionProps) {
     >
       <div className="grow flex flex-col pt-2 pb-10 px-6 md:pr-0">
         <div
-          className={`inline-grid gap-24 mb-24 lg:grid-cols-2
+          className={`inline-grid gap-24 lg:grid-cols-2
           ${animate ? 'visible' : 'hidden'}`}
         >
           <CvSubSection
@@ -45,10 +45,10 @@ export function CvSection(props: SectionProps) {
             subsection="courses"
             className="order-4 animate-fade-left"
           />
-        </div>
-        <div className="flex flex-col 2xl:items-center">
           <DownloadCV
-            className={`animate-fade-right ${animate ? 'visible' : 'hidden'}`}
+            className={`order-5 animate-fade-right ${
+              animate ? 'visible' : 'hidden'
+            }`}
           />
         </div>
       </div>
