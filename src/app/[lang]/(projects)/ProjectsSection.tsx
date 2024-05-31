@@ -28,14 +28,18 @@ export function ProjectsSection(props: SectionProps) {
       id="projects"
       className="min-h-screen flex flex-row bg-white"
     >
-      <div className="grow pt-2 pb-16 px-6 md:pl-12 flex flex-col">
+      <div
+        id="projects-body"
+        className="grow pt-2 pb-16 px-6 md:pl-12 flex flex-col"
+      >
         <SectionHeader decorationClassName="bg-silver">
           {i18n('title').toLocaleUpperCase()}
         </SectionHeader>
         <div className="grow flex flex-row flex-wrap gap-8 justify-center items-center px-8">
           {projectData.map(project => (
             <ProjectItem
-              key={`project-item-${project.id}`}
+              id={`projects-item-${project.id}`}
+              key={`projects-item-${project.id}`}
               title={project.title}
               image={project.image}
               url={project.url}
@@ -46,6 +50,7 @@ export function ProjectsSection(props: SectionProps) {
         </div>
       </div>
       <VerticalNav
+        id="projects-nav"
         items={items}
         position="right"
         color="silver"

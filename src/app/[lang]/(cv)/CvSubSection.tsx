@@ -15,14 +15,18 @@ export function CvSubSection(props: Props) {
   const subsectionData = subsectionInfo.data;
 
   return (
-    <section className={`flex flex-col items-center ${className ?? ''}`}>
+    <section
+      className={`flex flex-col items-center ${className ?? ''}`}
+      id={`cv-${subsection}`}
+    >
       <div className={`max-w-[800px] w-full`}>
         <SectionHeader decorationClassName="bg-silver">
           {i18n('title').toLocaleUpperCase()}
         </SectionHeader>
         {subsectionData.map(item => (
           <CvItem
-            key={`${subsection}-item-${item.id}`}
+            id={`cv-${subsection}-item-${item.id}`}
+            key={`cv-${subsection}-item-${item.id}`}
             title={i18n(`${item.id}.title`)}
             institution={item.institution ?? i18n(`${item.id}.institution`)}
             titleUrl={item.titleUrl}

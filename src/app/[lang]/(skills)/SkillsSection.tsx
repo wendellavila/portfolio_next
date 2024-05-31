@@ -27,13 +27,17 @@ export function SkillsSection(props: SectionProps) {
       className="min-h-screen flex flex-row bg-blueprint text-slate-50"
     >
       <VerticalNav
+        id="skills-nav"
         items={items}
         position="left"
         color="sky-100"
         textColor="slate-100"
         backgroundColor="blueprint"
       />
-      <div className="grow pt-2 pb-16 px-6 md:pr-12 md:pl-0 flex flex-col">
+      <div
+        id="skills-body"
+        className="grow pt-2 pb-16 px-6 md:pr-12 md:pl-0 flex flex-col"
+      >
         <SectionHeader decorationClassName="bg-cream">
           {i18n('title')}
         </SectionHeader>
@@ -42,7 +46,11 @@ export function SkillsSection(props: SectionProps) {
           flex-wrap items-center justify-evenly"
         >
           {skillsData.map(category => (
-            <div key={`skills-${category.id}`} className="w-full lg:w-[800px]">
+            <div
+              id={`skills-${category.id}`}
+              key={`skills-${category.id}`}
+              className="w-full lg:w-[800px]"
+            >
               <h3 className="font-semibold mb-2">{i18n(category.id)}</h3>
 
               {category.data.map(skillItem => (

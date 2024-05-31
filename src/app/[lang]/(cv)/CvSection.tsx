@@ -21,10 +21,10 @@ export function CvSection(props: SectionProps) {
   return (
     <section
       ref={componentRef}
-      id="education-experience"
+      id="cv"
       className="min-h-screen flex flex-row bg-white"
     >
-      <div className="grow flex flex-col pt-2 pb-10 px-6 md:pr-0">
+      <div id="cv-body" className="grow flex flex-col pt-2 pb-10 px-6 md:pr-0">
         <div
           className={`inline-grid gap-24 lg:grid-cols-2
           ${animate ? 'visible' : 'hidden'}`}
@@ -46,6 +46,7 @@ export function CvSection(props: SectionProps) {
             className="order-4 animate-fade-left"
           />
           <DownloadCV
+            id="cv-download"
             className={`order-5 animate-fade-right ${
               animate ? 'visible' : 'hidden'
             }`}
@@ -53,6 +54,7 @@ export function CvSection(props: SectionProps) {
         </div>
       </div>
       <VerticalNav
+        id="cv-nav"
         items={items}
         position="right"
         color="silver"

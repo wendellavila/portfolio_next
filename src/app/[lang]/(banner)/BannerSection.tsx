@@ -34,10 +34,11 @@ export function BannerSection(props: SectionProps) {
     >
       <StarrySky />
       <div
-        id="color-filter"
+        id="banner-color-filter"
+        aria-hidden
         className="bg-black/25 w-full h-full absolute top-0 left-0 z-0"
       ></div>
-      <div className="flex flex-col z-10">
+      <div id="banner-body" className="flex flex-col z-10">
         <h1
           className={`text-7xl mb-1 font-bold ${montserrat.className} hyphens-manual`}
         >
@@ -53,6 +54,7 @@ export function BannerSection(props: SectionProps) {
         <IconLinkList className={animate ? 'visible' : 'hidden'} />
       </div>
       <VerticalNav
+        id="banner-nav"
         gap={true}
         expandAll={true}
         showOnSmall={true}

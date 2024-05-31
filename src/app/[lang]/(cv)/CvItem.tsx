@@ -1,4 +1,6 @@
-interface Props {
+import { ComponentProps } from '@/typing/props';
+
+interface Props extends ComponentProps {
   title: string;
   institution: string;
   titleUrl?: string;

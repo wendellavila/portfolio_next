@@ -27,13 +27,14 @@ export function AboutSection(props: SectionProps) {
       className="min-h-screen flex flex-row bg-cream"
     >
       <VerticalNav
+        id="about-nav"
         items={items}
         position="left"
         color="latte"
         textColor="coffee"
         backgroundColor="cream"
       />
-      <div className="grow flex flex-col pt-2 pb-10">
+      <div id="about-body" className="grow flex flex-col pt-2 pb-10">
         <SectionHeader
           decorationClassName="bg-blueprint"
           className="ml-6 md:ml-0"
@@ -46,14 +47,14 @@ export function AboutSection(props: SectionProps) {
           flex-col`}
         >
           <div
-            className={`flex flex-col items-center px-4 animate-fade-right ${
-              animate ? 'visible' : 'hidden'
-            }`}
+            id="about-profile"
+            className={`flex flex-col items-center px-4 animate-fade-right
+            ${animate ? 'visible' : 'hidden'}`}
           >
             <Avatar className="mb-4" src="/profile.png" size={200} alt="WA" />
             <LinkList />
           </div>
-          <div className={` ${animate ? 'visible' : 'hidden'}`}>
+          <div id="about-content" className={animate ? 'visible' : 'hidden'}>
             <article className="md:px-12 px-6 max-w-[1200px] animate-fade-left">
               {i18n('content')
                 .split('\n')

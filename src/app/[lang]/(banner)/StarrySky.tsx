@@ -12,12 +12,13 @@ export function StarrySky() {
 
   return (
     <div
-      id="starry-sky"
+      id="banner-starry-sky"
+      aria-hidden
       ref={containerRef}
       className="w-full h-full absolute top-0 left-0 z-0 bg-gradient-to-b
       from-slate-800 via-slate-700 to-slate-600"
     >
-      {[...Array(Math.floor(biggerDimension() * 1.2))].map((_, index) =>
+      {[...Array(Math.floor(biggerDimension() * 1.2))].map((_, index) => (
         <Star
           key={`star-sm-${index + 1}`}
           id={`star-sm-${index + 1}`}
@@ -25,8 +26,8 @@ export function StarrySky() {
           top={getRandomInt(0, height - 1)}
           left={getRandomInt(0, width - 1)}
         />
-      )}
-      {[...Array(Math.floor(biggerDimension() * 0.3))].map((_, index) =>
+      ))}
+      {[...Array(Math.floor(biggerDimension() * 0.3))].map((_, index) => (
         <Star
           key={`star-md-${index + 1}`}
           id={`star-md-${index + 1}`}
@@ -34,8 +35,8 @@ export function StarrySky() {
           top={getRandomInt(0, height - 1)}
           left={getRandomInt(0, width - 1)}
         />
-      )}
-      {[...Array(Math.floor(biggerDimension() * 0.02))].map((_, index) =>
+      ))}
+      {[...Array(Math.floor(biggerDimension() * 0.02))].map((_, index) => (
         <Star
           key={`star-lg-${index + 1}`}
           id={`star-lg-${index + 1}`}
@@ -43,7 +44,7 @@ export function StarrySky() {
           top={getRandomInt(0, height - 1)}
           left={getRandomInt(0, width - 1)}
         />
-      )}
+      ))}
     </div>
   );
 }
