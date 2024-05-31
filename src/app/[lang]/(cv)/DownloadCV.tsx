@@ -13,11 +13,11 @@ export function DownloadCV(props: ComponentProps) {
 
   return (
     <article className={`flex flex-col items-center ${className}`}>
-      <div className="w-full max-w-[800px]">
+      <div className="w-full max-w-[800px] pt-8">
         <SectionHeader
           component="span"
           className="text-base"
-          decorationClassName="bg-gray-800"
+          decorationClassName="bg-cream"
         >
           {i18n('downloadPDF')}
         </SectionHeader>

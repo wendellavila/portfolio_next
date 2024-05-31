@@ -14,21 +14,20 @@ export function SectionHeader(props: Props) {
   return (
     <div
       className={`flex flex-row items-end
-      ${component === 'h2' ? 'text-xl mt-8 mb-12' : 'text-2xl mb-4'}
+      ${component === 'h2' ? 'text-xl mt-8 mb-12' : 'text-2xl mt-8 mb-4'}
       ${className ?? ''}`}
     >
       <TextComponent>
         {children.toLocaleUpperCase()}
         <span
           aria-hidden
-          className={`block ${component === 'h2' ? 'h-1' : 'h-0.5'} w-auto
-            ${decorationClassName ?? 'bg-blueprint'}`}
+          className={`block h-1 w-auto
+          ${decorationClassName ?? 'bg-blueprint'}`}
         ></span>
       </TextComponent>
       <span
         aria-hidden
-        className={`${component === 'h2' ? 'h-1' : 'h-0.5'}
-        ${component === 'h2' ? 'w-3' : 'w-2'}
+        className={`h-1 ${component === 'h2' ? 'w-3' : 'w-2'}
         ${decorationClassName ?? 'bg-blueprint'}`}
       ></span>
     </div>

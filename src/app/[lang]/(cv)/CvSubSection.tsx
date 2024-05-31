@@ -11,7 +11,7 @@ interface Props extends ComponentProps {
 export function CvSubSection(props: Props) {
   const { className, subsection } = props;
   const i18n = useTranslations(`sections.${subsection}`);
-  const subsectionInfo = cvData.filter(item => item.id === subsection)[0];
+  const subsectionInfo = cvData.filter((item) => item.id === subsection)[0];
   const subsectionData = subsectionInfo.data;
 
   return (
@@ -23,7 +23,7 @@ export function CvSubSection(props: Props) {
         <SectionHeader decorationClassName="bg-silver" className="mb-6">
           {i18n('title').toLocaleUpperCase()}
         </SectionHeader>
-        {subsectionData.map(item => (
+        {subsectionData.map((item) => (
           <CvItem
             id={`cv-${subsection}-item-${item.id}`}
             key={`cv-${subsection}-item-${item.id}`}

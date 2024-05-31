@@ -24,7 +24,10 @@ export function CvSection(props: SectionProps) {
       id="cv"
       className="min-h-dvh flex flex-row bg-white"
     >
-      <div id="cv-body" className="grow flex flex-col pt-2 pb-10 px-6 md:pr-0">
+      <div
+        id="cv-body"
+        className="grow flex flex-col justify-center pt-2 pb-10 px-6 md:pr-0"
+      >
         <div
           className={`inline-grid gap-y-4 gap-x-20 lg:grid-cols-2
           ${animate ? 'visible' : 'hidden'}`}
