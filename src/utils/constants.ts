@@ -209,6 +209,11 @@ const skillOther: SkillItem[] = [
   {
     title: 'Adobe Photoshop',
     icon: 'simple-icons:adobephotoshop',
+    percentage: 70,
+  },
+  {
+    title: 'Inkscape',
+    icon: 'simple-icons:inkscape',
     percentage: 65,
   },
 ];
