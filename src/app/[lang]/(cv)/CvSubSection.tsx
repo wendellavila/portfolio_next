@@ -20,7 +20,7 @@ export function CvSubSection(props: Props) {
       id={`cv-${subsection}`}
     >
       <div className={`max-w-[800px] w-full`}>
-        <SectionHeader decorationClassName="bg-silver">
+        <SectionHeader decorationClassName="bg-silver" className="mb-6">
           {i18n('title').toLocaleUpperCase()}
         </SectionHeader>
         {subsectionData.map(item => (
