@@ -15,16 +15,16 @@ export function PercentageBar(props: Props) {
 
   const [percentage, setPercentage] = useState(0);
 
-  const handleIncrease = () => {
-    if (percentage < maxPercentage)
-      setPercentage(percentage => percentage + 0.5);
-  };
-
-  // Using square root function to reduce acceleration
-  // when percentage gets closer to 100%
-  const animationTimeFunction = (x: number) => Math.sqrt(x);
-
   useEffect(() => {
+    const handleIncrease = () => {
+      if (percentage < maxPercentage)
+        setPercentage(percentage => percentage + 0.5);
+    };
+
+    // Using square root function to reduce acceleration
+    // when percentage gets closer to 100%
+    const animationTimeFunction = (x: number) => Math.sqrt(x);
+
     if (animate) {
       const timeoutId = setTimeout(
         handleIncrease,
@@ -32,7 +32,7 @@ export function PercentageBar(props: Props) {
       );
       return () => clearTimeout(timeoutId);
     }
-  }, [animate, percentage]);
+  }, [animate, maxPercentage, percentage]);
 
   return (
     <div

@@ -21,10 +21,10 @@ export function TypingText(props: Props) {
   const caret = 'ꕯ';
   const ComponentWrapper = component ?? 'span';
   const [displayText, setDisplayText] = useState<string>(caret);
-  let timeoutIds: ReturnType<typeof setTimeout>[] = [];
 
   useEffect(() => {
     if (animate) {
+      let timeoutIds: ReturnType<typeof setTimeout>[] = [];
       timeoutIds.push(
         setTimeout(() => {
           setDisplayText('|');

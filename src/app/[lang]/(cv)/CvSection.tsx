@@ -16,7 +16,7 @@ export function CvSection(props: SectionProps) {
   // Animate on first view
   useEffect(() => {
     if (inView && !animate) setAnimate(true);
-  }, [inView]);
+  }, [animate, inView]);
 
   return (
     <section

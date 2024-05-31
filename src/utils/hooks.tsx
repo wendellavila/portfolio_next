@@ -59,7 +59,13 @@ export function useRefDimensions(
 
     resizeObserver.observe(ref.current);
     return () => resizeObserver.disconnect(); // clean up
-  }, [ref, threshold, setRefDimensions]);
+  }, [
+    ref,
+    threshold,
+    refDimensions.width,
+    refDimensions.height,
+    setRefDimensions,
+  ]);
   return [refDimensions.width, refDimensions.height];
 }
 
@@ -76,30 +82,30 @@ export function useScreenDimensions(threshold = 0) {
     height: 0,
   });
 
-  function getDimensions() {
-    const hasWindow = typeof window !== 'undefined';
-    return {
-      width: hasWindow ? window.innerWidth : screenDimensions.width,
-      height: hasWindow ? window.innerHeight : screenDimensions.height,
-    };
-  }
-
-  function updateDimensions() {
-    const newDimensions = getDimensions();
-    const widthChanged =
-      Math.abs(screenDimensions.width - newDimensions.width) > threshold;
-    const heightChanged =
-      Math.abs(screenDimensions.height - newDimensions.height) > threshold;
-    if (widthChanged || heightChanged) {
-      setScreenDimensions(newDimensions);
-    }
-  }
-
   useEffect(() => {
+    function getDimensions() {
+      const hasWindow = typeof window !== 'undefined';
+      return {
+        width: hasWindow ? window.innerWidth : screenDimensions.width,
+        height: hasWindow ? window.innerHeight : screenDimensions.height,
+      };
+    }
+
+    function updateDimensions() {
+      const newDimensions = getDimensions();
+      const widthChanged =
+        Math.abs(screenDimensions.width - newDimensions.width) > threshold;
+      const heightChanged =
+        Math.abs(screenDimensions.height - newDimensions.height) > threshold;
+      if (widthChanged || heightChanged) {
+        setScreenDimensions(newDimensions);
+      }
+    }
+
     updateDimensions();
     window.addEventListener('resize', updateDimensions);
     return () => window.removeEventListener('resize', updateDimensions); // clean up
-  }, [threshold, updateDimensions]);
+  }, [threshold, screenDimensions.width, screenDimensions.height]);
 
   return [screenDimensions.width, screenDimensions.height];
 }
