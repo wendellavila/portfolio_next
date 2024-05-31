@@ -26,7 +26,7 @@ export function ProjectsSection(props: SectionProps) {
     <section
       ref={componentRef}
       id="projects"
-      className="min-h-screen flex flex-row bg-white"
+      className="min-h-dvh flex flex-row bg-white"
     >
       <div
         id="projects-body"

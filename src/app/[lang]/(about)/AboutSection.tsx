@@ -24,7 +24,7 @@ export function AboutSection(props: SectionProps) {
     <section
       ref={componentRef}
       id="about"
-      className="min-h-screen flex flex-row bg-cream"
+      className="min-h-dvh flex flex-row bg-cream"
     >
       <VerticalNav
         id="about-nav"

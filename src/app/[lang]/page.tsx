@@ -48,7 +48,7 @@ export default function MainPage() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col">
       <BannerSection componentRef={bannerRef} items={navItems} />
       <AboutSection componentRef={aboutRef} items={navItems} />
       <CvSection componentRef={experienceRef} items={navItems} />

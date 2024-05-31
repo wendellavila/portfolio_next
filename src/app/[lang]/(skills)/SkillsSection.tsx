@@ -24,7 +24,7 @@ export function SkillsSection(props: SectionProps) {
     <section
       ref={componentRef}
       id="skills"
-      className="min-h-screen flex flex-row bg-blueprint text-slate-50"
+      className="min-h-dvh flex flex-row bg-blueprint text-slate-50"
     >
       <VerticalNav
         id="skills-nav"

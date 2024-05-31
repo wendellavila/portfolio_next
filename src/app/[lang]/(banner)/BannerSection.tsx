@@ -30,7 +30,7 @@ export function BannerSection(props: SectionProps) {
     <section
       id="banner"
       ref={componentRef}
-      className="min-h-screen flex relative text-white/95 pt-8 pb-4 lg:pt-12 px-8 lg:px-16"
+      className="min-h-dvh flex relative text-white/95 pt-8 pb-4 lg:pt-12 px-8 lg:px-16"
     >
       <StarrySky />
       <div

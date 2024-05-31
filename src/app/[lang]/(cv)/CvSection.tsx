@@ -22,7 +22,7 @@ export function CvSection(props: SectionProps) {
     <section
       ref={componentRef}
       id="cv"
-      className="min-h-screen flex flex-row bg-white"
+      className="min-h-dvh flex flex-row bg-white"
     >
       <div id="cv-body" className="grow flex flex-col pt-2 pb-10 px-6 md:pr-0">
         <div

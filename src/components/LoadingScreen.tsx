@@ -11,7 +11,7 @@ export function LoadingScreen(props: Props) {
     <section
       id={id}
       className={`
-			min-h-screen flex flex-col items-center justify-center
+			min-h-dvh flex flex-col items-center justify-center
 			bg-blueprint text-white ${className ?? ''}
 			`}
     >
