@@ -42,7 +42,7 @@ const experienceData: CvDataItem[] = [
   {
     id: 'progepe',
     institution: 'Pró-Reitoria de Gestão de Pessoas - Unifal-MG',
-    institutionUrl: 'https://progepe.unifal-mg.edu.br',
+    institutionUrl: 'https://unifal-mg.edu.br/progepe/',
   },
   {
     id: 'tribit',
