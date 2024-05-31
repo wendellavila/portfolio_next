@@ -14,7 +14,7 @@ export function ProjectItem(props: Props) {
   const i18n = useTranslations('sections.projects');
   return (
     <article
-      className={`relative flex flex-col items-center
+      className={`relative flex flex-col w-96
       text-center mb-2 animate-fade-down ${className ?? ''}`}
     >
       <a
@@ -22,7 +22,10 @@ export function ProjectItem(props: Props) {
         group flex flex-col items-center gap-4"
         href={url}
       >
-        <div className="bg-cream flex justify-center rotate-3 transition duration-200 group-hover:scale-[1.02]">
+        <div
+          className="bg-cream flex rotate-3 transition duration-75
+          group-hover:scale-[1.02]"
+        >
           <div
             aria-hidden
             className="absolute bg-blueprint w-full h-full -rotate-3"

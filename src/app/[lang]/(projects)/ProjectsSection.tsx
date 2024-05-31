@@ -35,8 +35,8 @@ export function ProjectsSection(props: SectionProps) {
         <SectionHeader decorationClassName="bg-silver">
           {i18n('title').toLocaleUpperCase()}
         </SectionHeader>
-        <div className="grow flex flex-row flex-wrap gap-8 justify-center items-center px-8">
-          {projectData.map(project => (
+        <div className="grow flex flex-row flex-wrap gap-8 justify-center px-8">
+          {projectData.map((project) => (
             <ProjectItem
               id={`projects-item-${project.title}`}
               key={`projects-item-${project.title}`}
