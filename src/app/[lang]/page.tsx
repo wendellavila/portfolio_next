@@ -48,7 +48,7 @@ export default function MainPage() {
   ];
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-x-hidden">
       <BannerSection componentRef={bannerRef} items={navItems} />
       <AboutSection componentRef={aboutRef} items={navItems} />
       <CvSection componentRef={experienceRef} items={navItems} />
