@@ -42,9 +42,8 @@ export function AboutSection(props: SectionProps) {
           {i18n('title')}
         </SectionHeader>
         <div
-          className={`flex items-center gap-8 grow 
-          md:flex-row md:justify-evenly
-          flex-col`}
+          className={`grow flex items-center gap-8  
+          justify-evenly flex-col md:flex-row `}
         >
           <div
             id="about-profile"
