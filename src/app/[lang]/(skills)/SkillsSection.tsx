@@ -45,7 +45,7 @@ export function SkillsSection(props: SectionProps) {
           className="grow flex flex-row gap-x-0 md:gap-x-24 gap-y-8
           flex-wrap items-center justify-evenly"
         >
-          {skillsData.map(category => (
+          {skillsData.map((category) => (
             <div
               id={`skills-${category.id}`}
               key={`skills-${category.id}`}
@@ -53,14 +53,16 @@ export function SkillsSection(props: SectionProps) {
             >
               <h3 className="font-semibold mb-2">{i18n(category.id)}</h3>
 
-              {category.data.map(skillItem => (
+              {category.data.map((skillItem) => (
                 <PercentageBar
                   key={`skills-${category.id}-${skillItem.title}`}
                   percentage={skillItem.percentage}
                   animate={animate}
                 >
-                  <Iconify icon={skillItem.icon} aria-hidden />
-                  {skillItem.title}
+                  {skillItem.icon && (
+                    <Iconify icon={skillItem.icon} aria-hidden />
+                  )}
+                  {skillItem.title ?? i18n(`${skillItem.id}.title`)}
                 </PercentageBar>
               ))}
             </div>

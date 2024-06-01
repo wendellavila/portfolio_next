@@ -33,11 +33,11 @@ export function DownloadCV(props: ComponentProps) {
           font-sm hover:underline"
           >
             <Iconify
-              icon="ph:file-pdf-light"
-              width={20}
-              className="mr-1 font-bold"
+              icon="uiw:download"
+              width={16}
+              className="mr-2 font-bold"
             />
-            {i18n('download')}
+            {i18n('clickToDownload')}
           </div>
         </a>
       </div>

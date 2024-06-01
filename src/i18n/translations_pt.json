@@ -17,7 +17,7 @@
     },
     "cv": {
       "title": "CV",
-      "download": "Baixar",
+      "clickToDownload": "Clique para baixar",
       "downloadPDF": "Baixar PDF"
     },
     "education": {
@@ -75,9 +75,15 @@
     "skills": {
       "title": "Habilidades",
       "programmingLanguages": "Linguagens de Programação",
-      "frameworks": "Frameworks, Tecnologias, etc.",
+      "frameworksTech": "Frameworks, Tecnologias, etc.",
       "machineLearning": "Aprendizado de Máquina",
-      "other": "Outros"
+      "languages": "Idiomas",
+      "english": {
+        "title": "Inglês"
+      },
+      "brazilianPortuguese": {
+        "title": "Português Brasileiro"
+      }
     },
     "projects": {
       "title": "Projetos",

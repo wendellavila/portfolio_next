@@ -26,14 +26,14 @@ interface CvDataItem {
   years?: string;
 }
 
-const educationData: CvDataItem[] = [
+const cvDataEducation: CvDataItem[] = [
   {
     id: 'unifal',
     institutionUrl: 'https://bcc.unifal-mg.edu.br',
   },
 ];
 
-const experienceData: CvDataItem[] = [
+const cvDataExperience: CvDataItem[] = [
   {
     id: 'exportadora',
     institution: 'Exportadora de Café Guaxupé Ltda.',
@@ -50,7 +50,7 @@ const experienceData: CvDataItem[] = [
   },
 ];
 
-const coursesData: CvDataItem[] = [
+const cvDataCourses: CvDataItem[] = [
   {
     id: 'machineLearning',
     institution: 'Udemy',
@@ -77,7 +77,7 @@ const coursesData: CvDataItem[] = [
   },
 ];
 
-const publicationsData: CvDataItem[] = [
+const cvDataPublications: CvDataItem[] = [
   {
     id: 'l&nlm',
     title:
@@ -91,140 +91,179 @@ const publicationsData: CvDataItem[] = [
 export const cvData = [
   {
     id: 'education',
-    data: educationData,
+    data: cvDataEducation,
   },
   {
     id: 'experience',
-    data: experienceData,
+    data: cvDataExperience,
   },
   {
     id: 'courses',
-    data: coursesData,
+    data: cvDataCourses,
   },
   {
     id: 'publications',
-    data: publicationsData,
+    data: cvDataPublications,
   },
 ];
 
 interface SkillItem {
-  title: string;
-  icon: string;
+  id: string;
+  title?: string;
+  icon?: string;
   percentage: number;
 }
 
-const skillLanguages: SkillItem[] = [
-  { title: 'Typescript', icon: 'simple-icons:typescript', percentage: 85 },
-  { title: 'PHP', icon: 'simple-icons:php', percentage: 90 },
-  { title: 'Python', icon: 'simple-icons:python', percentage: 95 },
-  { title: 'Dart', icon: 'simple-icons:dart', percentage: 80 },
-  { title: 'Java', icon: 'ri:java-fill', percentage: 70 },
-  { title: 'C', icon: 'simple-icons:c', percentage: 60 },
-  { title: 'Lua', icon: 'simple-icons:lua', percentage: 50 },
-  { title: 'Bash', icon: 'simple-icons:gnubash', percentage: 30 },
-];
-const skillFrameworks: SkillItem[] = [
+const skillsProgrammingLanguages: SkillItem[] = [
   {
+    id: 'typescript',
+    title: 'Typescript',
+    icon: 'simple-icons:typescript',
+    percentage: 85,
+  },
+  { id: 'php', title: 'PHP', icon: 'simple-icons:php', percentage: 90 },
+  {
+    id: 'python',
+    title: 'Python',
+    icon: 'simple-icons:python',
+    percentage: 95,
+  },
+  { id: 'dart', title: 'Dart', icon: 'simple-icons:dart', percentage: 80 },
+  { id: 'java', title: 'Java', icon: 'ri:java-fill', percentage: 70 },
+  { id: 'c', title: 'C', icon: 'simple-icons:c', percentage: 60 },
+  { id: 'lua', title: 'Lua', icon: 'simple-icons:lua', percentage: 50 },
+  { id: 'bash', title: 'Bash', icon: 'simple-icons:gnubash', percentage: 30 },
+];
+const skillsFrameworksTech: SkillItem[] = [
+  {
+    id: 'nextjs',
     title: 'Next.Js',
     icon: 'simple-icons:nextdotjs',
     percentage: 80,
   },
   {
+    id: 'react',
     title: 'React',
     icon: 'simple-icons:react',
     percentage: 90,
   },
   {
+    id: 'tailwindcss',
     title: 'Tailwind CSS',
     icon: 'simple-icons:tailwindcss',
     percentage: 95,
   },
   {
+    id: 'flutter',
     title: 'Flutter',
     icon: 'simple-icons:flutter',
     percentage: 90,
   },
   {
+    id: 'sqlsrv',
     title: 'SQL Server',
     icon: 'simple-icons:microsoftsqlserver',
     percentage: 70,
   },
   {
+    id: 'mysql',
     title: 'MySQL',
     icon: 'fontisto:mysql',
     percentage: 50,
   },
   {
+    id: 'html',
     title: 'HTML 5',
     icon: 'simple-icons:html5',
     percentage: 95,
   },
   {
+    id: 'css',
     title: 'CSS 3',
     icon: 'simple-icons:css3',
     percentage: 90,
   },
   {
+    id: 'git',
     title: 'Git',
     icon: 'simple-icons:git',
     percentage: 60,
   },
-];
-const skillMachineLearning: SkillItem[] = [
   {
-    title: 'Keras',
-    icon: 'simple-icons:keras',
-    percentage: 65,
-  },
-  {
-    title: 'Numpy',
-    icon: 'simple-icons:numpy',
-    percentage: 75,
-  },
-  {
-    title: 'Pandas',
-    icon: 'simple-icons:pandas',
-    percentage: 80,
-  },
-  {
-    title: 'scikit-learn',
-    icon: 'simple-icons:scikitlearn',
-    percentage: 50,
-  },
-  {
-    title: 'Matplotlib',
-    icon: 'carbon:qq-plot',
-    percentage: 40,
-  },
-  {
-    title: 'Hyperopt',
-    icon: 'cil:graph',
-    percentage: 60,
-  },
-];
-const skillOther: SkillItem[] = [
-  {
+    id: 'arch',
     title: 'Arch Linux',
     icon: 'simple-icons:archlinux',
     percentage: 75,
   },
   {
+    id: 'photoshop',
     title: 'Adobe Photoshop',
     icon: 'simple-icons:adobephotoshop',
     percentage: 70,
   },
   {
+    id: 'inkscape',
     title: 'Inkscape',
     icon: 'simple-icons:inkscape',
     percentage: 65,
   },
 ];
+const skillsMachineLearning: SkillItem[] = [
+  {
+    id: 'keras',
+    title: 'Keras',
+    icon: 'simple-icons:keras',
+    percentage: 65,
+  },
+  {
+    id: 'numpy',
+    title: 'Numpy',
+    icon: 'simple-icons:numpy',
+    percentage: 75,
+  },
+  {
+    id: 'pandas',
+    title: 'Pandas',
+    icon: 'simple-icons:pandas',
+    percentage: 80,
+  },
+  {
+    id: 'scikitLearn',
+    title: 'scikit-learn',
+    icon: 'simple-icons:scikitlearn',
+    percentage: 50,
+  },
+  {
+    id: 'nextjs',
+    title: 'Matplotlib',
+    icon: 'carbon:qq-plot',
+    percentage: 40,
+  },
+  {
+    id: 'hyperopt',
+    title: 'Hyperopt',
+    icon: 'cil:graph',
+    percentage: 60,
+  },
+];
+const skillsLanguages: SkillItem[] = [
+  {
+    id: 'brazilianPortuguese',
+    icon: 'game-icons:brazil-flag',
+    percentage: 100,
+  },
+  {
+    id: 'english',
+    icon: 'la:flag-usa',
+    percentage: 90,
+  },
+];
 
 export const skillsData = [
-  { id: 'programmingLanguages', data: skillLanguages },
-  { id: 'frameworks', data: skillFrameworks },
-  { id: 'machineLearning', data: skillMachineLearning },
-  { id: 'other', data: skillOther },
+  { id: 'programmingLanguages', data: skillsProgrammingLanguages },
+  { id: 'frameworksTech', data: skillsFrameworksTech },
+  { id: 'machineLearning', data: skillsMachineLearning },
+  { id: 'languages', data: skillsLanguages },
 ];
 
 interface ProjectItem {
