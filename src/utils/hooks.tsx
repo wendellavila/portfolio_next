@@ -19,7 +19,7 @@ export function useInView(
       ([entry]) => setVisibility(entry.isIntersecting),
       { threshold: threshold ?? 0.3 }
     );
-  }, []);
+  }, [observerRef]);
 
   useEffect(() => {
     if (observerRef && observerRef.current && ref.current)
@@ -27,7 +27,7 @@ export function useInView(
     return () => {
       if (observerRef && observerRef.current) observerRef.current.disconnect();
     };
-  }, [ref]);
+  }, [observerRef, ref]);
   return inView;
 }
 

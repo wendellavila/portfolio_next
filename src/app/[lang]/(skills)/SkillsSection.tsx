@@ -55,7 +55,7 @@ export function SkillsSection(props: SectionProps) {
 
               {category.data.map((skillItem) => (
                 <PercentageBar
-                  key={`skills-${category.id}-${skillItem.title}`}
+                  key={`skills-${category.id}-${skillItem.id}`}
                   percentage={skillItem.percentage}
                   animate={animate}
                 >
