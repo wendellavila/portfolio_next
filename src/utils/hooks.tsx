@@ -3,15 +3,21 @@ import { RefObject, useEffect, useRef, useState } from 'react';
 /**
  * A hook that detects if the provided DOM node is currently in view.
  * @param {RefObject<HTMLElement | null>} ref - A reference to a DOM node.
+ * @param {number} threshold - Percentage of the element that needs to be in view
+ * to trigger an update. Defaults to 0.3.
  * @returns {boolean} The visibility status of the provided ref.
  */
-export function useInView(ref: RefObject<HTMLElement | null>) {
+export function useInView(
+  ref: RefObject<HTMLElement | null>,
+  threshold?: number
+) {
   const [inView, setVisibility] = useState(false);
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
-    observerRef.current = new IntersectionObserver(([entry]) =>
-      setVisibility(entry.isIntersecting)
+    observerRef.current = new IntersectionObserver(
+      ([entry]) => setVisibility(entry.isIntersecting),
+      { threshold: threshold ?? 0.3 }
     );
   }, []);
 
