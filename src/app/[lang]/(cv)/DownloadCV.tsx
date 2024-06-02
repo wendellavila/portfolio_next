@@ -33,7 +33,7 @@ export function DownloadCV(props: ComponentProps) {
           font-sm hover:underline"
           >
             <Iconify
-              icon="uiw:download"
+              icon="formkit:download"
               width={16}
               className="mr-2 font-bold"
             />
