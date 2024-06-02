@@ -52,6 +52,12 @@ const cvDataExperience: CvDataItem[] = [
 
 const cvDataCourses: CvDataItem[] = [
   {
+    id: 'java',
+    institution: 'Udemy',
+    titleUrl: 'https://www.udemy.com/course/java-curso-completo/',
+    years: '2023',
+  },
+  {
     id: 'machineLearning',
     institution: 'Udemy',
     titleUrl: 'https://www.udemy.com/course/python-coding/',
@@ -62,12 +68,6 @@ const cvDataCourses: CvDataItem[] = [
     institution: 'Udemy',
     titleUrl: 'https://www.udemy.com/course/python-coding/',
     years: '2019-2020',
-  },
-  {
-    id: 'java',
-    institution: 'Udemy',
-    titleUrl: 'https://www.udemy.com/course/java-curso-completo/',
-    years: '2023',
   },
   {
     id: 'r',
