@@ -41,7 +41,7 @@ jobs:
           cd ..
 
           mkdir tmp
-          cp deploy_repo/README.md tmp 2>/dev/null || :
+          cp deploy_repo/README.md tmp
 
           rm -rf deploy_repo/*
 
