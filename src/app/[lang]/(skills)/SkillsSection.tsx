@@ -60,9 +60,15 @@ export function SkillsSection(props: SectionProps) {
                   animate={animate}
                 >
                   {skillItem.icon && (
-                    <Iconify icon={skillItem.icon} aria-hidden />
+                    <Iconify
+                      icon={skillItem.icon}
+                      aria-hidden
+                      className="flex-shrink-0"
+                    />
                   )}
-                  {skillItem.title ?? i18n(`${skillItem.id}.title`)}
+                  <span>
+                    {skillItem.title ?? i18n(`${skillItem.id}.title`)}
+                  </span>
                 </PercentageBar>
               ))}
             </div>

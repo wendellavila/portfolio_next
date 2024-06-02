@@ -36,11 +36,11 @@ export function PercentageBar(props: Props) {
 
   return (
     <div
-      className={`flex flex-row gap-4 items-center flex-nowrap ${
+      className={`flex flex-row gap-x-4 items-center flex-nowrap ${
         className ?? ''
       }`}
     >
-      <div className="w-1/3 flex flex-row items-center gap-2">{children}</div>
+      <div className="w-1/3 flex flex-row items-center gap-x-2">{children}</div>
       <div
         aria-label={`${maxPercentage}%`}
         className="bg-slate-50/20 h-3 w-full"
