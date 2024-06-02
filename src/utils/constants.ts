@@ -289,9 +289,9 @@ export const projectData: ProjectItem[] = [
     url: 'https://github.com/wendellavila/block_game_next',
   },
   {
-    title: 'JSMP-Notebooks',
+    title: 'jsmp_notebooks',
     image: 'project.png',
-    url: 'https://github.com/wendellavila/block_game_next',
+    url: 'https://github.com/wendellavila/jsmp_notebooks',
   },
   {
     title: 'leetcode',
