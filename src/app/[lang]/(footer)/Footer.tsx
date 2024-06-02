@@ -8,9 +8,13 @@ export function Footer() {
   return (
     <footer
       id="footer"
-      className="bg-neutral-800 py-3 px-5 flex flex-row justify-between flex-wrap"
+      className="flex flex-row py-3 px-5 justify-between flex-wrap
+      gap-y-2 bg-neutral-800"
     >
-      <div id="footer-copyright" className="text-gray-100 flex flex-col">
+      <div
+        id="footer-copyright"
+        className="text-gray-100 flex flex-col gap-y-1"
+      >
         <a
           href={deployUrl}
           className="hover:underline font-bold text-sm hyphens-manual"
