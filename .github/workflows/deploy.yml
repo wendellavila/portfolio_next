@@ -41,6 +41,8 @@ jobs:
 
           mkdir tmp
           cp deploy_repo/README.md tmp
+          cp deploy_repo/LICENSE tmp
+          cp deploy_repo/.nojekyll tmp
 
           rm -rf deploy_repo/*
 
@@ -48,7 +50,6 @@ jobs:
           cp -r tmp/* deploy_repo
 
           cd deploy_repo
-          touch .nojekyll
           git add .
           git commit -m "ci: Auto deploy with GitHub Actions. Source: $username/$source_repo"
           git push origin main
