@@ -13,7 +13,7 @@
     },
     "about": {
       "title": "About Me",
-      "content": "I'm a computer scientist who graduated from the Federal University of Alfenas (Unifal-MG) in 2022.\nI currently work as a junior fullstack developer, where I've been developing my skills on the front-end using React/Next.js and Flutter, and on the back-end with PHP and SQL Server.\nI'm also familiar with data science and machine learning.\nIn December 2023, I had the opportunity of publishing my article entitled \"Study and Analysis of Deep Learning Techniques for Solving Financial Problems\" in the journal 'Learning and Nonlinear Models'.\nIn addition to development, I am also passionate about the GNU/Linux ecosystem, which I use daily as my primary system for both development and leisure."
+      "content": "I'm a computer scientist who graduated from the Federal University of Alfenas (Unifal-MG) in 2022.\nI currently work as a junior fullstack developer, where I've been developing my skills on the front-end using React/Next.js and Flutter, and on the back-end with PHP and SQL Server.\nI'm also familiar with data science and machine learning. In December 2023, I had the opportunity of publishing my article entitled \"Study and Analysis of Deep Learning Techniques for Solving Financial Problems\" in the journal 'Learning and Nonlinear Models'.\nIn addition to development, I am also passionate about the GNU/Linux ecosystem, which I use daily as my primary system for both development and leisure."
     },
     "cv": {
       "title": "CV",
