@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node_version: [22.x]
+        node_version: [20]
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node.js ${{ matrix.node_version }}
@@ -21,35 +21,35 @@ jobs:
 
       - name: Build Next.js project
         run: npm run build
-        
+
       - name: Deploy to external repository
         env:
           API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
-          username: 'wendellavila'
-          email: 'wendelljcavila@gmail.com'
-          build_dir: 'out'
-          source_repo: 'portfolio_next'
-          deploy_repo: 'wendellavila.github.io'
-          deploy_branch: 'main'
+          username: wendellavila
+          email: wendelljcavila@gmail.com
+          build_dir: out
+          source_repo: portfolio_next
+          deploy_repo: wendellavila.github.io
+          deploy_branch: main
         run: |
-        git config user.name "$username"
-        git config user.email "$email"
+          git config user.name "$username"
+          git config user.email "$email"
 
-        git clone "https://user:$API_GITHUB_TOKEN@github.com/$username/$deploy_repo" deploy_repo
-        cd deploy_repo
-        git checkout "$deploy_branch"
-        cd ..
-        
-        mkdir tmp
-        cp deploy_repo/README.md tmp
-        cp deploy_repo/.nojekyll tmp
+          git clone "https://user:$API_GITHUB_TOKEN@github.com/$username/$deploy_repo" deploy_repo
+          cd deploy_repo
+          git checkout "$deploy_branch"
+          cd ..
 
-        rm -rf deploy_repo/*
+          mkdir tmp
+          cp deploy_repo/README.md tmp
+          cp deploy_repo/.nojekyll tmp
 
-        cp -r ${{ env.build_dir }}/* deploy_repo
-        cp -r tmp/* deploy_repo
+          rm -rf deploy_repo/*
 
-        cd deploy_repo
-        git add .
-        git commit -m "ci: Auto deploy with GitHub Actions. Source: $username/$source_repo"
-        git push origin main
+          cp -r ${{ env.build_dir }}/* deploy_repo
+          cp -r tmp/* deploy_repo
+
+          cd deploy_repo
+          git add .
+          git commit -m "ci: Auto deploy with GitHub Actions. Source: $username/$source_repo"
+          git push origin main
