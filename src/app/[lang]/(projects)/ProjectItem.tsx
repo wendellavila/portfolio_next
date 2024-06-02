@@ -21,6 +21,7 @@ export function ProjectItem(props: Props) {
         className="z-10 hover:cursor-pointer hover:underline
         group flex flex-col items-center gap-4"
         href={url}
+        target="_blank"
       >
         <div
           className="bg-cream flex rotate-3 transition duration-75
