@@ -21,22 +21,23 @@ jobs:
 
       - name: Build Next.js project
         run: npm run build
+        
       - name: Deploy to external repository
         env:
           API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
           username: 'wendellavila'
-          email: wendelljcavila@gmail.com
+          email: 'wendelljcavila@gmail.com'
           build_dir: 'out'
           source_repo: 'portfolio_next'
           deploy_repo: 'wendellavila.github.io'
-          deploy_branch: main
+          deploy_branch: 'main'
         run: |
-        git config user.name ${{ env.username }}
-        git config user.email ${{ env.email }}
+        git config user.name "$username"
+        git config user.email "$email"
 
         git clone "https://user:$API_GITHUB_TOKEN@github.com/$username/$deploy_repo" deploy_repo
         cd deploy_repo
-        git checkout ${{ env.deploy_branch }}
+        git checkout "$deploy_branch"
         cd ..
         
         mkdir tmp
@@ -52,7 +53,3 @@ jobs:
         git add .
         git commit -m "ci: Auto deploy with GitHub Actions. Source: $username/$source_repo"
         git push origin main
-
-
-
-
