@@ -97,7 +97,7 @@
       "block_game_next": {
         "description": "Clone do Tetris feito com React/Next.js e Tailwind CSS."
       },
-      "JSMP-Notebooks": {
+      "jsmp_notebooks": {
         "description": "Código utilizado para exploração de técnicas de aprendizado de máquina e deep learning utilizando dados da competição \"Jane Street Market Prediction\"."
       },
       "leetcode": {
