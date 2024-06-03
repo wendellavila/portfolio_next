@@ -276,52 +276,52 @@ interface ProjectItem {
 export const projectData: ProjectItem[] = [
   {
     title: 'eudr_next',
-    image: 'project.png',
+    image: '/assets/img/eudr_next.webp',
     repoUrl: 'https://github.com/wendellavila/eudr_next',
   },
   {
     title: 'mediawiki_pybot',
-    image: 'project.png',
+    image: '/assets/img/mediawiki_pybot.webp',
     repoUrl: 'https://github.com/wendellavila/mediawiki_pybot',
   },
   {
     title: 'block_game_next',
-    image: 'project.png',
+    image: '/assets/img/block_game_next.webp',
     repoUrl: 'https://github.com/wendellavila/block_game_next',
   },
   {
     title: 'jsmp_notebooks',
-    image: 'project.png',
+    image: '/assets/img/jsmp_notebooks.webp',
     repoUrl: 'https://github.com/wendellavila/jsmp_notebooks',
   },
   {
     title: 'leetcode',
-    image: 'project.png',
+    image: '/assets/img/leetcode.webp',
     repoUrl: 'https://github.com/wendellavila/leetcode',
   },
   {
     title: 'chess_java',
-    image: 'project.png',
+    image: '/assets/img/chess_java.webp',
     repoUrl: 'https://github.com/wendellavila/chess_java',
   },
   {
     title: 'ssg_i18n_next',
-    image: 'project.png',
+    image: '/assets/img/ssg_i18n_next.webp',
     repoUrl: 'https://github.com/wendellavila/ssg_i18n_next',
   },
   {
     title: 'dashboard_flutter',
-    image: 'project.png',
+    image: '/assets/img/dashboard_flutter.webp',
     repoUrl: 'https://github.com/wendellavila/dashboard_flutter',
   },
   {
     title: 'routesapp_flutter',
-    image: 'project.png',
+    image: '/assets/img/routesapp_flutter.webp',
     repoUrl: 'https://github.com/wendellavila/routesapp_flutter',
   },
   {
     title: 'starcount_mpi_c',
-    image: 'project.png',
+    image: '/assets/img/starcount_mpi_c.webp',
     repoUrl: 'https://github.com/wendellavila/starcount_mpi_c',
   },
 ];

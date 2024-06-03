@@ -34,8 +34,8 @@ export function ProjectItem(props: Props) {
           ></div>
           <div className="relative">
             <Image
-              src={`/${image}`}
-              width={200}
+              src={image}
+              width={300}
               height={200}
               alt={`${title} - ${i18n('screenshot')}`}
               className="w-[300px] h-[200px] m-4 bg-white shadow-md border-8
