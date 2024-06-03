@@ -23,7 +23,7 @@ export function ProjectItemLinks(props: Props) {
   return (
     <div
       className={`absolute top-0 left-0 m-4 w-[300px] h-[200px] -rotate-3  z-30
-      bg-blueprint/15 backdrop-blur-sm text-gray-600
+      bg-white/15 backdrop-blur-sm text-gray-500
       flex flex-row justify-evenly items-center ${className ?? ''}`}
     >
       {linkInfo.map(item =>
