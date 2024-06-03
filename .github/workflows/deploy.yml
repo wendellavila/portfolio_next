@@ -8,6 +8,14 @@ jobs:
     strategy:
       matrix:
         node-version: [20]
+    env:
+      API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
+      username: wendellavila
+      email: wendelljcavila@gmail.com
+      build_dir: out
+      source_repo: portfolio_next
+      deploy_repo: wendellavila.github.io
+      deploy_branch: main
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node.js ${{ matrix.node-version }}
@@ -22,15 +30,7 @@ jobs:
       - name: Build Next.js project
         run: npm run build
 
-      - name: Deploy to external repository
-        env:
-          API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
-          username: wendellavila
-          email: wendelljcavila@gmail.com
-          build_dir: out
-          source_repo: portfolio_next
-          deploy_repo: wendellavila.github.io
-          deploy_branch: main
+      - name: Clone and checkout deployment repo
         run: |
           git clone "https://user:$API_GITHUB_TOKEN@github.com/$username/$deploy_repo" deploy_repo
           cd deploy_repo
@@ -39,6 +39,8 @@ jobs:
           git checkout "$deploy_branch"
           cd ..
 
+      - name: Delete old files and move new build to deployment repo folder
+        run: |
           mkdir tmp
 
           keep_files=(
@@ -55,10 +57,12 @@ jobs:
 
           rm -rf deploy_repo/*
 
-          cp -r ${{ env.build_dir }}/* deploy_repo
-          cp -r tmp/* deploy_repo
+          cp -r ${{ env.build_dir }}/. deploy_repo
+          cp -r tmp/. deploy_repo
 
+      - name: Commit files to deployment repo
+        run: |
           cd deploy_repo
           git add .
-          git commit -m "ci: Auto deploy with GitHub Actions. Source: $username/$source_repo"
+          git commit -m "ci: Automated deployment with GitHub Actions. Source repo: $username/$source_repo"
           git push origin main
