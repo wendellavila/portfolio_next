@@ -31,6 +31,12 @@ jobs:
           source_repo: portfolio_next
           deploy_repo: wendellavila.github.io
           deploy_branch: main
+          keep_files: |
+          (
+            "README.md"
+            "LICENSE"
+            ".nojekyll"
+          )
         run: |
           git clone "https://user:$API_GITHUB_TOKEN@github.com/$username/$deploy_repo" deploy_repo
           cd deploy_repo
@@ -40,9 +46,14 @@ jobs:
           cd ..
 
           mkdir tmp
-          cp deploy_repo/README.md tmp
-          cp deploy_repo/LICENSE tmp
-          cp deploy_repo/.nojekyll tmp
+
+          keep_files=${{ env.keep_files }}
+          for file in ${keep_files[*]}
+          do
+            if [ -f file ] || [ -d file ]; then
+              mv deploy_repo/"$file" tmp
+            fi
+          done
 
           rm -rf deploy_repo/*
 
