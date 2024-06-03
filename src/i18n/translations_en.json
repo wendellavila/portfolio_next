@@ -88,6 +88,8 @@
     "projects": {
       "title": "Projects",
       "screenshot": "Screenshot",
+      "githubRepo": "GitHub repo",
+      "liveProject": "Live project",
       "eudr_next": {
         "description": "Environmental Compliance Platform Frontend, made with Next.js 14, MUI, and Tailwind CSS. Internationalization made with next-intl."
       },

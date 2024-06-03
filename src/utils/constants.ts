@@ -269,58 +269,59 @@ export const skillsData = [
 interface ProjectItem {
   title: string;
   image: string;
-  url: string;
+  repoUrl: string;
+  deployUrl?: string;
 }
 
 export const projectData: ProjectItem[] = [
   {
     title: 'eudr_next',
     image: 'project.png',
-    url: 'https://github.com/wendellavila/eudr_next',
+    repoUrl: 'https://github.com/wendellavila/eudr_next',
   },
   {
     title: 'mediawiki_pybot',
     image: 'project.png',
-    url: 'https://github.com/wendellavila/mediawiki_pybot',
+    repoUrl: 'https://github.com/wendellavila/mediawiki_pybot',
   },
   {
     title: 'block_game_next',
     image: 'project.png',
-    url: 'https://github.com/wendellavila/block_game_next',
+    repoUrl: 'https://github.com/wendellavila/block_game_next',
   },
   {
     title: 'jsmp_notebooks',
     image: 'project.png',
-    url: 'https://github.com/wendellavila/jsmp_notebooks',
+    repoUrl: 'https://github.com/wendellavila/jsmp_notebooks',
   },
   {
     title: 'leetcode',
     image: 'project.png',
-    url: 'https://github.com/wendellavila/leetcode',
+    repoUrl: 'https://github.com/wendellavila/leetcode',
   },
   {
     title: 'chess_java',
     image: 'project.png',
-    url: 'https://github.com/wendellavila/chess_java',
+    repoUrl: 'https://github.com/wendellavila/chess_java',
   },
   {
     title: 'ssg_i18n_next',
     image: 'project.png',
-    url: 'https://github.com/wendellavila/ssg_i18n_next',
+    repoUrl: 'https://github.com/wendellavila/ssg_i18n_next',
   },
   {
     title: 'dashboard_flutter',
     image: 'project.png',
-    url: 'https://github.com/wendellavila/dashboard_flutter',
+    repoUrl: 'https://github.com/wendellavila/dashboard_flutter',
   },
   {
     title: 'routesapp_flutter',
     image: 'project.png',
-    url: 'https://github.com/wendellavila/routesapp_flutter',
+    repoUrl: 'https://github.com/wendellavila/routesapp_flutter',
   },
   {
     title: 'starcount_mpi_c',
     image: 'project.png',
-    url: 'https://github.com/wendellavila/starcount_mpi_c',
+    repoUrl: 'https://github.com/wendellavila/starcount_mpi_c',
   },
 ];

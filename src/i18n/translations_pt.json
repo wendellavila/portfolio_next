@@ -88,6 +88,8 @@
     "projects": {
       "title": "Projetos",
       "screenshot": "Captura de tela",
+      "githubRepo": "Repositório GitHub",
+      "liveProject": "Projeto interativo",
       "eudr_next": {
         "description": "Front-end de uma plataforma de verificação de conformidade com protocolos ambientais, feito com Next.js 14, MUI e Tailwind CSS. Internacionalização feito com next-intl."
       },

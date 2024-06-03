@@ -36,13 +36,14 @@ export function ProjectsSection(props: SectionProps) {
           {i18n('title').toLocaleUpperCase()}
         </SectionHeader>
         <div className="grow flex flex-row flex-wrap gap-8 justify-center px-8">
-          {projectData.map((project) => (
+          {projectData.map(project => (
             <ProjectItem
               id={`projects-item-${project.title}`}
               key={`projects-item-${project.title}`}
               title={project.title}
               image={project.image}
-              url={project.url}
+              repoUrl={project.repoUrl}
+              deployUrl={project.deployUrl}
               description={i18n(`${project.title}.description`) ?? undefined}
               className={animate ? 'visible' : 'hidden'}
             />
