@@ -31,12 +31,6 @@ jobs:
           source_repo: portfolio_next
           deploy_repo: wendellavila.github.io
           deploy_branch: main
-          keep_files: |
-          (
-            "README.md"
-            "LICENSE"
-            ".nojekyll"
-          )
         run: |
           git clone "https://user:$API_GITHUB_TOKEN@github.com/$username/$deploy_repo" deploy_repo
           cd deploy_repo
@@ -47,7 +41,11 @@ jobs:
 
           mkdir tmp
 
-          keep_files=${{ env.keep_files }}
+          keep_files=(
+            "README.md"
+            "LICENSE"
+            ".nojekyll"
+          )
           for file in ${keep_files[*]}
           do
             if [ -f file ] || [ -d file ]; then
