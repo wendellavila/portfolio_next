@@ -46,7 +46,6 @@ const cvDataExperience: CvDataItem[] = [
   },
   {
     id: 'tribit',
-    institution: 'TriBit Jr. - Unifal-MG',
   },
 ];
 
