@@ -32,22 +32,21 @@ export function ProjectItem(props: Props) {
           className={`bg-cream flex rotate-3 transition duration-75
           ${!showLinks ? 'group-hover:scale-[1.02]' : ''}`}
         >
-          <div
-            aria-hidden
-            className="absolute bg-blueprint w-full h-full -rotate-3"
-          ></div>
-          <div className="relative">
-            <Image
-              src={image}
-              width={300}
-              height={200}
-              alt={`${title} - ${i18n('screenshot')}`}
-              className="w-[300px] h-[200px] m-4 bg-white shadow-md border-8
-            border-white -rotate-3"
-            />
-            {showLinks && (
-              <ProjectItemLinks repoUrl={repoUrl} deployUrl={deployUrl} />
-            )}
+          <div className="p-3 -rotate-3 bg-blueprint">
+            <div className="p-3 shadow-md bg-white">
+              <div className="relative">
+                <Image
+                  src={image}
+                  width={300}
+                  height={200}
+                  alt={`${title} - ${i18n('screenshot')}`}
+                  className="w-[300px] h-[200px] bg-white border-white"
+                ></Image>
+                {showLinks && (
+                  <ProjectItemLinks repoUrl={repoUrl} deployUrl={deployUrl} />
+                )}
+              </div>
+            </div>
           </div>
         </div>
         <div>

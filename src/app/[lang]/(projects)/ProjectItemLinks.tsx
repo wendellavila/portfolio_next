@@ -22,7 +22,7 @@ export function ProjectItemLinks(props: Props) {
 
   return (
     <div
-      className={`absolute top-0 left-0 m-6 w-[284px] h-[184px] -rotate-3  z-30
+      className={`absolute top-0 left-0 w-full h-full
       bg-blueprint/45 backdrop-blur-md text-white/85 hover:text-white
       flex flex-row justify-evenly items-center ${className ?? ''}`}
     >
@@ -38,9 +38,9 @@ export function ProjectItemLinks(props: Props) {
               icon={item.icon}
               width={50}
               aria-hidden
-              className="drop-shadow-sm"
+              className="drop-shadow-md"
             />
-            {item.text}
+            <span className="drop-shadow-md">{item.text}</span>
           </a>
         ) : undefined
       )}
