@@ -20,8 +20,8 @@ export function ProjectItem(props: Props) {
   const [showLinks, setLinksVisibility] = useState(false);
   return (
     <article
-      className={`relative flex flex-col w-96
-      text-center mb-2 animate-fade-down ${className ?? ''}`}
+      className={`flex flex-col w-96 text-center mb-2
+      animate-fade-down ${className ?? ''}`}
     >
       <button
         className="z-10
