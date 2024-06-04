@@ -29,8 +29,8 @@ export function ProjectItem(props: Props) {
         onClick={() => setLinksVisibility(true)}
       >
         <div
-          className="bg-cream flex rotate-3 transition duration-75
-          group-hover:scale-[1.02]"
+          className={`bg-cream flex rotate-3 transition duration-75
+          ${!showLinks ? 'group-hover:scale-[1.02]' : ''}`}
         >
           <div
             aria-hidden
