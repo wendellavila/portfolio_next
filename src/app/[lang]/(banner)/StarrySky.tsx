@@ -1,20 +1,23 @@
 'use client';
-import { useRef } from 'react';
 import { getRandomInt } from '@/utils/functions';
-import { useRefDimensions } from '@/utils/hooks';
-import { Star } from './Star';
 
-export function StarrySky() {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const threshold = 50; // Rerender only when layout changes 50px in width or height
-  const [width, height] = useRefDimensions(containerRef, threshold);
+import { Star } from './Star';
+import { RefProps } from '@/typing/props';
+
+interface Props {
+  width: number;
+  height: number;
+}
+
+export function StarrySky(props: Props) {
+  const { width, height } = props;
+
   const biggerDimension = () => Math.max(width, height);
 
   return (
     <div
       id="banner-starry-sky"
       aria-hidden
-      ref={containerRef}
       className="w-full h-full absolute top-0 left-0 z-0 bg-gradient-to-b
       from-slate-800 via-slate-700 to-slate-600"
     >
