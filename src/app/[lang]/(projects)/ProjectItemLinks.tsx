@@ -23,8 +23,9 @@ export function ProjectItemLinks(props: Props) {
   return (
     <div
       className={`absolute top-0 left-0 w-full h-full
-      bg-blueprint/45 backdrop-blur-md text-white/85 hover:text-white
-      flex flex-row justify-evenly items-center ${className ?? ''}`}
+      bg-blueprint/45 backdrop-blur-md
+      flex flex-row justify-evenly items-center
+      ${className ?? ''}`}
     >
       {linkInfo.map(item =>
         item.href ? (
@@ -32,7 +33,8 @@ export function ProjectItemLinks(props: Props) {
             key={`project-item-link-${item.href}`}
             href={item.href}
             target="_blank"
-            className="flex flex-col items-center text-sm hover:underline"
+            className="flex flex-col items-center text-sm
+            hover:underline text-white/85 hover:text-white"
           >
             <Iconify
               icon={item.icon}
