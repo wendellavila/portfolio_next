@@ -1,6 +1,6 @@
 import { ColorProps, NavigationProps, PositionProps } from '@/typing/props';
 import { VerticalNavLanguageTooltip } from './VerticalNavLanguageTooltip';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface Props extends ColorProps, NavigationProps, PositionProps {}
 
@@ -13,7 +13,9 @@ export function VerticalNavLanguageLink(props: Props) {
       ? ['dot', 'languageSelector']
       : ['languageSelector', 'dot'];
 
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(true);
+
+  useEffect(() => setOpen(false), []);
 
   return (
     <a

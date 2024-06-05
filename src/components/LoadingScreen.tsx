@@ -1,4 +1,4 @@
-import { Iconify } from '@/components/Iconify';
+import { Iconify } from './Iconify';
 import { ComponentProps } from '@/typing/props';
 
 interface Props extends ComponentProps {

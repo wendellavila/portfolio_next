@@ -24,7 +24,8 @@ export function ProjectItemLinks(props: Props) {
     <div
       className={`absolute top-0 left-0 w-full h-full
       bg-blueprint/45 backdrop-blur-md
-      flex flex-row justify-evenly items-center
+      group-hover:flex hidden flex-row justify-evenly items-center
+      
       ${className ?? ''}`}
     >
       {linkInfo.map(item =>
@@ -40,7 +41,7 @@ export function ProjectItemLinks(props: Props) {
               icon={item.icon}
               width={50}
               aria-hidden
-              className="drop-shadow-md"
+              className="drop-shadow-sm"
             />
             <span className="drop-shadow-md">{item.text}</span>
           </a>

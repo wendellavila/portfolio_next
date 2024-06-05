@@ -20,10 +20,11 @@ export function TypingText(props: Props) {
   const { ariaLabel, children, className, component, animate } = props;
   const caret = 'ꕯ';
   const ComponentWrapper = component ?? 'span';
-  const [displayText, setDisplayText] = useState<string>(caret);
+  const [displayText, setDisplayText] = useState<string>(children);
 
   useEffect(() => {
     if (animate) {
+      setDisplayText(caret);
       let timeoutIds: ReturnType<typeof setTimeout>[] = [];
       timeoutIds.push(
         setTimeout(() => {
@@ -32,22 +33,28 @@ export function TypingText(props: Props) {
       );
       for (let i = 0; i < children.length; i++) {
         timeoutIds.push(
-          setTimeout(() => {
-            setDisplayText(
-              previousText =>
-                `${previousText.slice(0, previousText.length - 1)}${
-                  children[i]
-                }|`
-            );
-          }, 100 * (i + 1))
+          setTimeout(
+            () => {
+              setDisplayText(
+                previousText =>
+                  `${previousText.slice(0, previousText.length - 1)}${
+                    children[i]
+                  }|`
+              );
+            },
+            100 * (i + 1)
+          )
         );
       }
       timeoutIds.push(
-        setTimeout(() => {
-          setDisplayText(previousText =>
-            previousText.slice(0, previousText.length - 1)
-          );
-        }, 100 * (children.length + 2))
+        setTimeout(
+          () => {
+            setDisplayText(previousText =>
+              previousText.slice(0, previousText.length - 1)
+            );
+          },
+          100 * (children.length + 2)
+        )
       );
       return () => {
         timeoutIds.forEach(timeoutId => clearTimeout(timeoutId));

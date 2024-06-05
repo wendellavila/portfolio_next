@@ -47,8 +47,8 @@ export function AboutSection(props: SectionProps) {
         >
           <div
             id="about-profile"
-            className={`flex flex-col items-center px-4 animate-fade-right
-            ${animate ? 'visible' : 'hidden'}`}
+            className={`flex flex-col items-center px-4
+            ${animate ? 'animate-fade-right' : ''}`}
           >
             <Avatar
               className="mb-4"
@@ -56,10 +56,13 @@ export function AboutSection(props: SectionProps) {
               size={200}
               alt="WA"
             />
-            <LinkList />
+            <LinkList animate={animate} />
           </div>
-          <div id="about-content" className={animate ? 'visible' : 'hidden'}>
-            <article className="md:px-12 px-6 max-w-[1200px] animate-fade-left">
+          <div id="about-content">
+            <article
+              className={`md:px-12 px-6 max-w-[1200px]
+              ${animate ? 'animate-fade-left' : ''}`}
+            >
               {i18n('content')
                 .split('\n')
                 .map((line, index) => (

@@ -1,7 +1,12 @@
 import { email, githubUrl, linkedinUrl } from '@/utils/constants';
 import { Iconify } from '@/components/Iconify';
 
-export function LinkList() {
+interface Props {
+  animate?: boolean;
+}
+
+export function LinkList(props: Props) {
+  const { animate } = props;
   const linkData = [
     {
       url: linkedinUrl,
@@ -27,9 +32,9 @@ export function LinkList() {
           key={item.url}
           href={item.url}
           target="_blank"
-          className={`flex items-center justify-center gap-1 text-sm hover:underline py-0.5 animate-fade ${
-            index % 2 == 0 ? 'animate-fade-right' : 'animate-fade-left'
-          }`}
+          className={`flex items-center justify-center gap-1
+          text-sm hover:underline py-0.5
+          ${animate ? (index % 2 == 0 ? 'animate-fade-right' : 'animate-fade-left') : ''}`}
         >
           <Iconify icon={item.icon} width={18} />
           {item.text ?? item.url}

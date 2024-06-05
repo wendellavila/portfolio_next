@@ -44,8 +44,8 @@ export function ProjectsSection(props: SectionProps) {
               image={project.image}
               repoUrl={project.repoUrl}
               deployUrl={project.deployUrl}
-              description={i18n(`${project.title}.description`) ?? undefined}
-              className={animate ? 'visible' : 'hidden'}
+              description={i18n(`${project.title}.description`)}
+              className={animate ? 'animate-fade-down' : ''}
             />
           ))}
         </div>

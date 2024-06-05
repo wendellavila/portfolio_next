@@ -1,7 +1,6 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import { Iconify } from '@/components/Iconify';
-
 import { email, githubUrl, linkedinUrl } from '@/utils/constants';
 import { ComponentProps } from '@/typing/props';
 
@@ -31,14 +30,13 @@ export function IconLinkList(props: ComponentProps) {
   ];
 
   return (
-    <nav className={`flex flex-row gap-3 mt-4 ${className}`}>
-      {linkData.map((item) => (
+    <nav className={`flex flex-row gap-3 mt-4`}>
+      {linkData.map(item => (
         <a
           key={item.url}
           href={item.url}
           target="_blank"
           aria-label={item.ariaLabel}
-          className=""
         >
           <Iconify
             aria-label="LinkedIn Logo"
@@ -46,7 +44,7 @@ export function IconLinkList(props: ComponentProps) {
             width={45}
             className={`text-white/85 
             hover:cursor-pointer hover:text-white hover:scale-105
-            animate-fade ${item.animationDuration}`}
+            ${item.animationDuration} ${className}`}
           />
         </a>
       ))}

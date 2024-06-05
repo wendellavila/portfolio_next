@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { skillsData } from '@/utils/constants';
@@ -14,11 +14,13 @@ export function SkillsSection(props: SectionProps) {
   const { componentRef, items } = props;
 
   const i18n = useTranslations('sections.skills');
-  const isInView = useInView(componentRef);
+  const inView = useInView(componentRef);
   const [animate, setAnimate] = useState(false);
 
-  // Animate progress bars on first view
-  if (isInView && !animate) setAnimate(true);
+  // Animate on first view
+  useEffect(() => {
+    if (inView && !animate) setAnimate(true);
+  }, [animate, inView]);
 
   return (
     <section
@@ -45,7 +47,7 @@ export function SkillsSection(props: SectionProps) {
           className="grow flex flex-row gap-x-0 md:gap-x-24 gap-y-8
           flex-wrap items-center justify-evenly"
         >
-          {skillsData.map((category) => (
+          {skillsData.map(category => (
             <div
               id={`skills-${category.id}`}
               key={`skills-${category.id}`}
@@ -53,7 +55,7 @@ export function SkillsSection(props: SectionProps) {
             >
               <h3 className="font-semibold mb-2">{i18n(category.id)}</h3>
 
-              {category.data.map((skillItem) => (
+              {category.data.map(skillItem => (
                 <PercentageBar
                   key={`skills-${category.id}-${skillItem.id}`}
                   percentage={skillItem.percentage}

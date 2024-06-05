@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
-import { Iconify } from '@/components/Iconify';
+import { Iconify } from '../Iconify';
 import { i18nConfig } from '@/utils/constants';
 import { Map } from '@/typing/types';
 

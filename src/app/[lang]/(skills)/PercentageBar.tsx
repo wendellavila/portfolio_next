@@ -9,16 +9,19 @@ interface Props extends ComponentProps {
 export function PercentageBar(props: Props) {
   const { animate, className, children } = props;
 
-  let maxPercentage = Math.round(props.percentage);
-  if (maxPercentage < 0) maxPercentage = 0;
-  if (maxPercentage > 100) maxPercentage = 100;
+  const maxPercentage = Math.round(
+    props.percentage > 100 ? 100 : props.percentage < 0 ? 0 : props.percentage
+  );
 
-  const [percentage, setPercentage] = useState(0);
+  //Start at max in case JS is turned off
+  const [percentage, setPercentage] = useState(maxPercentage);
+  //And set to zero later to start animation
+  useEffect(() => setPercentage(0), [animate]);
 
   useEffect(() => {
     const handleIncrease = () => {
       if (percentage < maxPercentage)
-        setPercentage((percentage) => percentage + 0.4);
+        setPercentage(percentage => percentage + 0.4);
     };
 
     // This makes lower maxPercentages fill up a bit slower than high ones
@@ -32,7 +35,7 @@ export function PercentageBar(props: Props) {
       );
       return () => clearTimeout(timeoutId);
     }
-  }, [animate, maxPercentage, percentage]);
+  }, [animate, percentage]);
 
   return (
     <div

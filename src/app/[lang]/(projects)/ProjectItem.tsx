@@ -3,7 +3,6 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import { ProjectItemLinks } from './ProjectItemLinks';
-import { useState } from 'react';
 
 interface Props extends ComponentProps {
   title: string;
@@ -17,20 +16,17 @@ export function ProjectItem(props: Props) {
   const { className, title, image, repoUrl, deployUrl, description } = props;
   const i18n = useTranslations('sections.projects');
 
-  const [showLinks, setLinksVisibility] = useState(false);
   return (
     <article
-      className={`flex flex-col w-96 text-center mb-2
-      animate-fade-down ${className ?? ''}`}
+      className={`flex flex-col w-96 text-center mb-2 ${className ?? ''}`}
     >
       <button
         className="z-10
         group flex flex-col items-center gap-4"
-        onClick={() => setLinksVisibility(true)}
       >
         <div
           className={`bg-cream flex rotate-3 transition duration-75
-          ${!showLinks ? 'group-hover:scale-[1.02]' : ''}`}
+          group-hover:scale-[1.02]`}
         >
           <div className="p-3 -rotate-3 bg-blueprint">
             <div className="p-3 shadow-md bg-white">
@@ -42,9 +38,7 @@ export function ProjectItem(props: Props) {
                   alt={`${title} - ${i18n('screenshot')}`}
                   className="w-[300px] h-[200px] bg-white border-white"
                 ></Image>
-                {showLinks && (
-                  <ProjectItemLinks repoUrl={repoUrl} deployUrl={deployUrl} />
-                )}
+                <ProjectItemLinks repoUrl={repoUrl} deployUrl={deployUrl} />
               </div>
             </div>
           </div>
