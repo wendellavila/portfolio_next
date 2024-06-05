@@ -47,6 +47,7 @@ jobs:
             "README.md"
             "LICENSE"
             ".nojekyll"
+            "projects"
           )
           for file in ${keep_files[*]}
           do
