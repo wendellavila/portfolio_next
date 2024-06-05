@@ -277,6 +277,7 @@ export const projectData: ProjectItem[] = [
     title: 'eudr_next',
     image: '/assets/img/eudr_next.webp',
     repoUrl: 'https://github.com/wendellavila/eudr_next',
+    deployUrl: `${deployUrl}/projects/eudr_next`,
   },
   {
     title: 'mediawiki_pybot',
@@ -287,6 +288,7 @@ export const projectData: ProjectItem[] = [
     title: 'block_game_next',
     image: '/assets/img/block_game_next.webp',
     repoUrl: 'https://github.com/wendellavila/block_game_next',
+    deployUrl: `${deployUrl}/projects/block_game_next`,
   },
   {
     title: 'jsmp_notebooks',
@@ -307,6 +309,7 @@ export const projectData: ProjectItem[] = [
     title: 'ssg_i18n_next',
     image: '/assets/img/ssg_i18n_next.webp',
     repoUrl: 'https://github.com/wendellavila/ssg_i18n_next',
+    deployUrl: `${deployUrl}/projects/ssg_i18n_next`,
   },
   {
     title: 'dashboard_flutter',
