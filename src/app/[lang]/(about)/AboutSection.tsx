@@ -13,7 +13,7 @@ export function AboutSection(props: SectionProps) {
   const i18n = useTranslations('sections.about');
 
   const [animate, setAnimate] = useState(false);
-  const inView = useInView(componentRef);
+  const inView = useInView(componentRef, 50);
 
   // Animate on first view
   useEffect(() => {

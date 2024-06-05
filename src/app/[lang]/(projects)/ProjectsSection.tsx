@@ -14,7 +14,7 @@ export function ProjectsSection(props: SectionProps) {
   const { componentRef, items } = props;
 
   const i18n = useTranslations('sections.projects');
-  const inView = useInView(componentRef);
+  const inView = useInView(componentRef, 50);
   const [animate, setAnimate] = useState(false);
 
   // Animate on first view

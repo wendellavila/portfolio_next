@@ -18,7 +18,7 @@ export function BannerSection(props: SectionProps) {
   const subtitle = i18n('subtitle');
   const stylizedSubtitle = `__${subtitle.replaceAll(' ', '_')}__`;
 
-  const inView = useInView(componentRef);
+  const inView = useInView(componentRef, 50);
   const [animate, setAnimate] = useState(false);
 
   const threshold = 50; // Rerender StarrySky only when layout changes 50px in width or height
