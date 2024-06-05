@@ -41,7 +41,7 @@ export function Iconify(props: Props) {
       return <MaterialSymbolsLanguage {...props} />;
     case 'basil:gmail-solid':
       return <BasilGmailSolid {...props} />;
-    case 'svg:spinners-3-dots-fade':
+    case 'svg-spinners:3-dots-fade':
       return <SvgSpinners3DotsFade {...props} />;
     case 'formkit:download':
       return <FormkitDownload {...props} />;

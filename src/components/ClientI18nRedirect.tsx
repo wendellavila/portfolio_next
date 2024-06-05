@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { i18nConfig } from '@/utils/constants';
@@ -11,18 +11,18 @@ import { LoadingScreen } from '@/components/LoadingScreen';
  * and redirects to the first supported locale.
  */
 export function ClientI18nRedirect() {
-  const [locale, setLocale] = useState<string>('');
   const router = useRouter();
 
   useEffect(() => {
     const localStorageLocale = localStorage.getItem('lang') ?? '';
     if (localStorageLocale && i18nConfig.locales.includes(localStorageLocale)) {
-      setLocale(localStorageLocale);
+      const locale = localStorageLocale;
+      router.replace(`/${locale}`);
     } else {
-      setLocale(getBrowserPreferredLanguage(true));
+      const locale = getBrowserPreferredLanguage(true);
+      router.replace(`/${locale}`);
     }
-    if (locale) router.replace(`/${locale}`);
-  }, [locale, router]);
+  }, [router]);
 
   return (
     <main>

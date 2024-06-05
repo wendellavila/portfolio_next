@@ -23,7 +23,10 @@ export function useInView(
 
     observerRef.current = new IntersectionObserver(
       ([entry]) => setVisibility(entry.isIntersecting),
-      { rootMargin: threshold ? `0px 0px -${threshold}px` : undefined }
+      {
+        rootMargin:
+          threshold !== undefined ? `0px 0px -${threshold}px` : undefined,
+      }
     );
   }, [observerRef, threshold]);
 
