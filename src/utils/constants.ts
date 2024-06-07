@@ -315,6 +315,7 @@ export const projectData: ProjectItem[] = [
     title: 'dashboard_flutter',
     image: '/assets/img/dashboard_flutter.webp',
     repoUrl: 'https://github.com/wendellavila/dashboard_flutter',
+    deployUrl: `${deployUrl}/projects/dashboard_flutter`,
   },
   {
     title: 'routesapp_flutter',
