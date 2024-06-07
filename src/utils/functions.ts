@@ -53,7 +53,7 @@ export async function generateMetadata({
     title: projectTitle,
     description: i18n('description'),
     icons: {
-      icon: `/assets/img/.png`,
+      icon: `/assets/img/favicon.png`,
     },
   };
 }
