@@ -34,7 +34,7 @@
       "exportadora": {
         "title": "Desenvolvedor Fullstack Júnior",
         "years": "Jul 2023-Presente",
-        "description": "Desenvolvimento mobile/web front-end utilizando React, Next.js e Flutter.\nDesenvolvimento back-end utilizando PHP e SQL Server.\nDesenvolvimento de customizações para o sistema ERP TOTVS Protheus utilizando AdvPl e SQL Server."
+        "description": "Desenvolvimento de sistemas web utilizando PHP + SQL Server no backend e React no frontend.\nIntegração com APIs REST para automação de envio e recuperação de dados utilizando PHP + curl.\nRecuperação, tratamento e importação de dados geográficos e dados abertos utilizando Python.\nDesenvolvimento mobile utilizando Flutter.\nDesenvolvimento de integrações e customizações para o ERP TOTVS Protheus."
       },
       "progepe": {
         "title": "Estagiário de Web Design/Design Gráfico",
@@ -50,6 +50,10 @@
     },
     "courses": {
       "title": "Cursos e Certificações",
+      "flutter": {
+        "title": "Flutter & Dart - The Complete Guide",
+        "description": "Flutter e Dart"
+      },
       "python": {
         "title": "Python A-Z™: Python For Data Science",
         "description": "Python para análise de dados e ciência de dados."
