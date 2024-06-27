@@ -59,7 +59,7 @@ export function BannerSection(props: SectionProps) {
         >
           {stylizedSubtitle}
         </TypingText>
-        <IconLinkList className={animate ? 'animate-fade' : ''} />
+        <IconLinkList className={animate ? 'animate-fade ' : ''} />
       </div>
       <VerticalNav
         id="banner-nav"

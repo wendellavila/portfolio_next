@@ -34,7 +34,7 @@ export function LinkList(props: Props) {
           target="_blank"
           className={`flex items-center justify-center gap-1
           text-sm hover:underline py-0.5
-          ${animate ? (index % 2 == 0 ? 'animate-fade-right' : 'animate-fade-left') : ''}`}
+          ${animate ? (index % 2 == 0 ? 'animate-fade-right ' : 'animate-fade-left ') : ''}`}
         >
           <Iconify icon={item.icon} width={18} />
           {item.text ?? item.url}

@@ -14,8 +14,9 @@ export function ProjectsSection(props: SectionProps) {
   const { componentRef, items } = props;
 
   const i18n = useTranslations('sections.projects');
-  const inView = useInView(componentRef, 80);
+
   const [animate, setAnimate] = useState(false);
+  const inView = useInView(componentRef, 80);
 
   // Animate on first view
   useEffect(() => {
@@ -45,7 +46,7 @@ export function ProjectsSection(props: SectionProps) {
               repoUrl={project.repoUrl}
               deployUrl={project.deployUrl}
               description={i18n(`${project.title}.description`)}
-              className={animate ? 'animate-fade-down' : ''}
+              className={animate ? 'animate-fade ' : ''}
             />
           ))}
         </div>

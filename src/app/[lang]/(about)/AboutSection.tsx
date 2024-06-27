@@ -48,7 +48,7 @@ export function AboutSection(props: SectionProps) {
           <div
             id="about-profile"
             className={`flex flex-col items-center px-4
-            ${animate ? 'animate-fade-right' : ''}`}
+            ${animate ? 'animate-fade-right ' : ''}`}
           >
             <Avatar
               className="mb-4"
@@ -61,7 +61,7 @@ export function AboutSection(props: SectionProps) {
           <div id="about-content">
             <article
               className={`md:px-12 px-6 max-w-[1200px]
-              ${animate ? 'animate-fade-left' : ''}`}
+              ${animate ? 'animate-fade-left ' : ''}`}
             >
               {i18n('content')
                 .split('\n')

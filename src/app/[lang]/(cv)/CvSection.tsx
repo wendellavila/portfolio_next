@@ -31,23 +31,23 @@ export function CvSection(props: SectionProps) {
         <div className="inline-grid gap-y-4 gap-x-20 lg:grid-cols-2">
           <CvSubSection
             subsection="education"
-            className={`order-1 ${animate ? 'animate-fade-right' : ''}`}
+            className={`order-1 ${animate ? 'animate-fade-right ' : ''}`}
           />
           <CvSubSection
             subsection="experience"
-            className={`order-2 lg:order-3 ${animate ? 'animate-fade-left' : ''}`}
+            className={`order-2 lg:order-3 ${animate ? 'animate-fade-left ' : ''}`}
           />
           <CvSubSection
             subsection="publications"
-            className={`order-3 lg:order-2 ${animate ? 'animate-fade-right' : ''}`}
+            className={`order-3 lg:order-2 ${animate ? 'animate-fade-right ' : ''}`}
           />
           <CvSubSection
             subsection="courses"
-            className={`order-4 ${animate ? 'animate-fade-left' : ''}`}
+            className={`order-4 ${animate ? 'animate-fade-left ' : ''}`}
           />
           <DownloadCV
             id="cv-download"
-            className={`order-5 animate-fade-right ${animate ? 'animate-fade-left' : ''}`}
+            className={`order-5 ${animate ? 'animate-fade-right ' : ''}`}
           />
         </div>
       </div>

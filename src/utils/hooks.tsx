@@ -15,17 +15,17 @@ export function useInView(
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
-    if (!threshold || threshold < 0) {
-      threshold = 0;
+    let th = threshold;
+    if (!th || th < 0) {
+      th = 0;
     } else {
-      threshold = Math.floor(threshold);
+      th = Math.floor(th);
     }
 
     observerRef.current = new IntersectionObserver(
       ([entry]) => setVisibility(entry.isIntersecting),
       {
-        rootMargin:
-          threshold !== undefined ? `0px 0px -${threshold}px` : undefined,
+        rootMargin: th !== undefined ? `0px 0px -${th}px` : undefined,
       }
     );
   }, [observerRef, threshold]);
