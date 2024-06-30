@@ -48,6 +48,7 @@ jobs:
           keep_files=(
             "README.md"
             "LICENSE"
+            "CNAME"
             ".nojekyll"
             "projects"
           )
