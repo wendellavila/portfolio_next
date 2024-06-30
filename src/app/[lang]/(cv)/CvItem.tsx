@@ -42,7 +42,7 @@ export function CvItem(props: Props) {
             )}
           </p>
         </div>
-        <span className="text-sm italic">{years}</span>
+        {years && <span className="text-sm italic">{years}</span>}
       </div>
       {descriptionLines.length <= 1 ? (
         <p className="ml-5">{descriptionLines[0]}</p>

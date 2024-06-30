@@ -51,39 +51,40 @@ const cvDataExperience: CvDataItem[] = [
 
 const cvDataCourses: CvDataItem[] = [
   {
+    id: 'react',
+    institution: 'Udemy',
+    titleUrl:
+      'https://www.udemy.com/certificate/UC-c68703f4-6a8c-4b61-a577-389dc364464a/',
+  },
+  {
     id: 'flutter',
     institution: 'Udemy',
     titleUrl:
       'https://www.udemy.com/certificate/UC-9bc74c22-9fd6-4ce2-83ae-e5b5de8aaa53/',
-    years: '2024',
   },
   {
     id: 'java',
     institution: 'Udemy',
     titleUrl:
       'https://www.udemy.com/certificate/UC-9e706d51-87f4-4c16-891b-49869d302a39/',
-    years: '2023',
   },
   {
     id: 'machineLearning',
     institution: 'Udemy',
     titleUrl:
       'https://www.udemy.com/certificate/UC-6327e065-fefc-4a19-b73e-0d24ee34cde0/',
-    years: '2020-2021',
   },
   {
     id: 'python',
     institution: 'Udemy',
     titleUrl:
       'https://www.udemy.com/certificate/UC-41a3b708-052f-45b6-8b17-f52a9bb06489/',
-    years: '2019-2020',
   },
   {
     id: 'r',
     institution: 'Udemy',
     titleUrl:
       'https://www.udemy.com/certificate/UC-5d42c241-f59d-4249-b403-433d05b0720e/',
-    years: '2019-2020',
   },
 ];
 

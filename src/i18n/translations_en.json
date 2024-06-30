@@ -50,25 +50,35 @@
     },
     "courses": {
       "title": "Courses and Certifications",
+      "react": {
+        "title": "React - The Complete Guide 2024 (incl. Next.js, Redux)",
+        "description": "React, Next.js, Tailwind CSS, Redux.",
+        "years": ""
+      },
       "flutter": {
         "title": "Flutter & Dart - The Complete Guide",
-        "description": "Flutter & Dart"
+        "description": "Flutter & Dart",
+        "years": ""
       },
       "python": {
         "title": "Python A-Z™: Python For Data Science",
-        "description": "Python for data analysis and data science."
+        "description": "Python for data analysis and data science.",
+        "years": ""
       },
       "r": {
         "title": "R Programming A-Z™: Python For Data Science",
-        "description": "R for data analysis and data science."
+        "description": "R for data analysis and data science.",
+        "years": ""
       },
       "java": {
         "title": "Java Complete Course",
-        "description": "Java 17, JDBC, JPA, Hibernate, MySQL."
+        "description": "Java 17, JDBC, JPA, Hibernate, MySQL.",
+        "years": ""
       },
       "machineLearning": {
         "title": "Machine Learning A-Z™",
-        "description": "Machine learning full course with Python and R."
+        "description": "Machine learning full course with Python and R.",
+        "years": ""
       }
     },
     "publications": {
