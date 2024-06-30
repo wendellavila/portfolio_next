@@ -43,7 +43,7 @@ export function AboutSection(props: SectionProps) {
         </SectionHeader>
         <div
           className={`grow flex items-center gap-8  
-          justify-evenly flex-col md:flex-row `}
+          justify-evenly flex-col xl:flex-row `}
         >
           <div
             id="about-profile"
@@ -67,7 +67,7 @@ export function AboutSection(props: SectionProps) {
                 .split('\n')
                 .map((line, index) => (
                   <p
-                    className="text-md pb-4 text-justify"
+                    className="text-lg pb-4 text-justify"
                     key={`about-paragraph-${index + 1}`}
                   >
                     {line}
