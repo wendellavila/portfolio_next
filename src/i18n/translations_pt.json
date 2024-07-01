@@ -72,7 +72,7 @@
       },
       "java": {
         "title": "Java Completo",
-        "description": "Java 17, JDBC, JPA, Hibernate, MySQL.",
+        "description": "Java 17, JDBC, JPA, Hibernate, Spring Boot, MySQL.",
         "years": ""
       },
       "machineLearning": {
