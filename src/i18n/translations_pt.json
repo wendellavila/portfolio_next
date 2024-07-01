@@ -34,7 +34,7 @@
       "exportadora": {
         "title": "Desenvolvedor Fullstack Júnior",
         "years": "Jul 2023-Presente",
-        "description": "Desenvolvimento de sistemas web utilizando PHP + SQL Server no backend e React no frontend.\nIntegração com APIs REST para automação de envio e recuperação de dados utilizando PHP + curl.\nRecuperação, tratamento e importação de dados geográficos e dados abertos utilizando Python.\nDesenvolvimento mobile utilizando Flutter.\nDesenvolvimento de integrações e customizações para o ERP TOTVS Protheus."
+        "description": "Desenvolvimento de sistemas web utilizando PHP + SQL Server no backend e React/Next.js no frontend.\nIntegração com APIs REST para automação de envio e recuperação de dados utilizando PHP + curl.\nRecuperação, tratamento e importação de dados geográficos e dados abertos utilizando Python.\nDesenvolvimento mobile utilizando Flutter.\nDesenvolvimento de integrações e customizações para o ERP TOTVS Protheus."
       },
       "progepe": {
         "title": "Estagiário de Web Design/Design Gráfico",
