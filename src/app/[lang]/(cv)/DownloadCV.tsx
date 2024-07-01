@@ -35,7 +35,7 @@ export function DownloadCV(props: ComponentProps) {
             <Iconify
               icon="formkit:download"
               width={16}
-              className="mr-2 font-bold"
+              className="mr-1 font-bold"
             />
             {i18n('clickToDownload')}
           </div>
