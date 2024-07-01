@@ -303,25 +303,15 @@ export const projectData: ProjectItem[] = [
     deployUrl: `${deployUrl}/projects/block_game_next`,
   },
   {
-    title: 'jsmp_notebooks',
-    image: '/assets/img/jsmp_notebooks.webp',
-    repoUrl: 'https://github.com/wendellavila/jsmp_notebooks',
-  },
-  {
-    title: 'leetcode',
-    image: '/assets/img/leetcode.webp',
-    repoUrl: 'https://github.com/wendellavila/leetcode',
-  },
-  {
-    title: 'chess_java',
-    image: '/assets/img/chess_java.webp',
-    repoUrl: 'https://github.com/wendellavila/chess_java',
-  },
-  {
     title: 'ssg_i18n_next',
     image: '/assets/img/ssg_i18n_next.webp',
     repoUrl: 'https://github.com/wendellavila/ssg_i18n_next',
     deployUrl: `${deployUrl}/projects/ssg_i18n_next`,
+  },
+  {
+    title: 'jsmp_notebooks',
+    image: '/assets/img/jsmp_notebooks.webp',
+    repoUrl: 'https://github.com/wendellavila/jsmp_notebooks',
   },
   {
     title: 'dashboard_flutter',
@@ -335,8 +325,18 @@ export const projectData: ProjectItem[] = [
     repoUrl: 'https://github.com/wendellavila/routesapp_flutter',
   },
   {
+    title: 'chess_java',
+    image: '/assets/img/chess_java.webp',
+    repoUrl: 'https://github.com/wendellavila/chess_java',
+  },
+  {
     title: 'starcount_mpi_c',
     image: '/assets/img/starcount_mpi_c.webp',
     repoUrl: 'https://github.com/wendellavila/starcount_mpi_c',
+  },
+  {
+    title: 'leetcode',
+    image: '/assets/img/leetcode.webp',
+    repoUrl: 'https://github.com/wendellavila/leetcode',
   },
 ];
