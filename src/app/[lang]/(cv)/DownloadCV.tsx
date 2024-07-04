@@ -9,7 +9,7 @@ export function DownloadCV(props: ComponentProps) {
   const lang = useLocale();
 
   const basePath =
-    'https://raw.githubusercontent.com/wendellavila/wendellavila/main/assets/files';
+    'https://raw.githubusercontent.com/wendellavila/wendellavila/main/assets/pdf';
 
   return (
     <article className={`flex flex-col items-center ${className}`}>
@@ -24,7 +24,7 @@ export function DownloadCV(props: ComponentProps) {
         <a
           role="button"
           download={`Wendell_Avila_CV_${lang}`}
-          href={`${basePath}/CV_${lang}.pdf`}
+          href={`${basePath}/WendellAvila_CV_${lang}.pdf`}
           target="_blank"
           className="flex flex-row"
         >
@@ -35,7 +35,7 @@ export function DownloadCV(props: ComponentProps) {
             <Iconify
               icon="formkit:download"
               width={16}
-              className="mr-2 font-bold"
+              className="mr-1 font-bold"
             />
             {i18n('clickToDownload')}
           </div>

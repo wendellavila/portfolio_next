@@ -34,7 +34,7 @@
       "exportadora": {
         "title": "Junior Fullstack Developer",
         "years": "Jul 2023-Present",
-        "description": "Development of web systems using PHP + SQL Server in the backend and React in the frontend.\nIntegration with REST APIs for automating data retrieval and submission using PHP + curl.\nRetrieval and treatment of geographic data and open data using Python.\nDevelopment of mobile apps using Flutter.\nDevelopment of integrations and customizations for the TOTVS Protheus ERP system."
+        "description": "Development of web systems using PHP + SQL Server in the backend and React/Next.js in the frontend.\nIntegration with REST APIs for automating data retrieval and submission using PHP + curl.\nRetrieval and treatment of geographic data and open data using Python.\nDevelopment of mobile apps using Flutter.\nDevelopment of integrations and customizations for the TOTVS Protheus ERP system."
       },
       "progepe": {
         "title": "Web Design/Graphic Design Intern",
@@ -50,25 +50,35 @@
     },
     "courses": {
       "title": "Courses and Certifications",
+      "react": {
+        "title": "React - The Complete Guide 2024 (incl. Next.js, Redux)",
+        "description": "React, Next.js, Tailwind CSS, Redux.",
+        "years": ""
+      },
       "flutter": {
         "title": "Flutter & Dart - The Complete Guide",
-        "description": "Flutter & Dart"
+        "description": "Flutter & Dart",
+        "years": ""
       },
       "python": {
         "title": "Python A-Z™: Python For Data Science",
-        "description": "Python for data analysis and data science."
+        "description": "Python for data analysis and data science.",
+        "years": ""
       },
       "r": {
         "title": "R Programming A-Z™: Python For Data Science",
-        "description": "R for data analysis and data science."
+        "description": "R for data analysis and data science.",
+        "years": ""
       },
       "java": {
         "title": "Java Complete Course",
-        "description": "Java 17, JDBC, JPA, Hibernate, MySQL."
+        "description": "Java 17, JDBC, JPA, Hibernate, Spring Boot, MySQL.",
+        "years": ""
       },
       "machineLearning": {
         "title": "Machine Learning A-Z™",
-        "description": "Machine learning full course with Python and R."
+        "description": "Machine learning full course with Python and R.",
+        "years": ""
       }
     },
     "publications": {

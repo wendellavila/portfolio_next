@@ -69,15 +69,13 @@ export function VerticalNavLanguage(props: Props) {
           <Iconify
             icon="mdi:chevron-down"
             width={22}
-            className={`inline transition-all transform ${
-              isOpen ? 'rotate-180' : ''
-            }`}
+            className={`inline transition-all transform ${isOpen ? 'rotate-90' : 'rotate-0'}`}
           ></Iconify>
         </div>
       </button>
       {isOpen && (
         <div className="flex flex-col items-center">
-          {i18nConfig.locales.map(lang => {
+          {i18nConfig.locales.map((lang) => {
             return (
               <Fragment key={`option-${lang}`}>
                 {lang !== locale && (
