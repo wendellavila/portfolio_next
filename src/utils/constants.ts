@@ -296,25 +296,15 @@ export const projectData: ProjectItem[] = [
     repoUrl: 'https://github.com/wendellavila/mediawiki_pybot',
   },
   {
-    title: 'block_game_next',
-    image: '/assets/img/block_game_next.webp',
-    repoUrl: 'https://github.com/wendellavila/block_game_next',
-    deployUrl: `${deployUrl}/projects/block_game_next`,
-  },
-  {
     title: 'jsmp_notebooks',
     image: '/assets/img/jsmp_notebooks.webp',
     repoUrl: 'https://github.com/wendellavila/jsmp_notebooks',
   },
   {
-    title: 'leetcode',
-    image: '/assets/img/leetcode.webp',
-    repoUrl: 'https://github.com/wendellavila/leetcode',
-  },
-  {
-    title: 'chess_java',
-    image: '/assets/img/chess_java.webp',
-    repoUrl: 'https://github.com/wendellavila/chess_java',
+    title: 'block_game_next',
+    image: '/assets/img/block_game_next.webp',
+    repoUrl: 'https://github.com/wendellavila/block_game_next',
+    deployUrl: `${deployUrl}/projects/block_game_next`,
   },
   {
     title: 'ssg_i18n_next',
@@ -329,9 +319,25 @@ export const projectData: ProjectItem[] = [
     deployUrl: `${deployUrl}/projects/dashboard_flutter`,
   },
   {
+    title: 'fandom_clone_flutter',
+    image: '/assets/img/fandom_clone_flutter.webp',
+    repoUrl: 'https://github.com/wendellavila/fandom_clone_flutter',
+    deployUrl: `${deployUrl}/projects/fandom_clone_flutter`,
+  },
+  {
     title: 'routesapp_flutter',
     image: '/assets/img/routesapp_flutter.webp',
     repoUrl: 'https://github.com/wendellavila/routesapp_flutter',
+  },
+  {
+    title: 'auth_php',
+    image: '/assets/img/auth_php.webp',
+    repoUrl: 'https://github.com/wendellavila/auth_php',
+  },
+  {
+    title: 'chess_java',
+    image: '/assets/img/chess_java.webp',
+    repoUrl: 'https://github.com/wendellavila/chess_java',
   },
   {
     title: 'starcount_mpi_c',

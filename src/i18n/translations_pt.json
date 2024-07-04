@@ -107,14 +107,17 @@
       "jsmp_notebooks": {
         "description": "Código utilizado para exploração de técnicas de aprendizado de máquina e deep learning utilizando dados da competição \"Jane Street Market Prediction\"."
       },
-      "leetcode": {
-        "description": "Minhas soluções para problemas do LeetCode."
-      },
       "chess_java": {
         "description": "Jogo de xadrez via linha de comando feito com Java."
       },
+      "auth_php": {
+        "description": "API de autenticação usando JWT, feita com PHP e SQL Server."
+      },
       "ssg_i18n_next": {
         "description": "Projeto SSG do Next.js 14 com detecção de idioma no navegador e internacionalização com next-intl."
+      },
+      "fandom_clone_flutter": {
+        "description": "Clone da skin mobile do FANDOM feito com Flutter."
       },
       "dashboard_flutter": {
         "description": "Um dashboard responsivo com menu lateral e roteamento, feito com Flutter Web."
