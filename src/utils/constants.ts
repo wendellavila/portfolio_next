@@ -350,9 +350,4 @@ export const projectData: ProjectItem[] = [
     image: '/assets/img/starcount_mpi_c.webp',
     repoUrl: 'https://github.com/wendellavila/starcount_mpi_c',
   },
-  {
-    title: 'leetcode',
-    image: '/assets/img/leetcode.webp',
-    repoUrl: 'https://github.com/wendellavila/leetcode',
-  },
 ];
