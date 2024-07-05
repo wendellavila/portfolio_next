@@ -52,7 +52,7 @@
       "title": "Courses and Certifications",
       "react": {
         "title": "React - The Complete Guide 2024 (incl. Next.js, Redux)",
-        "description": "React, Next.js, Tailwind CSS, Redux.",
+        "description": "React 18, Next.js 14, Tailwind CSS, Redux, TanStack Query, React Router.",
         "years": ""
       },
       "flutter": {
