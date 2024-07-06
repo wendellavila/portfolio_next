@@ -1,7 +1,4 @@
 {
-  "metadata": {
-    "description": "Desenvolvedor Web"
-  },
   "sections": {
     "banner": {
       "title": "Início",
@@ -13,7 +10,7 @@
     },
     "about": {
       "title": "Sobre Mim",
-      "content": "Sou um cientista da computação graduado pela Universidade Federal de Alfenas (Unifal-MG) em 2022.\nAtualmente atuo como desenvolvedor fullstack júnior, onde venho desenvolvendo minhas habilidades no front-end utilizando React/Next.js e Flutter, e no back-end com PHP e SQL Server.\nTambém possuo conhecimentos na área de ciência de dados e machine learning. Em dezembro de 2023, tive a oportunidade de publicar meu artigo intitulado \"Study and Analysis of Deep Learning Techniques for Solving Financial Problems\" na revista 'Learning and Nonlinear Models'.\nAlém do desenvolvimento, também sou apaixonado pelo ecossistema GNU/Linux, o qual utilizo diariamente como meu sistema primário tanto para desenvolvimento quanto para lazer."
+      "description": "Sou um cientista da computação graduado pela Universidade Federal de Alfenas (Unifal-MG) em 2022.\nAtualmente atuo como desenvolvedor fullstack júnior, onde venho desenvolvendo minhas habilidades no front-end utilizando React/Next.js e Flutter, e no back-end com PHP e SQL Server.\nTambém possuo conhecimentos na área de ciência de dados e machine learning. Em dezembro de 2023, tive a oportunidade de publicar meu artigo intitulado \"Study and Analysis of Deep Learning Techniques for Solving Financial Problems\" na revista 'Learning and Nonlinear Models'.\nAlém do desenvolvimento, também sou apaixonado pelo ecossistema GNU/Linux, o qual utilizo diariamente como meu sistema primário tanto para desenvolvimento quanto para lazer."
     },
     "cv": {
       "title": "CV",

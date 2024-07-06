@@ -314,11 +314,6 @@ export const projectData: ProjectItem[] = [
     deployUrl: `${deployUrl}/projects/ssg_i18n_next`,
   },
   {
-    title: 'jsmp_notebooks',
-    image: '/assets/img/jsmp_notebooks.webp',
-    repoUrl: 'https://github.com/wendellavila/jsmp_notebooks',
-  },
-  {
     title: 'dashboard_flutter',
     image: '/assets/img/dashboard_flutter.webp',
     repoUrl: 'https://github.com/wendellavila/dashboard_flutter',

@@ -1,8 +1,25 @@
 import { NextIntlClientProvider } from 'next-intl';
 
 import { montserrat, timezone } from '@/utils/constants';
-import { getTranslationMessages } from '@/utils/functions';
-export { generateStaticParams, generateMetadata } from '@/utils/functions';
+import { getTranslations, getTranslationMessages } from '@/utils/functions';
+import { projectTitle } from '@/utils/constants';
+
+export { generateStaticParams } from '@/utils/functions';
+
+export async function generateMetadata({
+  params: { lang },
+}: {
+  params: { lang: string };
+}) {
+  const i18n = await getTranslations(lang, 'about');
+  return {
+    title: projectTitle,
+    description: (i18n('description') as string).replaceAll('\n', ' '),
+    icons: {
+      icon: `/assets/img/favicon.png`,
+    },
+  };
+}
 
 export default async function InternationalizedLayout({
   children,

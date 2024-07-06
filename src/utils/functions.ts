@@ -39,26 +39,6 @@ export function getBrowserPreferredLanguage(ignoreRegion?: boolean): string {
 }
 
 /**
- * Generates internationalized metadata
- * @param {{lang: string}} params - Path parameters containing a supported lang.
- * If lang is undefined or not supported, the default language in i18nConfig is used.
- */
-export async function generateMetadata({
-  params: { lang },
-}: {
-  params: { lang: string };
-}) {
-  const i18n = await getTranslations(lang, 'metadata');
-  return {
-    title: projectTitle,
-    description: i18n('description'),
-    icons: {
-      icon: `/assets/img/favicon.png`,
-    },
-  };
-}
-
-/**
  * Loads JSON files containing translations to be used for Internationalization.
  * @param {string} locale - The locale of the language to be loaded.
  */
@@ -70,7 +50,7 @@ export async function getTranslationMessages(locale: string) {
  * Creates a next-intl translator to be used outside of client components.
  * @param {string} locale - The locale of the language to be loaded.
  */
-async function getTranslations(
+export async function getTranslations(
   locale?: string,
   namespace?: string
 ): Promise<I18n> {

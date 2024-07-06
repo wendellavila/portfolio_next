@@ -63,7 +63,7 @@ export function AboutSection(props: SectionProps) {
               className={`md:px-12 px-6 max-w-[1200px]
               ${animate ? 'animate-fade-left ' : ''}`}
             >
-              {i18n('content')
+              {i18n('description')
                 .split('\n')
                 .map((line, index) => (
                   <p
