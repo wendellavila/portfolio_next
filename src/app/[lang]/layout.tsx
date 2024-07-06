@@ -11,7 +11,7 @@ export async function generateMetadata({
 }: {
   params: { lang: string };
 }) {
-  const i18n = await getTranslations(lang, 'about');
+  const i18n = await getTranslations(lang, 'sections.about');
   return {
     title: projectTitle,
     description: (i18n('description') as string).replaceAll('\n', ' '),
