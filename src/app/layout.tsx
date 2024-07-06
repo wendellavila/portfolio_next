@@ -3,7 +3,7 @@ import { getTranslations } from '@/utils/functions';
 import { projectTitle } from '@/utils/constants';
 
 export async function generateMetadata() {
-  const i18n = await getTranslations('en', 'about');
+  const i18n = await getTranslations('en', 'sections.about');
   return {
     title: projectTitle,
     description: (i18n('description') as string).replaceAll('\n', ' '),
