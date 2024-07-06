@@ -21,7 +21,7 @@ export function PercentageBar(props: Props) {
   useEffect(() => {
     const handleIncrease = () => {
       if (percentage < maxPercentage)
-        setPercentage(percentage => percentage + 0.4);
+        setPercentage((percentage) => percentage + 0.4);
     };
 
     // This makes lower maxPercentages fill up a bit slower than high ones
@@ -35,7 +35,7 @@ export function PercentageBar(props: Props) {
       );
       return () => clearTimeout(timeoutId);
     }
-  }, [animate, percentage]);
+  }, [animate, percentage, maxPercentage]);
 
   return (
     <div
