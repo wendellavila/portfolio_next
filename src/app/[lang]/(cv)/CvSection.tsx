@@ -10,7 +10,7 @@ import { DownloadCV } from './DownloadCV';
 export function CvSection(props: SectionProps) {
   const { componentRef, items } = props;
 
-  const inView = useInView(componentRef, 80);
+  const inView = useInView(componentRef, 10);
   const [animate, setAnimate] = useState(false);
 
   // Animate on first view

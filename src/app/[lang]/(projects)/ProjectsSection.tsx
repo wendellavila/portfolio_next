@@ -16,7 +16,7 @@ export function ProjectsSection(props: SectionProps) {
   const i18n = useTranslations('sections.projects');
 
   const [animate, setAnimate] = useState(false);
-  const inView = useInView(componentRef, 80);
+  const inView = useInView(componentRef, 10);
 
   // Animate on first view
   useEffect(() => {
@@ -37,7 +37,7 @@ export function ProjectsSection(props: SectionProps) {
           {i18n('title').toLocaleUpperCase()}
         </SectionHeader>
         <div className="grow flex flex-row flex-wrap gap-8 justify-center px-8">
-          {projectData.map(project => (
+          {projectData.map((project) => (
             <ProjectItem
               id={`projects-item-${project.title}`}
               key={`projects-item-${project.title}`}
@@ -46,7 +46,7 @@ export function ProjectsSection(props: SectionProps) {
               repoUrl={project.repoUrl}
               deployUrl={project.deployUrl}
               description={i18n(`${project.title}.description`)}
-              className={animate ? 'animate-fade ' : ''}
+              className={animate ? 'animate-fade-up ' : ''}
             />
           ))}
         </div>
