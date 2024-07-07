@@ -11,9 +11,15 @@ import { SectionProps } from '@/typing/props';
 import { IconLinkList } from './IconLinkList';
 
 import { useInView, useRefDimensions } from '@/utils/hooks';
+import { Iconify } from '@/components/Iconify';
+import { GoDownLink } from './GoDownLink';
 
-export function BannerSection(props: SectionProps) {
-  const { componentRef, items } = props;
+interface Props extends SectionProps {
+  aboutRef: React.RefObject<HTMLElement>;
+}
+
+export function BannerSection(props: Props) {
+  const { componentRef, items, aboutRef } = props;
   const i18n = useTranslations('sections.banner');
   const subtitle = i18n('subtitle');
   const stylizedSubtitle = `__${subtitle.replaceAll(' ', '_')}__`;
@@ -47,19 +53,22 @@ export function BannerSection(props: SectionProps) {
         className="bg-black/25 w-full h-full absolute top-0 left-0 z-0"
       ></div>
       <div id="banner-body" className="flex flex-col z-10">
-        <h1
-          className={`text-7xl mb-1 font-bold ${montserrat.className} hyphens-manual`}
-        >
-          {projectTitle.toLocaleUpperCase()}
-        </h1>
-        <TypingText
-          ariaLabel={subtitle}
-          className={`text-3xl mb-4 ${montserrat.className} break-all`}
-          animate={animate}
-        >
-          {stylizedSubtitle}
-        </TypingText>
-        <IconLinkList className={animate ? 'animate-fade ' : ''} />
+        <div className="grow">
+          <h1
+            className={`text-7xl mb-1 font-bold ${montserrat.className} hyphens-manual`}
+          >
+            {projectTitle.toLocaleUpperCase()}
+          </h1>
+          <TypingText
+            ariaLabel={subtitle}
+            className={`text-3xl mb-4 ${montserrat.className} break-all`}
+            animate={animate}
+          >
+            {stylizedSubtitle}
+          </TypingText>
+          <IconLinkList className={animate ? 'animate-fade ' : ''} />
+        </div>
+        <GoDownLink linkRef={aboutRef} />
       </div>
       <VerticalNav
         id="banner-nav"

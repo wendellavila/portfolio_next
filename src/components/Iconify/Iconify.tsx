@@ -13,6 +13,7 @@ import { MdiChevronDown } from './MdiChevronDown';
 import { BasilGmailSolid } from './BasilGmailSolid';
 import { SvgSpinners3DotsFade } from './SvgSpinners3DotsFade';
 import { FormkitDownload } from './FormkitDownload';
+import { PhCaretDownLight } from './PhCaretDownLight';
 /**
  * Client wrapper for using Iconify icons inside server components.
  * @param {Props} props
@@ -45,6 +46,8 @@ export function Iconify(props: Props) {
       return <SvgSpinners3DotsFade {...props} />;
     case 'formkit:download':
       return <FormkitDownload {...props} />;
+    case 'ph:caret-down-light':
+      return <PhCaretDownLight {...props} />;
   }
   return <Icon {...props} />;
 }

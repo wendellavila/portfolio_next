@@ -69,7 +69,7 @@ export function VerticalNavLanguage(props: Props) {
           <Iconify
             icon="mdi:chevron-down"
             width={26}
-            className={`inline transition-all transform
+            className={`inline transition duration-300
             ${isOpen ? 'rotate-90' : 'rotate-0'}`}
           ></Iconify>
         </div>
