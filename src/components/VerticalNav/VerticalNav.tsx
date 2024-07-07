@@ -19,6 +19,7 @@ interface Props
   expandAll?: boolean;
   gap?: boolean;
   showOnSmall?: boolean;
+  hideHome?: boolean;
   languageSelector?: boolean;
 }
 
@@ -27,11 +28,15 @@ export function VerticalNav(props: Props) {
     className,
     color,
     gap,
-    items,
     languageSelector,
     position,
     showOnSmall,
+    hideHome,
   } = props;
+
+  let { items } = props;
+
+  if (hideHome) items = items.slice(1);
 
   return (
     <nav

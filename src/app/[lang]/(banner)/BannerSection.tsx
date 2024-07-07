@@ -72,10 +72,11 @@ export function BannerSection(props: Props) {
       </div>
       <VerticalNav
         id="banner-nav"
-        gap={true}
-        expandAll={true}
-        showOnSmall={true}
-        languageSelector={true}
+        gap
+        expandAll
+        showOnSmall
+        hideHome
+        languageSelector
         items={items}
         position="right"
         color="white"
