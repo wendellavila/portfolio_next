@@ -46,7 +46,7 @@ export function VerticalNavLanguage(props: Props) {
         <div aria-hidden className="px-1.5 py-0.5">
           <Iconify
             icon="material-symbols:language"
-            width={22}
+            width={26}
             className="inline text-white/85"
           ></Iconify>
         </div>
@@ -58,18 +58,19 @@ export function VerticalNavLanguage(props: Props) {
             languagesInfo[locale].name
           }`}
         >
-          <span className="inline-flex flex-row items-center px-0.5">
+          <span className="text-xl inline-flex flex-row items-center px-0.5">
             <Iconify
               icon={languagesInfo[locale].flag}
-              width={22}
+              width={26}
               className="inline mr-1"
             ></Iconify>
             {locale.toLocaleUpperCase()}
           </span>
           <Iconify
             icon="mdi:chevron-down"
-            width={22}
-            className={`inline transition-all transform ${isOpen ? 'rotate-90' : 'rotate-0'}`}
+            width={26}
+            className={`inline transition-all transform
+            ${isOpen ? 'rotate-90' : 'rotate-0'}`}
           ></Iconify>
         </div>
       </button>
@@ -90,10 +91,10 @@ export function VerticalNavLanguage(props: Props) {
                   >
                     <Iconify
                       icon={languagesInfo[lang].flag}
-                      width={22}
+                      width={26}
                       className="mr-1 inline"
                     ></Iconify>
-                    {lang.toLocaleUpperCase()}
+                    <span className="text-xl">{lang.toLocaleUpperCase()}</span>
                   </button>
                 )}
               </Fragment>
