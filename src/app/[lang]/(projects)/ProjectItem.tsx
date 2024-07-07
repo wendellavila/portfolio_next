@@ -28,7 +28,7 @@ export function ProjectItem(props: Props) {
           className={`bg-cream flex rotate-3 transition duration-75
           group-hover:scale-[1.02]`}
         >
-          <div className="p-3 -rotate-3 bg-blueprint">
+          <div className="p-1.5 -rotate-3 bg-blueprint">
             <div className="p-3 shadow-md bg-white">
               <div className="relative">
                 <Image
