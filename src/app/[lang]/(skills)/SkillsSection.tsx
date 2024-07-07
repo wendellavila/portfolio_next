@@ -38,7 +38,7 @@ export function SkillsSection(props: SectionProps) {
       />
       <div
         id="skills-body"
-        className="grow pt-2 pb-16 px-6 md:pr-12 md:pl-0 flex flex-col"
+        className="grow pt-2 pb-16 px-6 lg:pr-12 lg:pl-0 flex flex-col"
       >
         <SectionHeader decorationClassName="bg-cream">
           {i18n('title')}

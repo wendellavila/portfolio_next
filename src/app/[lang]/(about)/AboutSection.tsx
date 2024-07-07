@@ -34,7 +34,10 @@ export function AboutSection(props: SectionProps) {
         textColor="coffee"
         backgroundColor="cream"
       />
-      <div id="about-body" className="grow flex flex-col pt-2 pb-10">
+      <div
+        id="about-body"
+        className="grow flex flex-col pt-2 pb-10 px-6 md:px-12 lg:pl-0"
+      >
         <SectionHeader
           decorationClassName="bg-blueprint"
           className="ml-6 md:ml-0"
@@ -60,7 +63,7 @@ export function AboutSection(props: SectionProps) {
           </div>
           <div id="about-content">
             <article
-              className={`md:px-12 px-6 max-w-[1200px]
+              className={` max-w-[1200px]
               ${animate ? 'animate-fade-left' : ''}`}
             >
               {i18n('description')

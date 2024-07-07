@@ -26,7 +26,7 @@ export function CvSection(props: SectionProps) {
     >
       <div
         id="cv-body"
-        className="grow flex flex-col justify-center pt-2 pb-10 px-6 md:pr-0"
+        className="grow flex flex-col justify-center pt-2 pb-10 px-6 lg:pr-0"
       >
         <div className="inline-grid gap-y-4 gap-x-20 lg:grid-cols-2">
           <CvSubSection

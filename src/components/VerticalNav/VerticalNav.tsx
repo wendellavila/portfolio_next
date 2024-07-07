@@ -40,7 +40,7 @@ export function VerticalNav(props: Props) {
 
   return (
     <nav
-      className={`${showOnSmall ? 'flex' : 'hidden sm:flex'}
+      className={`${showOnSmall ? 'flex' : 'hidden lg:flex'}
       flex-col justify-around items-center z-10
       ${className ?? ''}`}
     >
