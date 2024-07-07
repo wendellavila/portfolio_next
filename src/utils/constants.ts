@@ -7,7 +7,7 @@ export const montserrat = Montserrat({
 export const timezone = 'America/Sao_Paulo';
 export const i18nConfig = {
   locales: ['en', 'pt'],
-  defaultLocale: 'en',
+  defaultLocale: 'pt',
 };
 
 export const projectTitle = 'Wen\xADdell Jo\xADão Cas\xADtro de A\xADvi\xADla';
