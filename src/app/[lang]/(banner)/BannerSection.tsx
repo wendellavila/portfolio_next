@@ -52,7 +52,7 @@ export function BannerSection(props: Props) {
         aria-hidden
         className="bg-black/25 w-full h-full absolute top-0 left-0 z-0"
       ></div>
-      <div id="banner-body" className="flex flex-col z-10">
+      <div id="banner-body" className="flex flex-col z-10 grow">
         <div className="grow">
           <h1
             className={`text-7xl mb-1 font-bold ${montserrat.className} hyphens-manual`}
