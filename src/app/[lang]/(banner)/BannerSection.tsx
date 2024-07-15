@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { TypingText } from '@/components/TypingText';
@@ -30,11 +30,6 @@ export function BannerSection(props: Props) {
   const threshold = 50; // Rerender StarrySky only when layout changes 50px in width or height
   const [width, height] = useRefDimensions(componentRef, threshold);
 
-  const memoizedStarrySky = useMemo(
-    () => <StarrySky width={width} height={height} />,
-    [width, height]
-  );
-
   // Animate on first view
   useEffect(() => {
     if (inView && !animate) setAnimate(true);
@@ -46,7 +41,7 @@ export function BannerSection(props: Props) {
       ref={componentRef}
       className="min-h-dvh flex relative text-white/95 pt-8 pb-4 lg:pt-12 px-8 lg:px-16"
     >
-      {memoizedStarrySky}
+      <StarrySky width={width} height={height} />
       <div
         id="banner-color-filter"
         aria-hidden
