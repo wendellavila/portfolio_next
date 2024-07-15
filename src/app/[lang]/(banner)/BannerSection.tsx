@@ -11,7 +11,6 @@ import { SectionProps } from '@/typing/props';
 import { IconLinkList } from './IconLinkList';
 
 import { useInView, useRefDimensions } from '@/utils/hooks';
-import { Iconify } from '@/components/Iconify';
 import { GoDownLink } from './GoDownLink';
 
 interface Props extends SectionProps {

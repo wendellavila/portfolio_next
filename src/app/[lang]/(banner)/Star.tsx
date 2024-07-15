@@ -2,9 +2,9 @@ import { getRandomInt } from '@/utils/functions';
 import { ComponentProps } from '@/typing/props';
 
 interface Props extends ComponentProps {
-  size?: number;
-  top?: number;
-  left?: number;
+  size: number;
+  top: number;
+  left: number;
   animate?: boolean | 'random';
   animationDuration?: 'slow' | 'medium' | 'fast' | 'random';
 }
@@ -14,7 +14,7 @@ export function Star(props: Props) {
   const random = Math.random();
   let animationClassName = '';
   if (props.animate === 'random' || props.animate === undefined) {
-    const animate = random <= 0.34; // Random with chance of 1/3
+    const animate = random <= (size <= 1 ? 0.5 : size) / 10; // Random with chance of 1/3
     if (animate) {
       let animationDurationClassName: string;
       let animationDuration = props.animationDuration;
