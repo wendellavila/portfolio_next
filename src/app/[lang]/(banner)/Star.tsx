@@ -14,7 +14,7 @@ export function Star(props: Props) {
   const random = Math.random();
   let animationClassName = '';
   if (props.animate === 'random' || props.animate === undefined) {
-    const animate = random <= (size <= 1 ? 0.5 : size) / 10; // Random with chance of 1/3
+    const animate = random <= (size <= 1 ? 0.5 : size) / 10;
     if (animate) {
       let animationDurationClassName: string;
       let animationDuration = props.animationDuration;
