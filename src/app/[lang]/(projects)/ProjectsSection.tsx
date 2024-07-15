@@ -46,7 +46,7 @@ export function ProjectsSection(props: SectionProps) {
               repoUrl={project.repoUrl}
               deployUrl={project.deployUrl}
               description={i18n(`${project.title}.description`)}
-              className={animate ? 'animate-fade-up ' : ''}
+              className={animate ? 'animate-fade' : ''}
             />
           ))}
         </div>
